@@ -33,7 +33,7 @@
             -->
             <!--<arg value='-vmoptions:"-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\aspectj1.8\lib\aspectjweaver.jar -classpath C:\aspectj1.8\lib\aspectjrt.jar;c:\windows\temp\mute2.jar"'/>-->
             <arg value='-vmoptions:"-Xdebug -Xrunjdwp:transport=dt_socket,address=${jpda.child.address} -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -Xmx64M"'/>
-            <arg value="-cpa:C:\aspectj1.8\lib\aspectjrt.jar;c:\windows\temp\mute2.jar" />
+            <arg value="-cpa:C:\aspectj1.8\lib\aspectjrt.jar" />
             <arg value="-samevm"/>
             
             <arg value="-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\aspectj1.8\lib\aspectjweaver.jar"/>

@@ -576,19 +576,6 @@ public class MainAction extends Action
         return status;
     } // runAgentJVM()
 
-    static void loadAgentCurrentVM() {
-        String nameOfRunningVM = ManagementFactory.getRuntimeMXBean().getName();
-        int p = nameOfRunningVM.indexOf('@');
-        String pid = nameOfRunningVM.substring(0, p);
-
-        try {
-            com.sun.tools.attach.VirtualMachine vm = com.sun.tools.attach.VirtualMachine.attach(pid);
-            vm.loadAgent("C:\\aspectj1.8\\lib\\aspectjweaver.jar", "");
-            vm.detach();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
     static Status runClass(
             String testName,
             Map<String, String> props,
@@ -657,8 +644,6 @@ public class MainAction extends Action
             }
 
             // RUN JAVA IN ANOTHER THREADGROUP
-            //loadAgentCurrentVM();
-
             SameVMThreadGroup tg = new SameVMThreadGroup();
             SameVMRunnable svmt = new SameVMRunnable(method, methodArgs, err);
             Thread t = new Thread(tg, svmt, "SameVMThread");
