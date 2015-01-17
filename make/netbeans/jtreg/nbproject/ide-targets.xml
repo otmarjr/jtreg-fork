@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="../../../../make/.." name="jtreg-IDE">
+    <import file="../../../../make/build.xml"/>
+    <!-- TODO: edit the following target according to your needs -->
+    <!-- (more info: http://www.netbeans.org/kb/articles/freeform-config.html#debugj2se) -->
+    <target depends="dist-jtreg-debug" name="debug-nb-parent">
+        <nbjpdastart addressproperty="jpda.address" name="jtreg" transport="dt_socket"/>
+        <copy tofile="${dist.jtreg.dir}/lib/log.properties" file="${child.log.properties.path}" />
+        
+        <java fork="true" jar="${dist.jtreg.dir}/lib/jtreg.jar">
+            <!--
+            <jvmarg value='-javaagent:C:\Users\Otmar\Documents\NetBeansProjects\java-callgraph\target\javacg-0.1-SNAPSHOT-dycg-agent.jar="excl=java.nio.charset."'/>
+            -->
+            <!--<arg value='-vmoptions:"-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\aspectj1.8\lib\aspectjweaver.jar -classpath C:\aspectj1.8\lib\aspectjrt.jar;c:\windows\temp\mute2.jar"'/>-->
+            <arg value="-cpa:C:\aspectj1.8\lib\aspectjrt.jar;c:\windows\temp\mute2.jar" />
+            <arg value="-samevm"/>
+            
+            <arg value="e:\openjdk-6-src-b33-14_oct_2014.tar\jdk\test\java\net\DatagramSocket\B6411513.java"/>
+            <jvmarg value="-Djavatest.regtest.debugChild=true"/>
+            <!--<jvmarg value="-agentlib:hprof=cpu=times"/>-->
+            <jvmarg value="-Xdebug"/>
+            <jvmarg value="-Xrunjdwp:transport=dt_socket,address=${jpda.address}"/>
+        </java>
+    </target>
+    <target depends="dist-jtreg-debug" name="debug-nb">
+        <nbjpdastart addressproperty="jpda.address" name="jtreg" transport="dt_shmem"/>
+        <nbjpdastart addressproperty="jpda.child.address" name="jtreg" transport="dt_socket"/>
+        <copy tofile="${dist.jtreg.dir}/lib/log.properties" file="${child.log.properties.path}" />
+        
+        <java fork="true" jar="${dist.jtreg.dir}/lib/jtreg.jar">
+            <!--
+            <jvmarg value='-javaagent:C:\Users\Otmar\Documents\NetBeansProjects\java-callgraph\target\javacg-0.1-SNAPSHOT-dycg-agent.jar="excl=java.nio.charset."'/>
+            -->
+            <!--<arg value='-vmoptions:"-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\aspectj1.8\lib\aspectjweaver.jar -classpath C:\aspectj1.8\lib\aspectjrt.jar;c:\windows\temp\mute2.jar"'/>-->
+            <arg value='-vmoptions:"-Xdebug -Xrunjdwp:transport=dt_socket,address=${jpda.child.address} -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -Xmx64M"'/>
+            <arg value="-cpa:C:\aspectj1.8\lib\aspectjrt.jar;c:\windows\temp\mute2.jar" />
+            <arg value="-samevm"/>
+            
+            <arg value="-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\aspectj1.8\lib\aspectjweaver.jar"/>
+            <arg value="e:\openjdk-6-src-b33-14_oct_2014.tar\jdk\test\java\net\DatagramSocket\B6411513.java"/>
+            <jvmarg value="-Djavatest.regtest.debugChild=true"/>
+            <!--<jvmarg value="-agentlib:hprof=cpu=times"/>-->
+            <jvmarg value="-Xdebug"/>
+            <jvmarg value="-Xrunjdwp:transport=dt_shmem,address=${jpda.address}"/>
+        </java>
+    </target>
+    <target name="-profile-check">
+        <startprofiler freeform="true"/>
+    </target>
+    <!-- TODO: edit the following target according to your needs -->
+    <!-- (more info: http://netbeans.org/kb/articles/freeform-config.html#profilej2se) -->
+    <target depends="-profile-check" if="profiler.configured" name="profile-nb">
+        <java fork="true" jar="${dist.jtreg.dir}/lib/jtreg.jar">
+            <arg value="-samevm"/>
+            <arg value="e:\openjdk-6-src-b33-14_oct_2014.tar\jdk\test\java\net\DatagramSocket\B6411513.java"/>
+            <jvmarg line="${agent.jvmargs}"/>
+        </java>
+    </target>
+</project>

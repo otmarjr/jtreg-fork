@@ -1,0 +1,28 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>2.15.
+                                Can tests in different directories
+            have the same name?</title>
+</head>
+<body>
+<h1>2.15.
+                                Can tests in different directories
+            have the same name?</h1>
+                
+<p>Yes.  When a test is run by the harness, a special classloader is used so
+                that the classpath is effectively set to include just the directory containing
+                the test, plus the standard system classes.  Thus name
+                clashes between tests in different directories are not a problem.</p>
+
+                
+<p>An alternative approach would be to associate a different package with each
+                test directory.  This is done, for example, in the JCK test suite.  The
+                difficulty with this idea is that in order to debug a test (under dbx or
+                workshop or jdb or whatever) you must set up your classpath in just the right
+                way.  This makes it difficult to diagnose bugs that are reported against
+                specific tests.  </p>
+            
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.18.
+                                My test requires that I install my
+            own security manager, but it appears that the JavaTest harness has already installed
+            one. What do I do?</title>
+</head>
+<body>
+<h1>5.18.
+                                My test requires that I install my
+            own security manager, but it appears that the JavaTest harness has already installed
+            one. What do I do?</h1>
+                
+<p>The harness normally installs its own rather permissive security manager in
+                self-defense to prevent tests from interfering with each other.  The harness'
+                security manager is designed to prevent changes to the JVM's state that would
+                impact other tests. Most tests will not find the standard harness security
+                manager a hindrance.</p>
+
+                
+<p>A test which must install its own security manager will always need to run
+                in its own separate JVM. To do this, add the <code>othervm</code> option to the
+                <code>main</code> action in the test description.</p>
+            
+</body>
+</html>

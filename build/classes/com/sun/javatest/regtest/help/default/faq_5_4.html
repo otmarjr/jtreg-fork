@@ -1,0 +1,20 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.4.
+                                Why is the default to run tests in
+            another JVM?</title>
+</head>
+<body>
+<h1>5.4.
+                                Why is the default to run tests in
+            another JVM?</h1>
+                
+<p>Insulation from other tests.  Most well-behaved tests do not modify the
+                JVM; however, if a test does modify the JVM it is possible that this change
+                will interfere with subsequent tests.  Running each test in another JVM allows
+                for the possibility of bad test suite citizens.</p>
+            
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>8.2.
+                                </title>
+</head>
+<body>
+<h1>8.2.
+                                <code>Error. Can't find `main' method</code>
+</h1>
+                
+<p>
+<b>More symptoms</b>: In <code>System.err</code>, you get a stack trace
+                for an <code>java.lang.NoSuchMethodException</code> and some harness messages.</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        java.lang.NoSuchMethodException
+                         at java.lang.Class.getMethod(Class.java)
+                         at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:89)
+                         at java.lang.Thread.run(Thread.java)
+
+                        JavaTest Message: main() method must be in a public class named
+                        JavaTest Message: ClassNotPublic in file ClassNotPublic.java
+                    </pre>
+                
+</dd>
+</dl>
+
+                
+<p>
+<b>Answer</b>: The class defining the test must be declared
+                <code>public</code> and the class name must be the basename of the
+                <code>.java</code> file; otherwise the harness will not be able to use reflection
+                to invoke the test.</p>
+
+            
+</body>
+</html>

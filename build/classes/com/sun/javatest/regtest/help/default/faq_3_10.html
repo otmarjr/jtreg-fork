@@ -1,0 +1,42 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>3.10.
+                                Can I verify the correctness of
+            test descriptions without actually running the tests?</title>
+</head>
+<body>
+<h1>3.10.
+                                Can I verify the correctness of
+            test descriptions without actually running the tests?</h1>
+                
+<p>Yes!  The <code>-check</code> option to <code>jtreg</code> will find
+                test descriptions and will determine whether they are written according to the
+                <a href="http://javaweb.sfbay/jdk/test/tag-spec">tag specification</a>. Tests
+                will <em>not</em> be executed.</p>
+
+                
+<p>The following sample output illustrates use of this option.</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        ribbit$ jtreg -verbose:summary -check Pass.java Fail.java Error.java
+                        Passed: Pass.java
+                        Passed: Fail.java
+                        Error:  Error.java
+                        test results: passed: 2; error: 1
+                        Report written to /u/iag/jtw/JTreport/report.html
+                        Results written to /u/iag/jtw/JTwork
+                        Error: some tests failed or other problems occurred
+                    </pre>
+                
+</dd>
+</dl>
+            
+</body>
+</html>

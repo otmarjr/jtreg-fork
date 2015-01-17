@@ -1,0 +1,56 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>8.7.
+                                </title>
+</head>
+<body>
+<h1>8.7.
+                                <code>Test does not have unique name
+            within work directory</code>
+</h1>
+                
+<p>
+<b>More Symptoms</b>: At a terminal window, you get:</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        Error:
+                         -- Test does not have unique name within work directory
+                         -- Test name: Duplicate
+                         -- Used by test: Duplicate.java
+                         -- And by test:  Duplicate.html
+                         -- Overwriting results of first test
+                    </pre>
+                
+</dd>
+</dl>
+
+                
+<p>A single directory contains more than one file with the same basename.</p>
+
+                
+<p>
+<b>Answer</b>: The two files contain descriptions of tests and the harness is
+                unable to determine a unique <a href="#question3.5"><code>.jtr</code></a> filename so
+                the harness will overwrite the results of the first test.  It is possible to have
+                a single directory with more than one file with the same basename; however,
+                only one of those files may have a test description (<code>@test</code> is the
+                first token of the comment).</p>
+
+                
+<p>If both files contain identical test descriptions, select one file to
+                contain the primary test description. Disable the other test description by
+                either removal of the entire comment or simply the <code>@test</code> tag.</p>
+
+                
+<p>If the files contain unique test descriptions, one of the basefile names must
+                be changed.</p>
+            
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>3.17.
+                                How do I specify VM options to the test's JVM?
+            </title>
+</head>
+<body>
+<h1>3.17.
+                                How do I specify VM options to the test's JVM?
+            </h1>
+                
+<p>Many JVM options are recognized by <code>jtreg</code> and passed
+                to the test.  Note that these options are sensitive to both the platform and
+                the JDK being tested.  For example, Linux does not currently support 64-bit
+                operation.  Thus, the option <code>-d64</code> is not valid on
+                Linux and will be rejected.</p>
+                
+<p>You can also use the <code>-vmoption</code> or <code>-vmoptions</code>
+                option to pass one or a space-separated list of options to the JVM used
+                to run the test. </p>
+            
+</body>
+</html>

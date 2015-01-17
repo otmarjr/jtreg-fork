@@ -1,0 +1,182 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>3.1.
+                                What does a typical invocation of
+             look like?  How can I make sure that I can even run
+            the JavaTest harness?</title>
+</head>
+<body>
+<h1>3.1.
+                                What does a typical invocation of
+            <code>jtreg</code> look like?  How can I make sure that I can even run
+            the JavaTest harness?</h1>
+                
+<p>You may verify that the JavaTest harness  can be properly invoked by using
+                <code>jtreg</code> to run this sample test.</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                
+<pre>
+                    /*
+                     * @test
+                     * @bug 2718282
+                     * @summary Hello test
+                     */
+
+                    public class Hello {
+                        public static void main(String [] args) throws Exception {
+                            if (true)
+                                System.out.println("Hello World!");
+                            else
+                                throw new Exception("??");
+                        }
+                    }
+                </pre>
+</dd>
+</dl>
+
+                
+<p>A typical invocation of <code>jtreg</code> on that test is:</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        ribbit$ jtreg -verbose:all -testjdk:/usr/local/java/jdk1.4/solsparc Hello.java
+                    </pre>
+                
+</dd>
+</dl>
+
+                
+<p>where</p>
+                
+<ul>
+                    
+<li>
+<code>-verbose:all</code> is a verbose option which causes output
+                    from all tests (regardless of whether they passed or failed) to be
+                    printed at completion of the test.</li>
+                    
+<li>
+<code>-testjdk</code> specifies the location of the JDK version which
+                    should be used to run the test.</li>
+                
+</ul>
+
+                
+<p>Modulo the line numbers, output for the successful invocation of
+                <code>jtreg</code> will look like:</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                         1   --------------------------------------------------
+                         2   TEST: Hello.java
+                         3   JDK under test: (/usr/local/java/jdk1.4/solsparc/jre)
+                         4   java version "1.4.0-beta"
+                         5   Java(TM) 2 Runtime Environment, Standard Edition (build 1.4.0-beta-b56)
+                         6   Java HotSpot(TM) Client VM (build 1.4-beta-B56, mixed mode)
+                         7
+                         8   ACTION: build -- Passed. Compilation successful
+                         9   REASON: Named class compiled on demand
+                        10   TIME:   3.024 seconds
+                        11
+                        12   ACTION: compile -- Passed. Compilation successful
+                        13   REASON: .class file out of date or does not exist
+                        14   TIME:   3.023 seconds
+                        15   STDOUT:
+                        16   STDERR:
+                        17
+                        18   ACTION: main -- Passed. Execution successful
+                        19   REASON: Assumed action based on file name: run main Hello
+                        20   TIME:   0.862 seconds
+                        21   STDOUT:
+                        22   Hello World!
+                        23   STDERR:
+                        24   STATUS:Passed.
+                        25
+                        26   TEST RESULT: Passed. Execution successful
+                        27   --------------------------------------------------
+                        28   test results: passed: 1
+                        29   Report written to /u/iag/jtwJTreport/report.html
+                        30   Results written to /u/iag/jtw/JTwork
+                    </pre>
+                
+</dd>
+</dl>
+
+                
+<p>The test was compiled and executed. No exception was thrown during
+                execution, thus the test passed.</p>
+
+                
+<p>Interpretation of this output is as follows:</p>
+
+                
+<ul>
+                    
+<li>line 2 - The name of the test that was run.</li>
+                    
+<li>line 3 - The JDK under test (should be identical to the value passed via
+                    the <code>-testjdk</code> option).</li>
+                    
+<li>line 4-6 - The product version produced when <code>java
+                    [-JVMOptions]</code> version" is called for the JDK under test.  Valid
+                    <code>[-JVMOptions]</code> include <code>-client</code>, <code>-server</code>,
+                    <code>-hotspot</code>, <code>-d64</code>, and <code>-d32</code>, as
+                    applicable to the current platform and test JDK.</li>
+                    
+<li>lines 8-10, 12-16, 18-24 - The set of actions that were run according to
+                    the test description provided. Each action contains five parts.</li>
+
+                    
+<ul>
+                        
+<li>the name of the action and its final status</li>
+                        
+<li>the reason the action was taken</li>
+                        
+<li>the amount of time to run the test</li>
+                        
+<li>standard output (note line 22 of the <code>main</code> action contains the
+                        string "Hello World!")</li>
+                        
+<li>standard error</li>
+                    
+</ul>
+
+                    
+<li>line 26 - The final result of the test.</li>
+                    
+<li>lines 28-30 - Summary information about all the tests that were run.</li>
+
+                    
+<ul>
+                        
+<li>line 28 - One test passed. This line would also indicate the number of
+                        tests that failed, or that produced errors, as applicable.</li>
+                        
+<li>line 29 - Location for <code>.html</code> reports.</li>
+                        
+<li>line 30 - Location for auxiliary files generated during the test
+                        execution. Of particular note are the results files (<code>.jtr</code>)
+                        which contain information about the individual tests that were run.</li>
+                    
+</ul>
+                
+</ul>
+
+            
+</body>
+</html>

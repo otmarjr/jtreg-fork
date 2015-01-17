@@ -1,0 +1,73 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.1.
+                                My test only passes if I don't use jtreg to run it.
+            Why does it fail in jtreg?</title>
+</head>
+<body>
+<h1>5.1.
+                                My test only passes if I don't use jtreg to run it.
+            Why does it fail in jtreg?</h1>
+                
+<p>By default, tests run using <code>jtreg</code> are each run in a
+                separate JVM.  By design, only a limited number of shell
+                environment variables are passed down to the test's JVM.
+                This may affect how a test is run. </p>
+
+                
+<p>As per spec, the only shell environment variables that are
+                automatically propagated into the test's JVM are:</p>
+
+                
+<ul>
+                    
+<li>Linux and Solaris:
+                    <ul>
+                        
+<li>
+<code>PATH</code> is set to <code>/bin:/usr/bin</code>
+</li>
+                        
+<li>The following are propogated from the user's environment:
+                            <code>DISPLAY</code>,
+                            <code>HOME</code>
+                            <code>LANG</code>,
+                            <code>LC_ALL</code>,
+                            <code>LC_CTYPE</code>,
+                            <code>LPDEST</code>,
+                            <code>PRINTER</code>,
+                            <code>TZ</code> and
+                            <code>XMODIFIERS</code>
+                        
+</li>
+                    
+</ul>
+</li>
+
+                    
+<li>Windows:
+                    <ul>
+                        
+<li>
+<code>PATH</code> is set to the MKS or Cygwin toolkit binary directory</li>
+                        
+<li>The following are propogated from the user's environment:
+                            <code>SystemDrive</code>,
+                            <code>SystemRoot</code>
+                            <code>windir</code>
+                        
+</li>
+                    
+</ul>
+</li>
+                
+</ul>
+
+                
+<p>If your test needs to provide more environment variables or
+                to override any values, use the <code>-e</code> option.</p>
+            
+</body>
+</html>

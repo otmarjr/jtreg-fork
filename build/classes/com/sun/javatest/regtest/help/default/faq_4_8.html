@@ -1,0 +1,38 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>4.8.
+                                How do I specify any libraries I want to use in TestNG tests?
+            </title>
+</head>
+<body>
+<h1>4.8.
+                                How do I specify any libraries I want to use in TestNG tests?
+            </h1>
+                
+<p>Tests using "@run testng" can use @library and @build in
+                the standard way.
+                For any test in a group of TestNG tests, you can specify the
+                library by adding a line specifying the library in the
+                TEST.properties file in the package root directory for the group of
+                tests.
+                </p>
+                
+<pre>lib.dirs = path-to-library ...</pre>
+                
+<p>As with the @library tag, if the path begins with "/",
+                it will be evaluated relative to the test root directory;
+                otherwise, it will be evaluated relative to the directory
+                containing the TEST.properties file.
+                </p>
+                
+<p>For any particular group of TestNG tests, you can only
+                specify libraries for the entire group: you cannot specify one
+                library for some of the tests and another library for other tests.
+                This is because the all the source files in the group are
+                compiled together.
+                </p>
+            
+</body>
+</html>

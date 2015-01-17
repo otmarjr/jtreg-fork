@@ -1,0 +1,44 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>8.6.
+                                </title>
+</head>
+<body>
+<h1>8.6.
+                                <code>test results:no tests
+            selected</code>
+</h1>
+                
+<p>
+<b>More Symptoms</b>: At a terminal window, you get:</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        test results:no tests selected
+                        Report written to /home/iag/work/doc/JTreport/report.html
+                        Results written to /home/iag/work/doc/JTwork
+                    </pre>
+                
+</dd>
+</dl>
+
+                
+<p>
+<b>Answer</b>: No test descriptions were found by
+                <code>jtreg</code> in the file or directory specified.  If the
+                <code>-automatic</code> option to <code>jtreg</code> was provided,
+                then there were no tests which did not include the
+                <code>/manual</code> tag option.</p>
+
+                
+<p>Verify that the first tag of each test description is
+                <code>@test</code>.</p>
+            
+</body>
+</html>

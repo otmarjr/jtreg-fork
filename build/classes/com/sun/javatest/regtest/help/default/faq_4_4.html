@@ -1,0 +1,28 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>4.4.
+                                What is a "package root"?
+            </title>
+</head>
+<body>
+<h1>4.4.
+                                What is a "package root"?
+            </h1>
+                
+<p>"package root" refers the root of the package hierarchy in
+                 which a Java source is placed. It is the directory you would
+                 put on the javac source path if you wanted javac to compile
+                 the file explicitly.</p>
+                
+<p>Most jtreg tests are written in the "unnamed package"
+                 (i.e. without a package statement) and so for most jtreg tests,
+                 the directory directly containing the test is the package root
+                 for the test.  This is different from other test suites using
+                 other test harnesses (such as TestNG) in which all the tests
+                 of a test suite are placed in a single package hierarchy,
+                 often mirroring the package hierarchy of API being tested.</p>
+            
+</body>
+</html>

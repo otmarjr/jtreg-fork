@@ -1,0 +1,53 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>2.18.
+                                Exactly what does the
+             option mean?</title>
+</head>
+<body>
+<h1>2.18.
+                                Exactly what does the
+            <code>/manual</code> option mean?</h1>
+                
+<p>The <code>/manual</code> option indicates to the harness that this is a
+                manual test.  This allows the harness to distinguish manual from automatic
+                tests, which is important since the latter can be run without user interaction.</p>
+
+                
+<p>There are actually three kinds of applet manual tests: Self-contained tests,
+                <code>yesno</code> tests, and <code>done</code> tests.</p>
+
+                
+<p>A self-contained manual test handles all user interaction itself.  If the
+                test fails, whether this is determined by the user or by the applet, then the
+                applet must throw an exception.  Self-contained tests specify
+                <code>applet/manual</code> for the first <code>@run</code> argument.</p>
+
+                
+<p>A <code>yesno</code> test requests the harness to ask the user whether the test
+                passes or fails.  To do this, the harness will put up <code>pass</code> and
+                <code>fail</code> buttons, and it's up to the user to inspect the screen and
+                click one of the buttons.  The harness will take care of shutting down the applet.
+                The test will also fail if the applet throws an exception.  <code>Yesno</code>
+                tests specify <code>applet/manual=yesno</code> for the first <code>@run</code>
+                argument.</p>
+
+                
+<p>A <code>done</code> test requests the harness to put up a <code>done</code>
+                button.  After the user has completed whatever actions are required by the
+                test, the user clicks <code>done</code> and the harness shuts down the applet.
+                The program must itself determine whether the test is to pass or fail, and
+                throw an exception in the latter case.  <code>Done</code> tests specify
+                <code>applet/manual=done</code> for the first <code>@run</code> argument.</p>
+
+                
+<p>
+<code>main</code> and <code>shell</code> may also specify the
+                <code>manual</code> option using <code>main/manual</code> and
+                <code>shell/manual</code> respectively.  These tests must be completely
+                self-contained.</p>
+            
+</body>
+</html>

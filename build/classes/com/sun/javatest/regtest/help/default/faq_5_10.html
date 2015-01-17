@@ -1,0 +1,26 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.10.
+                                Can I use 
+            statements in my tests?</title>
+</head>
+<body>
+<h1>5.10.
+                                Can I use <code>package</code>
+            statements in my tests?</h1>
+                
+<p>Yes&hellip; but you probably don't want to.  The harness  searches for class
+                files in a class directory with components which are parallel to the source
+                directory.  It will be unable to locate packaged class files when the test is
+                invoked via reflection.  Use of the <code>package</code> statement is not
+                recommended unless the test is intended to test <code>package</code> statements.</p>
+
+                
+<p>Tests which test the package mechanism may use package statements; however,
+                it will be the responsibility of the test writer to properly execute the
+                compiled class as necessary.</p>
+            
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>2.2.
+                                What does the  tag mean?</title>
+</head>
+<body>
+<h1>2.2.
+                                What does the <code>@test</code> tag mean?</h1>
+                
+<p>The <code>@test</code> tag identifies a source file that defines a test.
+                the harness will automatically run any <code>.java</code>, <code>.sh</code>, and
+                <code>.html</code> file containing an <code>@test</code> tag within the
+                appropriate comment; it ignores any file not containing such a tag or not
+                utilizing one of the expected extensions.</p>
+
+                
+<p>If necessary the harness will compile the source file, if the class files are
+                older than the corresponding source files.  Other files which the test depends
+                on must be specified with the <code>@run build</code> action.</p>
+
+                
+<p>The arguments to the <code>@test</code> tag are ignored by the harness.  For
+                identification it may be useful to put information such as SCCS ID keywords after the <code>@test</code> tag.</p>
+
+                
+<p>While not part of the tag specification, some tests use the
+                string "<code>/nodynamiccopyright</code>" after <code>@test</code>
+                to indicate that that the file should not be subject to automated
+                copyright processing that might affect the operation of the test,
+                for example, by affecting the line numbers of the test source code.</p>
+            
+</body>
+</html>

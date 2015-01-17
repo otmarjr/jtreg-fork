@@ -1,0 +1,29 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.11.
+                                Why can't multiple test source
+            files in the same directory have package-private classes of the same
+            name?</title>
+</head>
+<body>
+<h1>5.11.
+                                Why can't multiple test source
+            files in the same directory have package-private classes of the same
+            name?</h1>
+                
+<p>In the Java language, package private classes defined in different files
+                in the same directory are interpreted as duplicate class definitions.  The
+                contents of the class files depends on the order of compilation.  To avoid
+                compilation order dependency problems, we recommend that you define auxiliary
+                classes as inner classes.</p>
+
+                
+<p>For performance reasons, the harness does not automatically remove class files
+                between individual tests or build each test within its own unique subdirectory.
+                This allows us to cache class files across test runs and share code between tests
+                in the same directory.</p>
+            
+</body>
+</html>

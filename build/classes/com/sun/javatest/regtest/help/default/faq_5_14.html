@@ -1,0 +1,74 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.14.
+                                My test does tricky things that are
+            not supported by . Can I still write a regression
+            test?</title>
+</head>
+<body>
+<h1>5.14.
+                                My test does tricky things that are
+            not supported by <code>jtreg</code>. Can I still write a regression
+            test?</h1>
+                
+<p>Yes.  Most tests can be written using a series of <code>main</code>,
+                <code>clean</code>, <code>build</code>, <code>applet</code>, and
+                <code>compile</code> actions.  However, there have been a few tests that need
+                to do things like run a specific application or access specific environment
+                variables.  The <code>shell</code> action allows a user to invoke a Bourne
+                shell-script which can run arbitrary commands, including running
+                <code>java</code> and <code>javac</code>.</p>
+
+                
+<p>
+<b>Warning!</b> All tests, including shell-script tests, may be run on
+                multiple platforms including Linux, Solaris, Windows and Mac OS X. The
+                shell-script should be written to with this in mind.  The following code
+                fragment may be useful in defining various platform-dependent variables.</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        OS=`uname -s`
+                        case "$OS" in
+                            SunOS | Linux | *BSD | Darwin )
+                                NULL=/dev/null
+                                PATHSEP=":"
+                                FILESEP="/"
+                                TMP=/tmp
+                                ;;
+                            CYGWIN* )
+                                NULL=/dev/null
+                                PATHSEP=";"
+                                FILESEP="/"
+                                TMP=/tmp
+                                ;;
+                            Windows* )
+                                NULL=NUL
+                                PATHSEP=";"
+                                FILESEP="\\"
+                                TMP=$TEMP
+                                ;;
+                            * )
+                                echo "Unrecognized system!"
+                                exit 1;
+                                ;;
+                        esac
+                    </pre>
+                
+</dd>
+</dl>
+
+                
+<p>If the <code>shell</code> action still does not provide the flexibility
+                needed to write the regression test, then use the <code>ignore</code> action.
+                It is also advisable to include a comment with sufficient detail to allow a
+                person to run the test and verify its behavior.</p>
+            
+</body>
+</html>

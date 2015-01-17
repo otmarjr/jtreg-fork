@@ -1,0 +1,195 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>3.2.
+                                Bleah! That verbose output is so
+            long!  Can I have something shorter?</title>
+</head>
+<body>
+<h1>3.2.
+                                Bleah! That verbose output is so
+            long!  Can I have something shorter?</h1>
+                
+<p>Yes. Several different options provided with <code>jtreg</code>
+                influence the output per test.  Here are a few verbose settings in order of
+                decreasing average output per test.</p>
+
+                
+<ul>
+                    
+<li>
+<a href="#V.0"><code>-verbose:fail</code></a> (and related
+                    <code>-verbose:pass</code>, <code>-verbose:error</code>, and
+                    <code>-verbose:all</code>)</li>
+                    
+<li>
+<a href="#V.1"><code>-verbose</code></a>
+</li>
+                    
+<li>
+<a href="#V.2"><code>-verbose:summary</code></a>
+</li>
+                    
+<li>
+<a href="#V.3">no verbose option</a>
+</li>
+                
+</ul>
+
+                
+<p>The following samples of output correspond to each of the above settings.
+                Each sample is run with three tests: <code>Pass.java</code>,
+                <code>Fail.java</code>, and <code>Error.java</code> .  Note that in
+                some cases, the output varies substantially depending on whether the test
+                passed or failed.</p>
+
+                
+<p>
+<a name="V.0"><b><code>-verbose:fail</code></b></a> - Full output for failed
+                tests only.  Two lines for tests that passed or produced errors (related
+                options: <code>-verbose:pass</code>, <code>-verbose:fail</code>, and
+                <code>-verbose:all</code>).</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        ribbit$ jtreg -verbose:fail Pass.java Fail.java Error.java
+                        --------------------------------------------------
+                        TEST: Pass.java
+                        TEST RESULT: Passed. Execution successful
+                        --------------------------------------------------
+                        TEST: Fail.java
+                        JDK under test: (/usr/local/java/jdk1.4/solsparc)
+                        java version "1.4.0-beta"
+                        Java(TM) 2 Runtime Environment, Standard Edition (build 1.4.0-beta-b56)
+                        Java HotSpot(TM) Client VM (build 1.4-beta-B56, mixed mode)
+
+                        ACTION: build -- Passed. Compilation successful
+                        REASON: Named class compiled on demand
+                        TIME:   3.649 seconds
+
+                        ACTION: compile -- Passed. Compilation successful
+                        REASON: .class file out of date or does not exist
+                        TIME:   3.637 seconds
+                        STDOUT:
+                        STDERR:
+
+                        ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.Exception: Fail
+                        REASON: Assumed action based on file name: run main Fail
+                        TIME:   1.219 seconds
+                        STDOUT:
+                        STDERR:
+                        java.lang.Exception: I failed
+                         at Fail.main(Fail.java:5)
+                         at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                         at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:30)
+                         at sun.reflect.InflatableMethodAccessorImpl.invoke(InflatableMethodAccessorImpl.java:46)
+                         at java.lang.reflect.Method.invoke(Method.java:306)
+                         at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+                         at java.lang.Thread.run(Thread.java:579)
+
+                        JavaTest Message: Test threw exception: java.lang.Exception: I failed
+                        JavaTest Message: shutting down test
+
+                        STATUS:Failed.`main' threw exception: java.lang.Exception: I failed
+
+                        TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.Exception: I failed
+                        --------------------------------------------------
+                        TEST: Error.java
+                        TEST RESULT: Error. Parse Exception: Unexpected length for bugid: 31415926,
+                        --------------------------------------------------
+                        test results: passed: 1; failed: 1; error: 1
+                        Report written to /u/iag/jtw/JTreport/report.html
+                        Results written to /u/iag/jtw/JTwork
+                        Error: some tests failed or other problems occurred
+                    </pre>
+                
+</dd>
+</dl>
+
+                
+<p>
+<a name="V.1"><b><code>-verbose</code></b></a> - This option produces three
+                lines of output per test: start, end, final status.</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        ribbit$ jtreg -verbose Pass.java Fail.java Error.java
+                        runner starting test: Pass.java
+                        runner finished test: Pass.java
+                        Passed. Execution successful
+                        runner starting test: Fail.java
+                        runner finished test: Fail.java
+                        Failed. Execution failed: `main' threw exception: java.lang.Exception: I failed
+                        runner starting test: Error.java
+                        runner finished test: Error.java
+                        Error. Parse Exception: Unexpected length for bugid: 31415926,
+                        test results: passed: 1; failed: 1; error: 1
+                        Report written to /u/iag/jtw/JTreport/report.html
+                        Results written to /u/iag/jtw/JTwork
+                        Error: some tests failed or other problems occurred
+                    </pre>
+                
+</dd>
+</dl>
+
+                
+<p>
+<a name="V.2"><b><code>-verbose:summary</code></b></a> - A single line of
+                output per test: final status and name of file.</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        ribbit$ jtreg -verbose:summary Pass.java Fail.java Error.java
+                        Passed: Pass.java
+                        FAILED: Fail.java
+                        Error:  Error.java
+                        test results: passed: 1; failed: 1; error: 1
+                        Report written to /u/iag/jtw/JTreport/report.html
+                        Results written to /u/iag/jtw/JTwork
+                        Error: some tests failed or other problems occurred
+                    </pre>
+                
+</dd>
+</dl>
+
+                
+<p>
+<a name="V.3"><b>No verbose option</b></a> provides only general summary
+                information about all the tests run.</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        ribbit$ jtreg Pass.java Fail.java Error.java
+                        test results: passed: 1; failed: 1; error: 1
+                        Report written to /u/iag/jtw/JTreport/report.html
+                        Results written to /u/iag/jtw/JTwork
+                        Error: some tests failed or other problems occurred
+                    </pre>
+                
+</dd>
+</dl>
+
+                
+<p>If there is information that you find lacking in all of these options,
+                please contact the developer to determine if it is possible to make it
+                available.</p>
+            
+</body>
+</html>

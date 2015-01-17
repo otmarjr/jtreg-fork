@@ -1,0 +1,38 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>8.3.
+                                </title>
+</head>
+<body>
+<h1>8.3.
+                                <code>Error. Parse Exception: No
+            class provided for `main'</code>
+</h1>
+                
+<p>
+<b>Answer</b>: An <code>@run main</code> tag was provided
+                without the required class name.  Either provide the name of the class
+                or remove the line entirely if appropriate.</p>
+
+                
+<p>The line may be removed without impacting the test if all of the following
+                criteria are met:</p>
+                
+<ul>
+                    
+<li>The file containing the test description has the <code>.java</code>
+                    extension.</li>
+                    
+<li>This is the only <code>@run</code> tag in the test description.</li>
+                    
+<li>No options to <code>main</code> are required</li>
+                
+</ul>
+                
+<p>In removing the line, we take advantage of the default action for
+                <code>.java</code> files.</p>
+            
+</body>
+</html>

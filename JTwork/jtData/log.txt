@@ -1,0 +1,293 @@
+[13jan2015 10:13BRST]  Starting test run
+[13jan2015 10:13BRST]  Completed test run: ok
+[13jan2015 10:22BRST]  Starting test run
+[13jan2015 10:22BRST]  Completed test run: ok
+[13jan2015 10:49BRST]  Starting test run
+[13jan2015 10:49BRST]  Completed test run: ok
+[13jan2015 10:55BRST]  Starting test run
+[13jan2015 10:55BRST]  Completed test run: ok
+[13jan2015 10:58BRST]  Starting test run
+[13jan2015 10:58BRST]  Completed test run: ok
+[13jan2015 11:10BRST]  Starting test run
+[13jan2015 11:10BRST]  Completed test run: ok
+[13jan2015 11:12BRST]  Starting test run
+[13jan2015 11:12BRST]  Completed test run: not ok
+[13jan2015 11:19BRST]  Starting test run
+[13jan2015 11:19BRST]  Completed test run: ok
+[13jan2015 11:39BRST]  Starting test run
+[13jan2015 11:39BRST]  Completed test run: not ok
+[13jan2015 11:43BRST]  Starting test run
+[13jan2015 11:43BRST]  Completed test run: ok
+[13jan2015 12:01BRST]  Starting test run
+[13jan2015 12:02BRST]  Completed test run: not ok
+[13jan2015 12:07BRST]  Starting test run
+[13jan2015 12:07BRST]  Completed test run: ok
+[13jan2015 12:24BRST]  Starting test run
+[13jan2015 12:24BRST]  Completed test run: ok
+[13jan2015 12:25BRST]  Starting test run
+[13jan2015 12:25BRST]  Completed test run: ok
+[13jan2015 12:25BRST]  Starting test run
+[13jan2015 12:25BRST]  Completed test run: ok
+[13jan2015 12:31BRST]  Starting test run
+[13jan2015 12:31BRST]  Completed test run: ok
+[13jan2015 12:58BRST]  Starting test run
+[13jan2015 12:58BRST]  Completed test run: ok
+[13jan2015 12:58BRST]  Starting test run
+[13jan2015 12:58BRST]  Completed test run: ok
+[13jan2015 15:55BRST]  Starting test run
+[13jan2015 15:55BRST]  Completed test run: ok
+[13jan2015 15:56BRST]  Starting test run
+[13jan2015 15:56BRST]  Completed test run: ok
+[13jan2015 15:58BRST]  Starting test run
+[13jan2015 15:58BRST]  Completed test run: ok
+[13jan2015 16:01BRST]  Starting test run
+[13jan2015 16:01BRST]  Completed test run: ok
+[13jan2015 16:03BRST]  Starting test run
+[13jan2015 16:03BRST]  Completed test run: not ok
+[13jan2015 16:11BRST]  Starting test run
+[13jan2015 16:11BRST]  Completed test run: not ok
+[13jan2015 16:18BRST]  Starting test run
+[13jan2015 16:18BRST]  Completed test run: not ok
+[13jan2015 18:23BRST]  Starting test run
+[13jan2015 18:23BRST]  Completed test run: ok
+[13jan2015 19:08BRST]  Starting test run
+[13jan2015 19:08BRST]  Completed test run: ok
+[13jan2015 19:09BRST]  Starting test run
+[13jan2015 19:09BRST]  Completed test run: ok
+[13jan2015 19:09BRST]  Starting test run
+[13jan2015 19:09BRST]  Completed test run: ok
+[13jan2015 19:10BRST]  Starting test run
+[13jan2015 19:10BRST]  Completed test run: ok
+[13jan2015 19:12BRST]  Starting test run
+[13jan2015 19:12BRST]  Completed test run: ok
+[13jan2015 19:13BRST]  Starting test run
+[13jan2015 19:13BRST]  Completed test run: ok
+[13jan2015 19:14BRST]  Starting test run
+[13jan2015 19:14BRST]  Completed test run: ok
+[13jan2015 19:16BRST]  Starting test run
+[13jan2015 19:16BRST]  Completed test run: ok
+[13jan2015 19:20BRST]  Starting test run
+[13jan2015 19:20BRST]  Completed test run: ok
+[13jan2015 19:22BRST]  Starting test run
+[13jan2015 19:22BRST]  Completed test run: ok
+[13jan2015 19:22BRST]  Starting test run
+[13jan2015 19:22BRST]  Completed test run: ok
+[13jan2015 19:23BRST]  Starting test run
+[13jan2015 19:23BRST]  Completed test run: ok
+[13jan2015 19:24BRST]  Starting test run
+[13jan2015 19:24BRST]  Completed test run: ok
+[13jan2015 19:25BRST]  Starting test run
+[13jan2015 19:25BRST]  Completed test run: ok
+[13jan2015 19:26BRST]  Starting test run
+[13jan2015 19:26BRST]  Completed test run: ok
+[13jan2015 19:26BRST]  Starting test run
+[13jan2015 19:26BRST]  Completed test run: ok
+[13jan2015 19:27BRST]  Starting test run
+[13jan2015 19:27BRST]  Completed test run: ok
+[13jan2015 19:28BRST]  Starting test run
+[13jan2015 19:28BRST]  Completed test run: ok
+[13jan2015 19:29BRST]  Starting test run
+[13jan2015 19:29BRST]  Completed test run: ok
+[13jan2015 19:31BRST]  Starting test run
+[13jan2015 19:31BRST]  Completed test run: ok
+[13jan2015 19:31BRST]  Starting test run
+[13jan2015 19:31BRST]  Completed test run: ok
+[13jan2015 22:27BRST]  Starting test run
+[13jan2015 22:27BRST]  Completed test run: ok
+[13jan2015 22:36BRST]  Starting test run
+[13jan2015 22:36BRST]  Completed test run: ok
+[13jan2015 22:37BRST]  Starting test run
+[13jan2015 22:37BRST]  Completed test run: ok
+[13jan2015 22:38BRST]  Starting test run
+[13jan2015 22:38BRST]  Completed test run: ok
+[15jan2015 12:15BRST]  Starting test run
+[15jan2015 12:15BRST]  Completed test run: ok
+[15jan2015 12:22BRST]  Starting test run
+[15jan2015 12:22BRST]  Completed test run: ok
+[15jan2015 12:25BRST]  Starting test run
+[15jan2015 12:25BRST]  Completed test run: ok
+[15jan2015 13:23BRST]  Starting test run
+[15jan2015 13:23BRST]  Completed test run: ok
+[15jan2015 13:30BRST]  Starting test run
+[15jan2015 13:30BRST]  Completed test run: ok
+[15jan2015 13:31BRST]  Starting test run
+[15jan2015 13:31BRST]  Completed test run: ok
+[15jan2015 13:31BRST]  Starting test run
+[15jan2015 13:31BRST]  Completed test run: ok
+[15jan2015 15:48BRST]  Starting test run
+[15jan2015 15:48BRST]  Completed test run: ok
+[15jan2015 16:01BRST]  Starting test run
+[15jan2015 16:01BRST]  Completed test run: ok
+[15jan2015 22:10BRST]  Starting test run
+[15jan2015 22:10BRST]  Completed test run: ok
+[15jan2015 22:14BRST]  Starting test run
+[15jan2015 22:14BRST]  Completed test run: ok
+[15jan2015 22:19BRST]  Starting test run
+[15jan2015 22:19BRST]  Completed test run: ok
+[15jan2015 22:38BRST]  Starting test run
+[15jan2015 22:38BRST]  Completed test run: ok
+[15jan2015 22:39BRST]  Starting test run
+[15jan2015 22:39BRST]  Completed test run: ok
+[15jan2015 22:53BRST]  Starting test run
+[15jan2015 22:53BRST]  Completed test run: ok
+[15jan2015 23:37BRST]  Starting test run
+[15jan2015 23:37BRST]  Completed test run: ok
+[15jan2015 23:38BRST]  Starting test run
+[15jan2015 23:38BRST]  Completed test run: ok
+[15jan2015 23:43BRST]  Starting test run
+[15jan2015 23:43BRST]  Completed test run: ok
+[15jan2015 23:44BRST]  Starting test run
+[15jan2015 23:44BRST]  Completed test run: ok
+[15jan2015 23:46BRST]  Starting test run
+[15jan2015 23:46BRST]  Completed test run: ok
+[15jan2015 23:48BRST]  Starting test run
+[15jan2015 23:48BRST]  Completed test run: ok
+[15jan2015 23:49BRST]  Starting test run
+[15jan2015 23:49BRST]  Completed test run: ok
+[15jan2015 23:49BRST]  Starting test run
+[15jan2015 23:49BRST]  Completed test run: ok
+[15jan2015 23:50BRST]  Starting test run
+[15jan2015 23:50BRST]  Completed test run: ok
+[15jan2015 23:53BRST]  Starting test run
+[15jan2015 23:53BRST]  Completed test run: ok
+[15jan2015 23:57BRST]  Starting test run
+[15jan2015 23:57BRST]  Completed test run: ok
+[16jan2015 24:22BRST]  Starting test run
+[16jan2015 24:22BRST]  Completed test run: ok
+[16jan2015 24:26BRST]  Starting test run
+[16jan2015 24:26BRST]  Completed test run: ok
+[16jan2015 24:29BRST]  Starting test run
+[16jan2015 24:29BRST]  Completed test run: ok
+[16jan2015 24:30BRST]  Starting test run
+[16jan2015 24:30BRST]  Completed test run: ok
+[16jan2015 24:31BRST]  Starting test run
+[16jan2015 24:31BRST]  Completed test run: ok
+[16jan2015 24:36BRST]  Starting test run
+[16jan2015 24:36BRST]  Completed test run: ok
+[16jan2015 24:37BRST]  Starting test run
+[16jan2015 24:37BRST]  Completed test run: ok
+[16jan2015 24:38BRST]  Starting test run
+[16jan2015 24:38BRST]  Completed test run: ok
+[16jan2015 24:39BRST]  Starting test run
+[16jan2015 24:39BRST]  Completed test run: ok
+[16jan2015 24:42BRST]  Starting test run
+[16jan2015 24:42BRST]  Completed test run: ok
+[16jan2015 24:47BRST]  Starting test run
+[16jan2015 24:47BRST]  Completed test run: ok
+[16jan2015 10:14BRST]  Starting test run
+[16jan2015 10:14BRST]  Completed test run: ok
+[16jan2015 10:18BRST]  Starting test run
+[16jan2015 10:18BRST]  Completed test run: ok
+[16jan2015 10:19BRST]  Starting test run
+[16jan2015 10:19BRST]  Completed test run: ok
+[16jan2015 10:21BRST]  Starting test run
+[16jan2015 10:21BRST]  Completed test run: ok
+[16jan2015 10:25BRST]  Starting test run
+[16jan2015 10:25BRST]  Completed test run: ok
+[16jan2015 11:04BRST]  Starting test run
+[16jan2015 11:04BRST]  Completed test run: ok
+[16jan2015 11:05BRST]  Starting test run
+[16jan2015 11:05BRST]  Completed test run: ok
+[16jan2015 11:08BRST]  Starting test run
+[16jan2015 11:08BRST]  Completed test run: ok
+[16jan2015 11:12BRST]  Starting test run
+[16jan2015 11:12BRST]  Completed test run: ok
+[16jan2015 11:19BRST]  Starting test run
+[16jan2015 11:19BRST]  Completed test run: ok
+[16jan2015 11:19BRST]  Starting test run
+[16jan2015 11:20BRST]  Completed test run: ok
+[16jan2015 13:21BRST]  Starting test run
+[16jan2015 13:21BRST]  Completed test run: ok
+[16jan2015 13:46BRST]  Starting test run
+[16jan2015 13:46BRST]  Completed test run: ok
+[16jan2015 14:49BRST]  Error reading test result cache (java.lang.NullPointerException)
+java.lang.NullPointerException
+	at br.pucminas.icei.MUTETracer.ajc$afterReturning$br_pucminas_icei_MUTETracer$5$af6a9b8a(MUTETracer.aj:190)
+	at com.sun.javatest.TestResultCache.readCacheEntries(TestResultCache.java:635)
+	at com.sun.javatest.TestResultCache.readCache(TestResultCache.java:579)
+	at com.sun.javatest.TestResultCache.doWork(TestResultCache.java:319)
+	at com.sun.javatest.TestResultCache.doWorkUntilDone(TestResultCache.java:236)
+	at com.sun.javatest.TestResultCache.access$000(TestResultCache.java:48)
+	at com.sun.javatest.TestResultCache$1.run(TestResultCache.java:140)
+[16jan2015 14:49BRST]  Starting test run
+[16jan2015 14:49BRST]  Completed test run: ok
+[16jan2015 14:54BRST]  Starting test run
+[16jan2015 14:54BRST]  Completed test run: ok
+[16jan2015 14:56BRST]  Starting test run
+[16jan2015 14:56BRST]  Completed test run: ok
+[16jan2015 15:05BRST]  Starting test run
+[16jan2015 15:05BRST]  Completed test run: ok
+[16jan2015 15:12BRST]  Starting test run
+[16jan2015 15:12BRST]  Completed test run: ok
+[16jan2015 15:26BRST]  Starting test run
+[16jan2015 15:26BRST]  Completed test run: ok
+[16jan2015 15:31BRST]  Starting test run
+[16jan2015 15:31BRST]  Completed test run: ok
+[16jan2015 15:40BRST]  Starting test run
+[16jan2015 15:40BRST]  Completed test run: ok
+[16jan2015 15:46BRST]  Starting test run
+[16jan2015 15:46BRST]  Completed test run: ok
+[16jan2015 15:58BRST]  Starting test run
+[16jan2015 15:58BRST]  Completed test run: ok
+[16jan2015 16:08BRST]  Starting test run
+[16jan2015 16:08BRST]  Completed test run: ok
+[16jan2015 16:25BRST]  Starting test run
+[16jan2015 16:25BRST]  Completed test run: ok
+[16jan2015 18:20BRST]  Starting test run
+[16jan2015 18:20BRST]  Completed test run: ok
+[16jan2015 18:23BRST]  Starting test run
+[16jan2015 18:41BRST]  Completed test run: ok
+[16jan2015 18:42BRST]  Starting test run
+[16jan2015 18:42BRST]  Completed test run: ok
+[16jan2015 18:43BRST]  Starting test run
+[16jan2015 18:43BRST]  Completed test run: ok
+[16jan2015 18:43BRST]  Starting test run
+[16jan2015 18:44BRST]  Completed test run: ok
+[16jan2015 18:44BRST]  Starting test run
+[16jan2015 18:44BRST]  Completed test run: ok
+[16jan2015 19:05BRST]  Starting test run
+[16jan2015 19:06BRST]  Unexpected exception caught from test java/net/DatagramSocket/B6411513.java: java.lang.UnsupportedOperationException
+[16jan2015 19:06BRST]  Completed test run: not ok
+[16jan2015 19:08BRST]  Starting test run
+[16jan2015 19:12BRST]  Starting test run
+[16jan2015 19:12BRST]  Completed test run: ok
+[16jan2015 19:13BRST]  Starting test run
+[16jan2015 19:17BRST]  Completed test run: ok
+[16jan2015 19:19BRST]  Starting test run
+[16jan2015 19:22BRST]  Completed test run: ok
+[16jan2015 19:23BRST]  Starting test run
+[16jan2015 19:25BRST]  Starting test run
+[16jan2015 19:43BRST]  Starting test run
+[16jan2015 20:06BRST]  Starting test run
+[16jan2015 20:06BRST]  Completed test run: ok
+[16jan2015 20:12BRST]  Starting test run
+[16jan2015 20:17BRST]  Starting test run
+[16jan2015 20:17BRST]  Completed test run: ok
+[16jan2015 20:26BRST]  Starting test run
+[16jan2015 20:26BRST]  Completed test run: ok
+[16jan2015 20:29BRST]  Starting test run
+[16jan2015 20:29BRST]  Completed test run: ok
+[17jan2015 11:37BRST]  Starting test run
+[17jan2015 11:37BRST]  Completed test run: ok
+[17jan2015 11:37BRST]  Starting test run
+[17jan2015 11:37BRST]  Completed test run: ok
+[17jan2015 13:21BRST]  Starting test run
+[17jan2015 13:22BRST]  Starting test run
+[17jan2015 13:25BRST]  Starting test run
+[17jan2015 13:36BRST]  Starting test run
+[17jan2015 13:38BRST]  Starting test run
+[17jan2015 13:39BRST]  Completed test run: ok
+[17jan2015 13:41BRST]  Starting test run
+[17jan2015 13:56BRST]  Starting test run
+[17jan2015 14:12BRST]  Starting test run
+[17jan2015 14:14BRST]  Completed test run: ok
+[17jan2015 14:25BRST]  Starting test run
+[17jan2015 14:25BRST]  Completed test run: ok
+[17jan2015 14:33BRST]  Starting test run
+[17jan2015 14:34BRST]  Starting test run
+[17jan2015 14:44BRST]  Starting test run
+[17jan2015 14:46BRST]  Starting test run
+[17jan2015 14:47BRST]  Starting test run
+[17jan2015 14:48BRST]  Completed test run: not ok
+[17jan2015 14:52BRST]  Starting test run
+[17jan2015 14:52BRST]  Completed test run: not ok

@@ -1,0 +1,28 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>7.3.
+                                My  action test
+            didn't run my  method!</title>
+</head>
+<body>
+<h1>7.3.
+                                My <code>applet</code> action test
+            didn't run my <code>main</code> method!</h1>
+                
+<p>
+<code>applet</code> action tests do not call <code>main</code>. A test
+                which uses the <code>applet</code> action is run by invoking its
+                <code>init</code>, <code>start</code>, and <code>setVisible(true)</code>
+                methods. Depending on the value of <code>manual</code>, the harness will pause
+                either for a few seconds or until the user clicks on the <code>pass</code>,
+                <code>fail</code>, or <code>done</code> buttons. Finally, the harness will invoke
+                the <code>stop</code> and <code>destroy</code> methods.</p>
+
+                
+<p>The <code>main</code> method of an <code>applet</code> action will only be
+                used if the test was run outside of the harness.</p>
+            
+</body>
+</html>

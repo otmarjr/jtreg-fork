@@ -1,0 +1,21 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.16.
+                                If my bug hasn't been fixed, and
+            the test is run, the JVM crashes.  How do I make sure that the test doesn't
+            cause the harness to crash?</title>
+</head>
+<body>
+<h1>5.16.
+                                If my bug hasn't been fixed, and
+            the test is run, the JVM crashes.  How do I make sure that the test doesn't
+            cause the harness to crash?</h1>
+                
+<p>If the symptom of a bug is a JVM crash, then the test's description
+                should include the <code>othervm</code> option. This will allow the harness to
+                continue running any subsequent tests, write its reports, and exit normally.</p>
+            
+</body>
+</html>

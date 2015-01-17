@@ -1,0 +1,144 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>7.1.
+                                My  test sends
+            events to  so that the user can determine
+            whether the test behaved properly.  How do I write my test if I can't see these
+            output streams?</title>
+</head>
+<body>
+<h1>7.1.
+                                My <code>/manual</code> test sends
+            events to <code>System.out/System.err</code> so that the user can determine
+            whether the test behaved properly.  How do I write my test if I can't see these
+            output streams?</h1>
+                
+<p>The test code should be written to determine whether a test has passed or
+                failed based on events generated during a given time-frame. Use the
+                <code>/manual=done</code> option of the <code>applet</code> action to set the
+                time frame.  If the user has not generated the expected event before the
+                <code>done</code> button has been pressed, the test should detect this in the
+                <code>destroy</code> method and throw an exception.</p>
+
+                
+<p>While this approach takes potentially more time to implement, it avoids user
+                error which may occur in checking the event.  This scheme also avoids string
+                comparison of events. (A much safer way to determine whether the expected event
+                has been received is to check the event type, coordinates, modifiers, etc.)</p>
+
+                
+<p>
+<b>Warning!</b> The AWT event thread does not propagate exceptions!  It is
+                recommended that all exceptions indicating failure of the test be thrown from
+                one of the methods called by the harness.  (i.e. <code>init()</code>,
+                <code>start()</code>, <code>stop()</code>, <code>destroy()</code>)</p>
+
+                
+<p>The following simple <code>applet</code> test illustrates the recommended
+                behavior.</p>
+
+                
+<p>Basic <code>.html</code> test description file.</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        &lt;html&gt;
+                            &lt;body&gt;
+
+                                &lt;!--
+                                    @test
+                                    @bug 2997924
+                                    @summary Sample test that verifies an event
+                                    @run applet/manual=done SampleTest.html
+                                --&gt;
+
+                                &lt;applet code=SampleTest width=200 height=50&gt;&lt;/applet&gt;
+
+                                Select the "pick me" check box.
+
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </pre>
+                
+</dd>
+</dl>
+
+                
+<p>The sample test code.</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        import java.applet.Applet;
+                        import java.awt.Checkbox;
+                        import java.awt.FlowLayout;
+                        import java.awt.Panel;
+                        import java.awt.event.ItemEvent;
+                        import java.awt.event.ItemListener;
+
+                        // WARNING! The AWT event thread does not propagate exceptions!
+                        // It is recommended that all exceptions indicating failure
+                        // of the test be thrown from one of the methods called by the harness.
+                        // (i.e. init(), start(), stop(), destroy())
+
+                        public class SampleTest extends Applet {
+                            public void init() {
+                                setLayout(new FlowLayout());
+                                add(new TestPanel(this));
+                            }
+
+                            public void destroy() {
+                                if (myEvent == null)
+                                    throw new RuntimeException("no events");
+                                else {
+                                    Checkbox cb = (Checkbox)(myEvent.getItemSelectable());
+                                    if (!(cb.getLabel().equals("pick me!") &amp;&amp; cb.getState()))
+                                        throw new RuntimeException("unexpected last event");
+                                }
+                            }
+
+                            class TestPanel extends Panel {
+                                Checkbox pickMe, notMe;
+                                Listener listener = new Listener();
+                                Applet applet;
+
+                                public TestPanel(Applet myApplet) {
+                                    applet = myApplet;
+                                    pickMe = new Checkbox("pick me!");
+                                    notMe  = new Checkbox("not me");
+
+                                    pickMe.addItemListener(listener);
+                                    notMe.addItemListener(listener);
+
+                                    add(pickMe);
+                                    add(notMe);
+                                }
+
+                                class Listener implements ItemListener {
+                                    // Don't throw an exception here.  The awt event thread
+                                    // will NOT propagate your exception!
+                                    public void itemStateChanged(ItemEvent event) {
+                                        System.out.println("event: " + event);
+                                        myEvent = event;
+                                    }
+                                }
+                            }
+
+                            private ItemEvent myEvent;
+                        }
+                    </pre>
+                
+</dd>
+</dl>
+            
+</body>
+</html>

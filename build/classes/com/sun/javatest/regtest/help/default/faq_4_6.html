@@ -1,0 +1,38 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>4.6.
+                                How do I identify a group of TestNG tests in their own directory?
+            </title>
+</head>
+<body>
+<h1>4.6.
+                                How do I identify a group of TestNG tests in their own directory?
+            </h1>
+                
+<p>Add a line specifying the directory to TEST.ROOT</p>
+                
+<pre>TestNG.dirs = dir1 dir2 dir3 ...</pre>
+                
+<p>Include the package root directory for each group of TestNG
+                tests, and specify the package root directory relative to the test
+                root directory.
+                </p>
+                
+<p>You can also override the value in TEST.ROOT by using the
+                TEST.properties file in any subdirectory of the test root directory
+                that contains the package root.
+                If you put the declaration in a TEST.properties file, you can
+                specify the path relative to the directory containing the
+                TEST.properties file.
+                In particular, instead of declaring the directory in TEST.ROOT,
+                you could place the declaration in a TEST.properties file in the
+                package root directory for the group of tests, in which case
+                the declaration would be simply:
+                </p>
+                
+<pre>TestNG.dirs = .</pre>
+            
+</body>
+</html>

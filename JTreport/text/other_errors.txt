@@ -1,0 +1,2 @@
+# other_errors.txt
+java/net/DatagramSocket/B6411513.java 

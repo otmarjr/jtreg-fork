@@ -1,0 +1,25 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>7.2.
+                                I threw an exception, the output
+            was sent to , but my test still passed.  What
+            happened?</title>
+</head>
+<body>
+<h1>7.2.
+                                I threw an exception, the output
+            was sent to <code>System.err</code>, but my test still passed.  What
+            happened?</h1>
+                
+<p>Verify that the exception was not thrown by the event thread.  The event
+                thread does not propagate exceptions.  Furthermore, the event thread is in a
+                separate thread group and the harness cannot catch exceptions thrown from there.
+                It is <em>strongly</em> recommended that all exceptions indicating failure of
+                the test be thrown from one of the methods called by the harness.
+                (i.e. <code>init()</code>, <code>start()</code>, <code>stop()</code>,
+                <code>destroy()</code>)</p>
+            
+</body>
+</html>

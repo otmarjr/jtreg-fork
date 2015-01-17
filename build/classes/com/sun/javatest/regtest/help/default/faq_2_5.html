@@ -1,0 +1,37 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>2.5.
+                                If a test fails, do I have to throw
+            my own exception?</title>
+</head>
+<body>
+<h1>2.5.
+                                If a test fails, do I have to throw
+            my own exception?</h1>
+                
+<p>No.  In cases like the above example in which you must check a condition
+                in order to decide whether the test is to pass or fail, you have no choice but
+                to construct an exception.  <code>RuntimeException</code> is a convenient
+                choice since it's unchecked, so you don't have to sprinkle your code with
+                throws clauses.</p>
+
+                
+<p>On the other hand, if the test would naturally cause an exception to be
+                thrown when it fails, it suffices to let that exception be propagated up
+                through the main method.  If the exception you expect to be thrown in the
+                failure case is a checked exception, then you'll need to provide the
+                appropriate throws clauses in your code.</p>
+
+                
+<p>In general, the advantage of throwing your own exception is that often you
+                can provide better diagnostics.</p>
+
+                
+<p>It is <em>strongly</em> recommended that you not catch general exceptions
+                such as <code>Throwable</code>, <code>Exception</code>, or <code>Error</code>.
+                Doing so can be potentially <a href="#question4.11">problematic</a>.</p>
+            
+</body>
+</html>

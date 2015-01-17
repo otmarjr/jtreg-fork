@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN" "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+<tocitem image="openbook" target="home" text="Introduction"/>
+<tocitem image="openbook" target="spec" text="Tag Language Specification"/>
+<tocitem image="openbook" target="faq" text="Frequently Asked Questions">
+<tocitem image="chapter" target="faq_1" text="1 Overview"/>
+<tocitem image="chapter" target="faq_2" text="2 Writing a JDK Regression Test"/>
+<tocitem image="chapter" target="faq_3" text="3 Getting Started"/>
+<tocitem image="chapter" target="faq_4" text="4 TestNG tests"/>
+<tocitem image="chapter" target="faq_5" text="5 General Problems"/>
+<tocitem image="chapter" target="faq_6" text="6 Tag Problems"/>
+<tocitem image="chapter" target="faq_7" text="7 Applet Problems"/>
+<tocitem image="chapter" target="faq_8" text="8 Deciphering Common Harness Errors"/>
+</tocitem>
+<tocitem image="openbook" target="usage" text="Command Line Usage"/>
+<tocitem image="openbook" target="ant" text="Using jtreg with Ant"/>
+</toc>

@@ -1,0 +1,44 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.12.
+                                Should a test catch
+            , , or
+            ?</title>
+</head>
+<body>
+<h1>5.12.
+                                Should a test catch
+            <code>Throwable</code>, <code>Exception</code>, or
+            <code>Error</code>?</h1>
+                
+<p>Ideally, only specific, anticipated exceptions should be caught by a
+                test.  Any other exception which is provoked during testing should be
+                propagated back to the harness.</p>
+
+                
+<p>In the event that a very general exception is caught in test code, a certain
+                amount of care will need to be exercised.  For example if a user wants to stop
+                the harness during a test run, an <code>InterruptedException</code> is used to
+                interrupt the test.  If that exception is caught by a test and not re-thrown to
+                the harness, the stop request will be lost and the tests will not stop!</p>
+
+                
+<p>Here is a list of exceptions that may need to be re-thrown:</p>
+                
+<ul>
+                    
+<li>
+<code>InterruptedException</code> (from <code>Exception</code>)</li>
+                    
+<li>
+<code>InterruptedIOException</code> (from <code>IOException</code>)</li>
+                    
+<li>
+<code>ThreadDeath</code> (from <code>Error</code>)</li>
+                
+</ul>
+            
+</body>
+</html>

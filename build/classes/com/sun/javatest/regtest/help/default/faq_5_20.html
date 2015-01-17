@@ -1,0 +1,25 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.20.
+                                I run all (or a huge part) of the
+            regression test suite as part of a cron job or other nightly process.  I'd like
+            to generate my own reports or I'd like to send myself e-mail whenever a test
+            fails.  Do I have to parse the verbose output or the 
+            file?</title>
+</head>
+<body>
+<h1>5.20.
+                                I run all (or a huge part) of the
+            regression test suite as part of a cron job or other nightly process.  I'd like
+            to generate my own reports or I'd like to send myself e-mail whenever a test
+            fails.  Do I have to parse the verbose output or the <code>.jtr</code>
+            file?</h1>
+                
+<p>No. The harness supports an observer interface.  APIs exist to query test
+                results at the conclusion of the test's execution.  A user can write their own
+                observer to record and act on information as desired. </p>
+            
+</body>
+</html>

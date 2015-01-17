@@ -1,0 +1,57 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>6.3.
+                                How do I decide whether my applet
+            test should use the  action or the 
+            action?</title>
+</head>
+<body>
+<h1>6.3.
+                                How do I decide whether my applet
+            test should use the <code>main</code> action or the <code>applet</code>
+            action?</h1>
+                
+<p>Ultimately, that decision is left to the person writing the test;
+                however, the following should be considered.</p>
+
+                
+<p>Tests which use the <code>applet</code> action are <i>not</i>
+                necessarily restricted to tests which must run in a browser. Any
+                Swing/AWT code which can be written such that it derives from
+                <code>java.applet.Applet</code> or <code>javax.swing.JApplet</code> is
+                a potential applet test.</p>
+
+                
+<p>For tests which test graphics functionality, there are three major
+                advantages to selecting the <code>applet</code> action over the
+                <code>main</code> action: expanded <code>manual</code> support leading to less
+                duplicated code per test, thread synchronization, and cleanup.</p>
+
+                
+<p>Frequently, tests which test graphics functionality need some sort of user
+                interaction to determine whether the test behaves as expected. The
+                <code>applet</code> action takes care of providing a user interface which
+                contains instructions for the user and the appropriate interface to indicate
+                <code>pass</code>, <code>fail</code>, or <code>done</code> as indicated by the
+                <code>manual</code> option.  User instructions are taken from the
+                <code>.html</code> file referenced in the <code>applet</code> action.  Each
+                <code>main</code> action which tests graphics functionality must implement
+                their own version of this interface.  This path leads to more code needed per
+                test and less consistency across tests in the test suite.</p>
+
+                
+<p>A <code>main</code> action test is deemed to be completed when the
+                <code>main</code> method returns. A test which requires multiple threads must
+                take care not to allow the main method to return before those other threads
+                have completed. The <code>applet</code> action handles basic AWT thread
+                synchronization.</p>
+
+                
+<p>Finally, the <code>applet</code> action handles test cleanup.  If a test can
+                not or does not dispose top-level windows or any AWT threads, they will be
+                eliminated by the harness after the test completes.</p>
+            
+</body>
+</html>

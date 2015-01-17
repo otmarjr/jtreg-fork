@@ -1,0 +1,23 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>2.11.
+                                Why not have separate test
+            workspaces that only contain tests?</title>
+</head>
+<body>
+<h1>2.11.
+                                Why not have separate test
+            workspaces that only contain tests?</h1>
+                
+<p>Checking a test into the workspace against which it's first written
+                helps prevent spurious test failures.  In the case of a regression test, this
+                process ensures that a regression test will migrate upward in the integration
+                hierarchy along with the fix for the corresponding bug.  If tests were managed
+                separately from fixes then it would be difficult to distinguish between a true
+                test failure and a failure due to version skew because the fix hadn't caught up
+                with the test.</p>
+            
+</body>
+</html>

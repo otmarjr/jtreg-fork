@@ -1,0 +1,86 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.8.
+                                My test only applies to one
+            platform and it will fail/not run in others.  How do I prevent the harness from
+            running it on the wrong platform?</title>
+</head>
+<body>
+<h1>5.8.
+                                My test only applies to one
+            platform and it will fail/not run in others.  How do I prevent the harness from
+            running it on the wrong platform?</h1>
+                
+<p>The <a href="tag-spec.txt">tag specification</a> provides no way to indicate
+                any platform requirements.  If
+                the test only applies to a single platform, then the test itself must determine
+                the current platform and decide whether the test should be run there.  If the
+                test suite is running on the wrong platform, the test should pass (i.e. just
+                return) otherwise, the test should proceed. A significant benefit to this
+                approach is that the same number of tests in a testsuite will always be run if
+                the same arguments are given to <code>jtreg</code> regardless of the particular
+                platform.</p>
+
+                
+<p>For tests that are written in Java code (i.e. <code>applet</code> and
+                <code>main</code> tests), you may determine the platform via the system
+                properties.  The following code fragment may be used to distinguish between
+                SunOS sparc, SunOS x86, Windows, etc.</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                
+<pre>
+                    String name = System.getProperty("os.name");
+                    if (name.equals("Linux")) {
+                        System.out.println("Linux");
+                    } else if (name.contains("OS X")) {
+                        System.out.println("(Mac) OS X");
+                    } else if (name.equals("SunOS")) {
+                        System.out.println("Solaris");
+                    } else if (name.startsWith("Windows")) {
+                        System.out.println("Windows");
+                    } else {
+                        throw new RuntimeException("unrecognized OS:" +
+                                " os.name == " + name);
+                    }
+                </pre>
+</dd>
+</dl>
+
+                
+<p>This approach is not suitable for <code>shell</code> tests.  In this case,
+                you can determine the platform via <code>uname</code>.  The following code
+                accomplishes the same task as above.</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                
+<pre>
+                    OS=`uname -s`
+                    case "$OS" in
+                        CYGWIN* )
+                            echo "Windows (Cygwin)" ;;
+                        Darwin )
+                            echo "(Mac) OS X" ;;
+                        Linux )
+                            echo "Linux" ;;
+                        SunOS )
+                            echo "Solaris" ;;
+                        Windows* )
+                            echo "Windows" ;;
+                        * )
+                            echo "unrecognized system: $OS" ; exit 1 ;;
+                    esac
+                </pre>
+</dd>
+</dl>
+            
+</body>
+</html>

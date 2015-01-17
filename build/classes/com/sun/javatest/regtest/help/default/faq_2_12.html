@@ -1,0 +1,27 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>2.12.
+                                How are the test directories organized?</title>
+</head>
+<body>
+<h1>2.12.
+                                How are the test directories organized?</h1>
+                
+<p>Tests are generally organized following the structure of the Java API.  For
+                example, the <code>test</code> directory contains a <code>java</code> directory
+                that has subdirectories <code>lang</code>, <code>io</code>, <code>util</code>,
+                etc.</p>
+
+                
+<p>Each package directory contains one subdirectory for each class in the
+                package.  Thus tests for <code>java.io.FileInputStream</code> can be found in
+                <code>java/io/FileInputStream</code>.</p>
+
+                
+<p>Each class directory may contain a combination of single-file tests and
+                further subdirectories for tests that require more than one source file.</p>
+            
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.15.
+                                What happens if my test returns
+            when there are still threads running?</title>
+</head>
+<body>
+<h1>5.15.
+                                What happens if my test returns
+            when there are still threads running?</h1>
+                
+<p>The harness runs the <code>main</code> action's <code>main</code> method in
+                its own thread group.  The thread group will be destroyed by the harness when the
+                <code>main</code> method returns.  It is the responsibility of the test to
+                return only after the appropriate tasks have been completed by its subsidiary
+                threads.</p>
+            
+</body>
+</html>

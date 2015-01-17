@@ -1,0 +1,6 @@
+grant codebase "file:/E:/jtreg-d37ce1ca5ded/jtreg-d37ce1ca5ded/dist/jtreg/lib/jtreg.jar" {
+    permission java.security.AllPermission;
+};
+grant codebase "file:/E:/jtreg-d37ce1ca5ded/jtreg-d37ce1ca5ded/dist/jtreg/lib/javatest.jar" {
+    permission java.security.AllPermission;
+};

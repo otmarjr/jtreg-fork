@@ -1,0 +1,13 @@
+# Trace file started at Sat Jan 17 14:52:10 BRST 2015
+# JT Harness version 4.6
+# class directory: E:\jtreg-d37ce1ca5ded\jtreg-d37ce1ca5ded\dist\jtreg\lib\javatest.jar
+# using java: C:\Program Files\Java\jdk1.8.0_25\jre
+Starting tests.
+Test suite class: com.sun.javatest.regtest.RegressionTestSuite
+Test finder class: com.sun.javatest.regtest.RegressionTestFinder
+
+Test starting: java/net/DatagramSocket/B6411513.java
+
+Test finished: java/net/DatagramSocket/B6411513.java: Error. Error invoking compiler
+Doing post-run cleanup
+Completed: Some tests did not pass

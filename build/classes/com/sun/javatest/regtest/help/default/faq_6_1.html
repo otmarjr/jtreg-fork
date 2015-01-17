@@ -1,0 +1,24 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>6.1.
+                                How do I decide whether my test
+            should use the  action or the 
+            action?</title>
+</head>
+<body>
+<h1>6.1.
+                                How do I decide whether my test
+            should use the <code>compile</code> action or the <code>build</code>
+            action?</h1>
+                
+<p>The <code>build</code> action will compile the specified class only if
+                the classfile doesn't exist or is older than its source.  The
+                <code>compile</code> action <em>always</em> invokes the compiler.  Typically,
+                the <code>compile</code> action is used only to test the compiler, while the
+                <code>build</code> action is used for tests that make use of multiple sources
+                or for API tests.</p>
+            
+</body>
+</html>

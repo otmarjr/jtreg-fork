@@ -1,0 +1,62 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>2.16.
+                                How do I write a test for an AWT
+            bug or a Swing bug?</title>
+</head>
+<body>
+<h1>2.16.
+                                How do I write a test for an AWT
+            bug or a Swing bug?</h1>
+                
+<p>Bugs in the graphical facilities of the JDK generally require
+                manual interaction with applets.  Applet tests are written in much the
+                same way as the simple <code>main</code> tests described above.  The
+                primary differences are that a second "@" tag is given to indicate
+                that the test is an applet test, and an appropriate HTML file is
+                needed.  For example, an AWT test named <code>Foo.java</code> would
+                have the form:</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        /* @test 1.1 97/10/12
+                           @bug 9876543
+                           @run applet/manual Foo.html */
+
+                        public class Foo extends java.awt.Applet { ... }
+                    </pre>
+                
+</dd>
+</dl>
+                
+<p>or</p>
+                
+<dl>
+<dt></dt>
+<dd>
+                    
+<pre>
+                        public class Foo extends javax.swing.JApplet { ... }
+                    </pre>
+                
+</dd>
+</dl>
+
+                
+<p>The <code>@run</code> tag tells the harness how to run the test.  The first
+                argument is the run type, <code>applet</code>, followed by an option,
+                <code>/manual</code>, that flags this test as a manual test requiring user
+                interaction.  The remaining arguments to the <code>@run</code> tag are passed
+                to the program in a manner appropriate to the run type.  In this case, the test
+                will be run just as if the <code>appletviewer</code> had been invoked on
+                <code>Foo.html</code>.  Thus <code>Foo.html</code> must contain, at least, an
+                HTML <code>applet</code> tag with any necessary parameters.</p>
+            
+</body>
+</html>

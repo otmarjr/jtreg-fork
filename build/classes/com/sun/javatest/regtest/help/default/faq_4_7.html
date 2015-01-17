@@ -1,0 +1,27 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>4.7.
+                                 How does jtreg run TestNG tests?
+            </title>
+</head>
+<body>
+<h1>4.7.
+                                 How does jtreg run TestNG tests?
+            </h1>
+                
+<p>Tests using "@run testng" are compiled in the standard way,
+                with TestNG libraries on the classpath.
+                The test is run using the class <code>org.testng.TestNG</code>.
+                For any TestNG test in a group of TestNG tests, any tests in the
+                group that need compiling are compiled together before any
+                test in the group is run.
+                Then, the selected test classes are run one at a time using
+                <code>org.testng.TestNG</code>.
+                Each test that is run will have its results stored in a
+                corresponding *.jtr file.
+                </p>
+            
+</body>
+</html>

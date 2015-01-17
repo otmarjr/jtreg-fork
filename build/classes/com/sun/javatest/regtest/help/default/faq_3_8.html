@@ -1,0 +1,29 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>3.8.
+                                If a test fails, I'd like to put
+            all of my debugging information into the final result.  How do I do
+            that?</title>
+</head>
+<body>
+<h1>3.8.
+                                If a test fails, I'd like to put
+            all of my debugging information into the final result.  How do I do
+            that?</h1>
+                
+<p>The final result string is composed by the harness.  For tests that fail
+                because an exception is thrown, the result string will contain some header
+                string such as <code>`main' threw exception: </code> followed by the
+                exception's type and detail message.  This detail message should contain
+                sufficient information to provide the test user a starting point to investigate
+                the unexpected failure.  It should <em>not</em> contain full debugging
+                information.</p>
+
+                
+<p>The harness makes no guarantees as to the availability of any detail message
+                longer than 128 characters.</p>
+            
+</body>
+</html>

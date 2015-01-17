@@ -1,0 +1,25 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.2.
+                                How do I set the
+             environment variable for my test?</title>
+</head>
+<body>
+<h1>5.2.
+                                How do I set the
+            <code>CLASSPATH</code> environment variable for my test?</h1>
+                
+<p>The harness sets the <code>CLASSPATH</code> for the <code>compile</code>,
+                <code>main</code>, and <code>applet</code> actions to be the system class path
+                plus the test's source and classes directory.</p>
+
+                
+<p>It is possible to set the classpath for the <code>main/othervm</code> action
+                via the <code>-classpath</code> option to <code>java</code>.  Any other
+                modification of the <code>CLASSPATH</code> must be done using the
+                <code>shell</code> action.</p>
+            
+</body>
+</html>

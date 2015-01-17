@@ -1,0 +1,41 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.9.
+                                How can I make
+             and  action tests read from data
+            files?</title>
+</head>
+<body>
+<h1>5.9.
+                                How can I make
+            <code>applet</code> and <code>main</code> action tests read from data
+            files?</h1>
+                
+<p>When jtreg is executed, it <code>cd's</code> into a scratch area to
+                ensure that a test can not alter the test suite.  Thus, a direct reference to a
+                data file without some sort of indicator as to where the test was originally
+                located will fail.</p>
+
+                
+<p>The system property <code>test.src</code> contains the name of the directory
+                where the test source resides.  The following example illustrates how to read
+                the data file <code>foo</code> which is contained in the test source directory.
+                Note that the default value of <code>"."</code> allows this test to run both
+                with the harness, and without (in the source directory).</p>
+
+                
+<dl>
+<dt></dt>
+<dd>
+                
+<pre>
+                    File f = new File(System.getProperty("test.src", "."), "foo");
+                    InputStream in = new File(f);
+                </pre>
+</dd>
+</dl>
+            
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.17.
+                                The JavaTest harness is running into problems
+            running the test because of issues with the JDK I'm trying to test. What can I
+            do?</title>
+</head>
+<body>
+<h1>5.17.
+                                The JavaTest harness is running into problems
+            running the test because of issues with the JDK I'm trying to test. What can I
+            do?</h1>
+                
+<p>When the harness is used to run tests, two possibly different versions of
+                the JDK are used: the JDK version used to run the harness and the JDK version used
+                to run the test(s) themselves.</p>
+
+                
+<p>To run the harness with one version of the JDK and the tests with another, use
+                the <code>-othervm</code> option in conjunction with the <code>-testjdk</code>
+                option.  The <code>-testjdk</code> option will specify the version of the JDK
+                to run the tests.  The environment variables <code>JT_JAVA</code> or
+                <code>JAVA_HOME</code> will specify the version of the JDK for the harness.</p>
+            
+</body>
+</html>

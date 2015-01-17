@@ -1,0 +1,30 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>3.7.
+                                What's the difference between the
+            "fail" and "error" return status?</title>
+</head>
+<body>
+<h1>3.7.
+                                What's the difference between the
+            "fail" and "error" return status?</h1>
+                
+<p>If a test <em>failed</em>, then the harness was able to actually run the
+                test code.  The failure could either indicate that the test truly failed
+                (i.e. it threw an exception) or that there was some problem running the test
+                due to security restrictions, lack of resources, etc.</p>
+
+                
+<p>If <em>error</em> is the final result of a test, then the harness was unable to
+                run the test.  An error is most commonly associated with problems in the test
+                description (typos, missing required arguments, etc.).</p>
+
+                
+<p>In either case the result contains a short message intended to provide hints
+                    as to where the problem lies.
+                </p>
+            
+</body>
+</html>

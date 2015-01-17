@@ -1,0 +1,308 @@
+#
+# Copyright (c) 1996, 2014, Oracle and/or its affiliates. All rights reserved.
+# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+#
+# This code is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 2 only, as
+# published by the Free Software Foundation.  Oracle designates this
+# particular file as subject to the "Classpath" exception as provided
+# by Oracle in the LICENSE file that accompanied this code.
+#
+# This code is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+# version 2 for more details (a copy is included in the LICENSE file that
+# accompanied this code).
+#
+# You should have received a copy of the GNU General Public License version
+# 2 along with this work; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+#
+# Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+# or visit www.oracle.com if you need additional information or have any
+# questions.
+#
+
+# include host-specific defs, if any
+-include Defs-$(shell hostname).gmk
+
+# TOPDIR = .. # now set in Makefile
+ABSTOPDIR = $(shell cd $(TOPDIR); pwd)
+
+BUILDDIR = $(TOPDIR)/build
+
+# clobber settings from user's environment
+JAVA_HOME=
+CLASSPATH=
+JAVA_COMPILER=
+LD_LIBRARY_PATH=
+
+
+
+#----------------------------------------------------------------------
+#
+# Support for Cygwin
+
+SYSTEM_UNAME := $(shell uname)
+
+# Where is unwanted output to be delivered?
+# On Windows, MKS uses the special file "NUL", cygwin uses the customary unix file.
+ifeq ($(SYSTEM_UNAME), Windows_NT)
+DEV_NULL = NUL
+else
+DEV_NULL = /dev/null 
+endif
+
+ifneq (,$(findstring CYGWIN,$(SYSTEM_UNAME)))
+USING_CYGWIN = true
+endif
+
+ifdef USING_CYGWIN
+define FullPath
+$(shell cygpath -a -m $1 2> $(DEV_NULL))
+endef
+define PosixPath
+$(shell cygpath -a -u $1 2> $(DEV_NULL))
+endef
+else
+define FullPath
+$(abspath $1)
+endef
+define PosixPath
+$1
+endef
+endif
+
+#----------------------------------------------------------------------
+#
+# Parameters to control what to build with
+# explicit JDK versions, for use as needed
+
+#----- Java: see http://java.sun.com
+
+ifndef JDK15HOME
+  ifdef SLASHJAVA
+    JDK15HOME = $(SLASHJAVA)/re/jdk/1.5.0/archive/fcs/binaries/linux-i586
+  endif
+endif
+JDK15HOME := $(call FullPath,$(JDK15HOME))
+
+ifndef JDK16HOME
+  ifdef SLASHJAVA
+    JDK16HOME = $(SLASHJAVA)/re/jdk/1.6.0/archive/fcs/binaries/linux-i586
+  endif
+endif
+JDK16HOME := $(call FullPath,$(JDK16HOME))
+
+ifndef JDK17HOME
+  ifdef SLASHJAVA
+    JDK17HOME = $(SLASHJAVA)/re/jdk/1.7.0/archive/fcs/binaries/linux-i586
+  endif
+endif
+JDK17HOME := $(call FullPath,$(JDK17HOME))
+
+ifndef JDK18HOME
+  ifdef SLASHJAVA
+    JDK18HOME = $(SLASHJAVA)/re/jdk/1.8.0/promoted/latest/binaries/linux-i586
+  endif
+endif
+JDK18HOME := $(call FullPath,$(JDK18HOME))
+
+# J2SE for most classes
+J2SEHOME = $(JDK15HOME)
+J2SEJAVA = $(J2SEHOME)/bin/java
+J2SEJAVAC = $(J2SEHOME)/bin/javac
+JAR = $(J2SEHOME)/bin/jar
+
+J2SEJAVAC_SOURCE = 5
+J2SEJAVAC_TARGET = 5
+
+#----- JavaHelp: see https://javahelp.dev.java.net/
+ifndef JAVAHELP_HOME
+  ifdef SLASHJAVA
+    JAVAHELP_HOME = $(SLASHJAVA)/re/jh/2.0_01/promoted/fcs/latest/binaries/jh2.0/javahelp
+  endif
+endif
+JAVAHELP_HOME := $(call FullPath,$(JAVAHELP_HOME))
+
+JAVAHELP_JAR = $(JAVAHELP_HOME)/lib/jh.jar
+JHINDEXER =  CLASSPATH=$(JAVAHELP_HOME)/lib/jhall.jar $(J2SEJAVA) com.sun.java.help.search.Indexer
+
+#----- JavaTest: see https://jtharness.dev.java.net/
+
+ifndef JTHARNESS_HOME
+  ifdef SLASHJAVA
+    JTHARNESS_HOME = $(SLASHJAVA)/re/jtharness/4.4/archive/MR1/binaries
+  endif
+endif 
+JTHARNESS_HOME := $(call FullPath,$(JTHARNESS_HOME))
+
+ifndef JAVATEST_HOME
+  ifdef JTHARNESS_HOME
+    JAVATEST_HOME = $(JTHARNESS_HOME)
+  else
+    ifdef SLASHJAVA
+      JAVATEST_HOME = $(SLASHJAVA)/re/javatest/4.4/archive/fcs/binaries/javatest
+    endif
+  endif
+endif
+JAVATEST_HOME := $(call FullPath,$(JAVATEST_HOME))
+
+ifdef JAVATEST_HOME
+  JAVATEST_JAR = $(JAVATEST_HOME)/lib/javatest.jar
+endif
+
+#----- JCov 2.0
+
+ifndef JCOV_HOME
+  ifdef SLASHJAVA
+    JCOV_HOME = $(SLASHJAVA)/re/jcov/2.0/promoted/latest/binaries/jcov_2.0/
+  endif
+endif
+JCOV_HOME := $(call FullPath,$(JCOV_HOME))
+
+ifdef JCOV_HOME
+  JCOV = $(JDK16HOME)/bin/java -jar $(JCOV_HOME)/lib/jcov.jar
+endif
+
+#----- JUnit 4.5: see http://www.junit.org/
+# http://sourceforge.net/projects/junit/files/junit/4.5/junit-4.5.jar/download
+
+ifndef JUNIT_JAR
+  ifdef SLASHJAVA
+    JUNIT_JAR = $(SLASHJAVA)/devtools/share/junit/junit-4.5/junit.jar
+  endif
+endif
+JUNIT_JAR := $(call FullPath,$(JUNIT_JAR))
+
+#----- TestNG 6.8.5: see http://www.testng.org/
+# http://testng.org/doc/download.html
+
+ifndef TESTNG_HOME
+  ifdef SLASHJAVA
+    TESTNG_HOME = $(SLASHJAVA)/devtools/share/testng/testng-6.8.5
+  endif
+endif
+TESTNG_HOME := $(call FullPath,$(TESTNG_HOME))
+
+ifndef TESTNG_JAR
+  ifdef TESTNG_HOME
+    TESTNG_JAR = $(TESTNG_HOME)/testng-6.8.5.jar
+  endif
+endif
+TESTNG_JAR := $(call FullPath,$(TESTNG_JAR))
+
+#----- Ant: see http://ant.apache.org/
+
+ifndef ANTHOME
+  ifdef SLASHJAVA
+    ANTHOME = $(SLASHJAVA)/devtools/share/ant/1.7.0
+  endif
+endif
+ANTHOME := $(call FullPath,$(ANTHOME))
+
+ifdef ANTHOME
+  ANT = $(ANTHOME)/bin/ant
+endif
+
+#----- HTML check: 
+# Optional: if set, checks HTML doc files for correctness.
+# Uses nsgmlns http://www.jclark.com/sp/ and w3c DTDs
+# Leave HTMLCHECK unset if not required
+
+ifndef HTMLCHECK
+  ifdef SLASHJAVA
+#  HTMLCHECK = $(SLASHJAVA)/jct-tools/pkgs/htmlcheck_1.2.1/bin/htmlcheck
+  endif
+endif
+
+#----- Linklint: see http://www.linklint.org/
+# Optional: if set, checks HTML doc files for broken links
+
+ifndef LINKLINT
+    LINKLINT = $(shell which linklint 2>/dev/null)
+endif
+
+#----- Xalan: see http://xml.apache.org/xalan-j/
+
+ifndef XALANHOME
+  ifdef SLASHJAVA
+    XALANHOME = $(SLASHJAVA)/jct-tools/pkgs/xalan-j_2_7_0
+  endif
+endif
+XALANHOME := $(call FullPath,$(XALANHOME))
+
+#----- Unix commands
+
+AWK     = /usr/bin/awk
+CAT 	= /bin/cat
+CHMOD 	= /bin/chmod
+CP 	= /bin/cp
+DIFF 	= /usr/bin/diff
+ECHO	= /bin/echo
+FIND	= /usr/bin/find
+GREP 	:= $(shell if [ -r /bin/grep ]; then echo /bin/grep ; else echo /usr/bin/grep ; fi )
+LN	= /bin/ln
+MKDIR 	= /bin/mkdir
+PERL	= /usr/bin/perl
+RM 	= /bin/rm -rf
+SED 	:= $(shell if [ -r /bin/sed ]; then echo /bin/sed ; else echo /usr/bin/sed ; fi )
+SH 	= /bin/sh
+SORT    = /usr/bin/sort
+TEST 	= /usr/bin/test
+TOUCH 	= /usr/bin/touch
+UNZIP 	= /usr/bin/unzip
+WC 	= /usr/bin/wc
+ZIP 	= /usr/bin/zip
+
+
+#----------------------------------------------------------------------
+#
+# Identification of parts of the system
+SRCDIR = $(TOPDIR)/src
+JAVADIR = $(SRCDIR)/share/classes
+SRCDOCDIR = $(SRCDIR)/share/doc
+SRCJTDOCDIR = $(SRCDIR)/share/doc/javatest
+SRCJTREGDOCDIR = $(SRCDIR)/share/doc/javatest/regtest
+SRCSHAREBINDIR = $(SRCDIR)/share/bin
+TESTDIR = $(SRCDIR)/share/test
+
+CLASSDIR = $(BUILDDIR)/classes
+ABSCLASSDIR = $(cd $(CLASSDIR); pwd)
+
+IMAGES_DIR = $(BUILDDIR)/images
+JTREG_IMAGEDIR = $(IMAGES_DIR)/jtreg
+JTREG_IMAGEDOCDIR = $(JTREG_IMAGEDIR)/doc
+JTREG_IMAGEJARDIR = $(JTREG_IMAGEDIR)/lib
+ABS_JTREG_IMAGEJARDIR = $(shell cd $(JTREG_IMAGEJARDIR); pwd)
+
+# source bundle locations
+IMAGESRC_SRCDIR = $(IMAGESRC_TOPDIR)/src/share/classes
+
+#----------------------------------------------------------------------
+#
+# Version tags
+#
+# BUILD_* variables are normally set (overridden) by RE builds
+BUILD_VERSION = 4.1
+BUILD_MILESTONE = dev
+BUILD_NUMBER = b00
+
+# don't eval dates here directly, because that leads to unstable builds
+#BUILD_YEAR:sh = /bin/date +"%Y"
+BUILD_YEAR_CMD = /bin/date '+%Y'
+#BUILD_DOCDATE:sh = /bin/date +"%B %d, %Y"
+BUILD_DOCDATE_CMD = /bin/date  +'%B %d, %Y'
+#BUILD_ZIPDATE:sh = /bin/date '+%d %h %Y' 
+BUILD_ZIPDATE_CMD = /bin/date  '+%d %h %Y' 
+BUILD_NONFCS_MILESTONE_sh = echo $(BUILD_MILESTONE) | sed -e 's/[fF][cC][sS]//'
+BUILD_NONFCS_MILESTONE = $(BUILD_NONFCS_MILESTONE_sh:sh)
+
+# munge the BUILD values suitable for use in the bundle name
+ZIPSFX_VERSION_sh = echo '$(BUILD_VERSION)' | sed -e 's|\([^0-9][^0-9]*\)|_|g'
+ZIPSFX_MILESTONE_sh = echo '$(BUILD_MILESTONE)'
+ZIPSFX_BUILD_sh = echo '$(BUILD_NUMBER)'
+ZIPSFX_DATE_sh = echo "`$(BUILD_ZIPDATE_CMD)`" | /usr/bin/tr -s '[A-Z] ' '[a-z]_'
+
+VERBOSE_ZIP_SUFFIX = $(shell $(ZIPSFX_VERSION_sh))-$(shell $(ZIPSFX_MILESTONE_sh))-bin-$(shell $(ZIPSFX_BUILD_sh))-$(shell $(ZIPSFX_DATE_sh))
+

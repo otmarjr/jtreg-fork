@@ -1,0 +1,54 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>4.5.
+                                How does jtreg support TestNG tests?
+            </title>
+</head>
+<body>
+<h1>4.5.
+                                How does jtreg support TestNG tests?
+            </h1>
+                
+<p>jtreg supports TestNG tests in two ways.</p>
+                
+<ol>
+                    
+<li>
+<p>Tests can be written with a full test description
+                     (the comment beginning /* @test....*/) and can use the following
+                     action tag to run the test with TestNG: </p>
+                            
+<pre>"@run testng classname args"</pre>
+                            
+<p>Such a test would otherwise be similar to a standard test
+                     using "@run main". You can use other tags such as @library and
+                     @build, just as you would for "@run main".
+                     These tests would normally be in the unnamed directory
+                     (i.e. no package statement.)
+                     These tests can be freely intermixed with other tests using
+                     "@run main", "@run shell", "@run applet" and so on. </p> 
+</li>
+                    
+<li>
+<p>If you have a group of TestNG tests written in their own
+                     package hierarchy, you can include that entire package
+                     hierarchy as a subdirectory under the main test root directory.
+                     If you do this, you must identify the root directory of that
+                     package hierarchy to jtreg, so that it knows to treat all the
+                     files in that package hierarchy specially.
+                     In such a group of tests, you do not need to provide test
+                     descriptions in each test.
+                     You may optionally provide a test description if you choose to
+                     do so, if you wish to specify information tags such as
+                     @bug, @summary and @keyword.
+                     You must not specify any action tags, such as @run, @compile,
+                     etc, since the actions are implicit for every test in the group
+                     of tests. </p>
+</li>
+                
+</ol>
+            
+</body>
+</html>

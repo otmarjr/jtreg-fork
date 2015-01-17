@@ -1,0 +1,26 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>2.8.
+                                Can a test check the output of
+             and ?</title>
+</head>
+<body>
+<h1>2.8.
+                                Can a test check the output of
+            <code>System.out</code> and <code>System.err</code>?</h1>
+                
+<p>Yes, compiler tests using the <code>@compile</code> tag can use
+                the <code>/ref=<i>file</i></code> option.
+                Such tests are generally not recommended, since the output can be
+                sensitive to the locale in which the are run, and may contain
+                other details which may be hard to maintain, such as line numbers.</p>
+                
+<p>While not part of the tag specification, some tests use the
+                string "<code>/nodynamiccopyright/</code>" after the <code>@test</code> tag
+                to indicate that that the file should not be subject to automated
+                copyright processing that might affect the operation of the test.</p>
+            
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>2.13.
+                                How should I name a test?</title>
+</head>
+<body>
+<h1>2.13.
+                                How should I name a test?</h1>
+                
+<p>In general, try to give tests names that are as specific and descriptive
+                as possible.  If a test is checking the behavior of one or a few methods, its
+                name should include the names of those methods.  For example, a test written
+                for a bug in the skip method of FileInputStream could be placed in
+                <code>test/java/io/FileInputStream/Skip.java</code>.  A test written for a bug
+                that involves both the skip and available methods could be named
+                <code>SkipAvailable.java</code>.</p>
+
+                
+<p>Tests that involve many methods require a little more creativity in naming,
+                since it would be unwieldy to include the names of all the methods.  Just
+                choose a descriptive word or short phrase.  For example, a test that checks the
+                general behavior of a FileInputStream after end-of-file has been reached could
+                be named <code>AfterEOF.java</code>.</p>
+
+                
+<p>It can be helpful to add more information to the test name to help further
+                describe the test.  For example, a test that checks the skip method's behavior
+                when passed a negative count could be named <code>SkipNegative.java</code>.</p>
+
+                
+<p>You might find that the name you want to give your test has already been
+                taken.  In this case either find a different name or, if you're just not in a
+                creative mood, append an underscore and a digit to an existing name.  Thus if
+                there were already a <code>Skip.java</code> file, a new test for the skip
+                method could be named <code>Skip_1.java</code>.</p>
+
+                
+<p>Some tests require more than one source file, or may need access to data
+                files.  In this case it's best to create a subdirectory in order to keep
+                related files together.  The subdirectory should be given a descriptive
+                mixed-case name that begins with a lowercase letter.  For example, a
+                FileInputStream test that needs an input file as well as its Java source file
+                in order to test the interaction of the read and available methods could be
+                placed in the subdirectory
+                <code>test/java/io/FileInputStream/readAvailable</code>.</p>
+
+                
+<p>Some tests involve more than one class in a package, in which case a new
+                subdirectory in the relevant package directory should be created.  For example,
+                a set of general tests that exercise the character streams in the
+                <code>java.io</code> package could be placed in the
+                <code>test/java/io/charStreams</code> directory.</p>
+            
+</body>
+</html>

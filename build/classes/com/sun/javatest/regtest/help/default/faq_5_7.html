@@ -1,0 +1,26 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK TITLE="Style" HREF="help.css" TYPE="text/css" REL="stylesheet">
+<title>5.7.
+                                Should a test call the
+             method?</title>
+</head>
+<body>
+<h1>5.7.
+                                Should a test call the
+            <code>System.exit</code> method?</h1>
+                
+<p>
+<i>NO!</i> The default harness security manager prevents tests from
+                calling <code>System.exit</code>.  If the test is running in the same JVM as
+                the harness and the harness was not permitted to install its own security manager, a
+                call to <code>System.exit</code> will cause the harness itself to exit!</p>
+
+                
+<p>If the test is running in its own separate JVM, a call to
+                <code>System.exit</code> may not allow the harness to properly handle test
+                termination.</p>
+            
+</body>
+</html>
