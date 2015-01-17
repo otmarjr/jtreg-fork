@@ -22,9 +22,7 @@
  * or visit www.oracle.com if you need additional information or have any
  * questions.
  */
-
 package com.sun.javatest.regtest;
-
 
 import java.io.OutputStream;
 import java.io.PrintWriter;
@@ -38,48 +36,50 @@ import com.sun.javatest.util.PathClassLoader;
 import com.sun.javatest.util.WriterStream;
 
 import static com.sun.javatest.regtest.RStatus.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 // This is primarily a cut-n-paste copy of com.sun.javatest.lib.JavaCompileCommand,
 // that provides a way to map compiler exit codes to a status.
-
 /**
- * Invoke a Java compiler via reflection.
- * The compiler is assumed to have a constructor and compile method
- * matching the following signature:
- *<pre>
+ * Invoke a Java compiler via reflection. The compiler is assumed to have a
+ * constructor and compile method matching the following signature:
+ * <pre>
  * public class COMPILER {
  *     public COMPILER(java.io.OutputStream out, String compilerName);
  *     public boolean compile(String[] args);
  * }
- *</pre>
- * or
- *<pre>
+ * </pre> or
+ * <pre>
  * public class COMPILER {
  *     public COMPILER();
  *     public int compile(String[] args);
  * }
- *</pre>
- * or
+ * </pre> or
  * <pre>
  * public class COMPILER {
  *    public static int compile(String[] args, PrintWriter out);
  * }
- * </pre>
- * This means the command is suitable for (but not limited to) the
- * compiler javac suplied with JDK. (Note that this uses an internal
- * API of javac which is not documented and is not guaranteed to exist
- * in any specific release of JDK.)
+ * </pre> This means the command is suitable for (but not limited to) the
+ * compiler javac suplied with JDK. (Note that this uses an internal API of
+ * javac which is not documented and is not guaranteed to exist in any specific
+ * release of JDK.)
  */
-public class RegressionCompileCommand extends Command
-{
+public class RegressionCompileCommand extends Command {
+
     /**
-     * A stand-alone entry point for this command. An instance of this
-     * command is created, and its <code>run</code> method invoked,
-     * passing in the command line args and <code>System.out</code> and
-     * <code>System.err</code> as the two streams.
+     * A stand-alone entry point for this command. An instance of this command
+     * is created, and its <code>run</code> method invoked, passing in the
+     * command line args and <code>System.out</code> and <code>System.err</code>
+     * as the two streams.
+     *
      * @param args command line arguments for this command.
      * @see #run
      */
@@ -90,46 +90,91 @@ public class RegressionCompileCommand extends Command
         try {
             RegressionCompileCommand c = new RegressionCompileCommand();
             s = normalize(c.run(args, out, err));
-        }
-        finally {
+        } finally {
             out.flush();
             err.flush();
         }
         s.exit();
     }
 
+    private int compileWithAspectWeaving(Object[] args) {
+        Process p;
+        ProcessBuilder pb = new ProcessBuilder();
+        //pb.environment().clear();
+        int rc = -1;
+        
+        List<String> c = new ArrayList<String>();
+        String[] cmdArgs = (String[])args[0];
+        c.addAll(Arrays.asList(cmdArgs));
+        int indexOfDirectoryOutput = c.indexOf("-d");
+        String directoryOutput = c.get(indexOfDirectoryOutput+1);
+        String[] cmd = new String[] {"c:\\aspectj1.8\\bin\\ajc.bat", "-source", "1.6", "-target", "1.6", "-d", directoryOutput, cmdArgs[cmdArgs.length-1], "C:/Users/Otmar/git/MUTE-Tracer/MUTE2 - Clean try/src/br/pucminas/icei/FullTracer.aj" };
+        
+        pb.environment().put("CLASSPATH", "c:\\aspectj1.8\\lib\\aspectjrt.jar");
+        try {
+            p = pb.command(cmd).start();
+
+            InputStream childOut = p.getInputStream(); // output stream from process
+            PrintWriter out = new PrintWriter(System.out, true);
+            PrintWriter err = new PrintWriter(System.err, true);
+            Main.StreamCopier childOutCopier = new Main.StreamCopier(childOut, out);
+            childOutCopier.start();
+            InputStream childErr = p.getErrorStream();
+            Main.StreamCopier childErrCopier = new Main.StreamCopier(childErr, err);
+            childErrCopier.start();
+
+            OutputStream childIn = p.getOutputStream();  // input stream to process
+            if (childIn != null) {
+                childIn.close();
+            }
+
+            // wait for the stream copiers to complete
+            childOutCopier.waitUntilDone();
+            childErrCopier.waitUntilDone();
+
+            // wait for the process to complete;
+            rc = p.waitFor();
+        } catch (IOException ex) {
+            Logger.getLogger(RegressionCompileCommand.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(RegressionCompileCommand.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return rc;
+    }
 
     /**
-     * Invoke a specified compiler, or the default, javac.
-     * If the first word in the <code>args</code> array is "-compiler"
-     * the second is interpreted as the class name for the compiler to be
-     * invoked, optionally preceded by a name for the compiler, separated
-     * from the class name by a colon.  If no -compiler is specified,
-     * the default is `javac:com.sun.tools.javac.Main'. If -compiler is specified
-     * but no compiler name is given before the class name, the default name
-     * will be `java ' followed by the classname. For example, `-compiler Main'
-     * will result in the class name being `Main' and the compiler name being
-     * `java Main'. After determining the class and compiler name,
-     * an instance of the compiler class will be created, passing it a stream
-     * using the <code>ref</code> parameter, and the name of the compiler.
-     * Then the `compile' method will be invoked, passing it the remaining
-     * values of the `args' parameter.  If the compile method returns true,
-     * the result will be a status of `passed'; if it returns `false', the
-     * result will be `failed'. If any problems arise, the result will be
-     * a status of `error'.
+     * Invoke a specified compiler, or the default, javac. If the first word in
+     * the <code>args</code> array is "-compiler" the second is interpreted as
+     * the class name for the compiler to be invoked, optionally preceded by a
+     * name for the compiler, separated from the class name by a colon. If no
+     * -compiler is specified, the default is `javac:com.sun.tools.javac.Main'.
+     * If -compiler is specified but no compiler name is given before the class
+     * name, the default name will be `java ' followed by the classname. For
+     * example, `-compiler Main' will result in the class name being `Main' and
+     * the compiler name being `java Main'. After determining the class and
+     * compiler name, an instance of the compiler class will be created, passing
+     * it a stream using the <code>ref</code> parameter, and the name of the
+     * compiler. Then the `compile' method will be invoked, passing it the
+     * remaining values of the `args' parameter. If the compile method returns
+     * true, the result will be a status of `passed'; if it returns `false', the
+     * result will be `failed'. If any problems arise, the result will be a
+     * status of `error'.
+     *
      * @param args An optional specification for the compiler to be invoked,
-     *          followed by arguments for the compiler's compile method.
-     * @param log  Not used.
-     * @param ref  Passed to the compiler that is invoked.
+     * followed by arguments for the compiler's compile method.
+     * @param log Not used.
+     * @param ref Passed to the compiler that is invoked.
      * @return `passed' if the compilation is successful; `failed' if the
-     *          compiler is invoked and errors are found in the file(s)
-     *          being compiler; or `error' if some more serios problem arose
-     *          that prevented the compiler performing its task.
+     * compiler is invoked and errors are found in the file(s) being compiler;
+     * or `error' if some more serios problem arose that prevented the compiler
+     * performing its task.
      */
     public Status run(String[] args, PrintWriter log, PrintWriter ref) {
 
-        if (args.length == 0)
+        if (args.length == 0) {
             return error("No args supplied");
+        }
 
         String compilerClassName = null;
         String compilerName = null;
@@ -141,13 +186,12 @@ public class RegressionCompileCommand extends Command
         // for the compiler class. If don't find a '-', there are no
         // options for this class, and everything is handed off to
         // the compiler class
-
         System.out.println("Compiling test clas.....");
         for (int i = 0; i < args.length; i++) {
             if (args[i].equals("-")) {
                 options = new String[i];
                 System.arraycopy(args, 0, options, 0, options.length);
-                args = shift(args, i+1);
+                args = shift(args, i + 1);
                 break;
             }
         }
@@ -155,29 +199,29 @@ public class RegressionCompileCommand extends Command
         if (options != null) {
             for (int i = 0; i < options.length; i++) {
                 if (options[i].equals("-compiler")) {
-                    if (i + 1 == options.length)
+                    if (i + 1 == options.length) {
                         return error("No compiler specified after -compiler option");
+                    }
 
                     String s = options[++i];
                     int colon = s.indexOf(":");
                     if (colon == -1) {
                         compilerClassName = s;
                         compilerName = "java " + s;
-                    }
-                    else {
+                    } else {
                         compilerClassName = s.substring(colon + 1);
                         compilerName = s.substring(0, colon);
                     }
-                }
-                else if (options[i].equals("-cp") || options[i].equals("-classpath")) {
-                    if (i + 1 == options.length)
+                } else if (options[i].equals("-cp") || options[i].equals("-classpath")) {
+                    if (i + 1 == options.length) {
                         return error("No path specified after -cp or -classpath option");
+                    }
                     classpath = options[++i];
-                }
-                else if (options[i].equals("-verbose"))
+                } else if (options[i].equals("-verbose")) {
                     verbose = true;
-                else
+                } else {
                     return error("Unrecognized option: " + options[i]);
+                }
             }
         }
 
@@ -186,77 +230,81 @@ public class RegressionCompileCommand extends Command
         try {
 
             ClassLoader loader;
-            if (classpath == null)
+            if (classpath == null) {
                 loader = null;
-            else
+            } else {
                 loader = new PathClassLoader(classpath);
+            }
 
             Class<?> compilerClass;
             if (compilerClassName != null) {
                 compilerClass = getClass(loader, compilerClassName);
-                if (compilerClass == null)
+                if (compilerClass == null) {
                     return error("Cannot find compiler: " + compilerClassName);
-            }
-            else {
+                }
+            } else {
                 compilerName = "javac";
                 compilerClass = getClass(loader, "com.sun.tools.javac.Main");  // JDK1.3+
-                if (compilerClass == null)
+                if (compilerClass == null) {
                     compilerClass = getClass(loader, "sun.tools.javac.Main");  // JDK1.1-2
-                if (compilerClass == null)
+                }
+                if (compilerClass == null) {
                     return error("Cannot find compiler");
+                }
             }
 
             loader = null;
 
             Object[] compileMethodArgs;
             Method compileMethod = getMethod(compilerClass, "compile", // JDK1.4+
-                                             new Class<?>[] { String[].class, PrintWriter.class });
-            if (compileMethod != null)
-                compileMethodArgs = new Object[] { args, ref };
-            else {
-                compileMethod = getMethod(compilerClass, "compile",   // JDK1.1-3
-                                          new Class<?>[] { String[].class });
-                if (compileMethod != null)
-                    compileMethodArgs = new Object[] { args };
-                else
+                    new Class<?>[]{String[].class, PrintWriter.class});
+            if (compileMethod != null) {
+                compileMethodArgs = new Object[]{args, ref}; //HERE!
+            } else {
+                compileMethod = getMethod(compilerClass, "compile", // JDK1.1-3
+                        new Class<?>[]{String[].class});
+                if (compileMethod != null) {
+                    compileMethodArgs = new Object[]{args};
+                } else {
                     return error("Cannot find compile method for " + compilerClass.getName());
+                }
             }
 
             Object compiler;
-            if (Modifier.isStatic(compileMethod.getModifiers()))
-                compiler =  null;
-            else {
+            if (Modifier.isStatic(compileMethod.getModifiers())) {
+                compiler = null;
+            } else {
                 Object[] constrArgs;
                 Constructor<?> constr = getConstructor(compilerClass, // JDK1.1-2
-                                                    new Class<?>[] { OutputStream.class, String.class });
-                if (constr != null)
-                    constrArgs = new Object[] { new WriterStream(ref), compilerName };
-                else {
+                        new Class<?>[]{OutputStream.class, String.class});
+                if (constr != null) {
+                    constrArgs = new Object[]{new WriterStream(ref), compilerName};
+                } else {
                     constr = getConstructor(compilerClass, new Class<?>[0]); // JDK1.3
-                    if (constr != null)
+                    if (constr != null) {
                         constrArgs = new Object[0];
-                    else
+                    } else {
                         return error("Cannot find suitable constructor for " + compilerClass.getName());
+                    }
                 }
                 try {
                     compiler = constr.newInstance(constrArgs);
-                }
-                catch (Throwable t) {
+                } catch (Throwable t) {
                     t.printStackTrace(log);
                     return error("Cannot instantiate compiler");
                 }
             }
 
             Object result;
+            boolean weaveAspectsIntoTest = true;
+
             try {
-                List<String> compileArgs;
-                compileArgs = new LinkedList<>();
-                compileArgs.addAll(Arrays.asList((String[])compileMethodArgs[0]));
-                // compileArgs.add(compileArgs.size()-1,"org.aspectj.tools.ajc.Main");
-                compileMethodArgs[0] = compileArgs.toArray();
-                result = compileMethod.invoke(compiler, compileMethodArgs);
-            }
-            catch (Throwable t) {
+                if (!weaveAspectsIntoTest) {
+                    result = compileMethod.invoke(compiler, compileMethodArgs);
+                } else {
+                    result = compileWithAspectWeaving(compileMethodArgs);
+                }
+            } catch (Throwable t) {
                 t.printStackTrace(log);
                 return error("Error invoking compiler");
             }
@@ -264,14 +312,12 @@ public class RegressionCompileCommand extends Command
             // result might be a boolean (old javac) or an int (new javac)
             if (result instanceof Boolean) {
                 return getStatus((Boolean) result);
-            }
-            else if (result instanceof Integer) {
+            } else if (result instanceof Integer) {
                 return getStatus((Integer) result);
-            }
-            else
+            } else {
                 return error("Unexpected return value from compiler: " + result);
-        }
-        finally {
+            }
+        } finally {
             log.flush();
             ref.flush();
         }
@@ -288,8 +334,7 @@ public class RegressionCompileCommand extends Command
     private Class<?> getClass(ClassLoader loader, String name) {
         try {
             return (loader == null ? Class.forName(name) : loader.loadClass(name));
-        }
-        catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             return null;
         }
     }
@@ -297,13 +342,12 @@ public class RegressionCompileCommand extends Command
     private Constructor<?> getConstructor(Class<?> c, Class<?>[] argTypes) {
         try {
             return c.getConstructor(argTypes);
-        }
-        catch (NoSuchMethodException e) {
+        } catch (NoSuchMethodException e) {
             return null;
-        }
-        catch (Throwable t) {
-            if (verbose)
+        } catch (Throwable t) {
+            if (verbose) {
                 t.printStackTrace(log);
+            }
             return null;
         }
     }
@@ -311,13 +355,12 @@ public class RegressionCompileCommand extends Command
     private Method getMethod(Class<?> c, String name, Class<?>[] argTypes) {
         try {
             return c.getMethod(name, argTypes);
-        }
-        catch (NoSuchMethodException e) {
+        } catch (NoSuchMethodException e) {
             return null;
-        }
-        catch (Throwable t) {
-            if (verbose)
+        } catch (Throwable t) {
+            if (verbose) {
                 t.printStackTrace(log);
+            }
             return null;
         }
     }

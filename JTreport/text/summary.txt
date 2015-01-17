@@ -1395,7 +1395,7 @@ java/net/DatagramPacket/Offset.java                                             
 java/net/DatagramPacket/ReuseBuf.java                                                                              Not run.
 java/net/DatagramPacket/Unresolved.java                                                                            Not run.
 java/net/DatagramSocketImpl/CheckDiscard.java                                                                      Not run.
-java/net/DatagramSocket/B6411513.java                                                                              Error. Error invoking compiler
+java/net/DatagramSocket/B6411513.java                                                                              Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
 java/net/DatagramSocket/BindFailTest.java                                                                          Not run.
 java/net/DatagramSocket/DatagramTimeout.java                                                                       Not run.
 java/net/DatagramSocket/ImplicitBind.java                                                                          Not run.

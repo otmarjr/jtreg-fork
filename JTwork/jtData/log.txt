@@ -291,3 +291,45 @@ java.lang.NullPointerException
 [17jan2015 14:48BRST]  Completed test run: not ok
 [17jan2015 14:52BRST]  Starting test run
 [17jan2015 14:52BRST]  Completed test run: not ok
+[17jan2015 15:09BRST]  Starting test run
+[17jan2015 15:10BRST]  Completed test run: not ok
+[17jan2015 15:11BRST]  Starting test run
+[17jan2015 15:11BRST]  Completed test run: not ok
+[17jan2015 15:12BRST]  Starting test run
+[17jan2015 15:17BRST]  Starting test run
+[17jan2015 15:17BRST]  Completed test run: not ok
+[17jan2015 15:19BRST]  Starting test run
+[17jan2015 15:19BRST]  Completed test run: not ok
+[17jan2015 15:20BRST]  Starting test run
+[17jan2015 15:21BRST]  Completed test run: ok
+[17jan2015 15:21BRST]  Starting test run
+[17jan2015 15:21BRST]  Starting test run
+[17jan2015 15:29BRST]  Starting test run
+[17jan2015 15:29BRST]  Completed test run: ok
+[17jan2015 15:31BRST]  Starting test run
+[17jan2015 15:36BRST]  Starting test run
+[17jan2015 15:36BRST]  Completed test run: not ok
+[17jan2015 15:40BRST]  Starting test run
+[17jan2015 15:40BRST]  Completed test run: not ok
+[17jan2015 15:42BRST]  Starting test run
+[17jan2015 15:42BRST]  Completed test run: not ok
+[17jan2015 15:43BRST]  Starting test run
+[17jan2015 15:43BRST]  Completed test run: ok
+[17jan2015 16:50BRST]  Starting test run
+[17jan2015 16:50BRST]  Completed test run: not ok
+[17jan2015 16:51BRST]  Starting test run
+[17jan2015 16:54BRST]  Starting test run
+[17jan2015 16:56BRST]  Starting test run
+[17jan2015 16:57BRST]  Completed test run: not ok
+[17jan2015 17:00BRST]  Starting test run
+[17jan2015 17:02BRST]  Starting test run
+[17jan2015 17:05BRST]  Starting test run
+[17jan2015 19:45BRST]  Starting test run
+[17jan2015 19:47BRST]  Starting test run
+[17jan2015 20:05BRST]  Starting test run
+[17jan2015 20:06BRST]  Starting test run
+[17jan2015 20:10BRST]  Starting test run
+[17jan2015 20:10BRST]  Starting test run
+[17jan2015 20:11BRST]  Completed test run: not ok
+[17jan2015 20:15BRST]  Starting test run
+[17jan2015 20:15BRST]  Completed test run: not ok

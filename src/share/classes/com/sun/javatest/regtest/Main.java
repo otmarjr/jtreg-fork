@@ -1579,14 +1579,10 @@ public class Main {
         List<String> c = new ArrayList<String>();
         c.add(childJava.getPath());
 
-        // c.add("-javaagent:C:\\Users\\Otmar\\Documents\\NetBeansProjects\\java-callgraph\\target\\javacg-0.1-SNAPSHOT-dycg-agent.jar=\"incl=B6411513;excl=java.io.,java.nio.charset.\" ");
-        // c.add("-javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar ");
-        //c.add(" -agentlib:hprof=cpu=times ");
         c.add("-classpath");
         List<File> classpath = new ArrayList<File>();
         classpath.add(jtreg_jar);
-        // classpath.add(new File("C:\\aspectj1.8\\bin\\aspects.jar"));
-        // classpath.add(new File("C:\\aspectj1.8\\lib\\aspectjweaver.jar"));
+
         if (childTools.exists())
             classpath.add(childTools);
         if (junit_jar.exists())

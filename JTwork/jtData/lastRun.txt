@@ -1,6 +1,6 @@
 #Last test run info
-#Sat Jan 17 14:52:14 BRST 2015
-finishTime=1421513534549
+#Sat Jan 17 20:15:31 BRST 2015
+finishTime=1421532931545
 testURLs=java/net/DatagramSocket/B6411513.java
-startTime=1421513530704
+startTime=1421532915238
 configName=regtest

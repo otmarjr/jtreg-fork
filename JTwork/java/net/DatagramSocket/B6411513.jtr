@@ -1,5 +1,5 @@
 #Test Results (version 2)
-#Sat Jan 17 14:52:14 BRST 2015
+#Sat Jan 17 20:15:31 BRST 2015
 #-----testdescription-----
 $file=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\DatagramSocket\\B6411513.java
 $root=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test
@@ -12,10 +12,10 @@ title=java.net.DatagramSocket.receive\: packet isn't received
 
 #-----testresult-----
 description=file\:/E\:/openjdk-6-src-b33-14_oct_2014.tar/jdk/test/java/net/DatagramSocket/B6411513.java
-elapsed=3783 0\:00\:03.783
-end=Sat Jan 17 14\:52\:14 BRST 2015
+elapsed=16275 0\:00\:16.275
+end=Sat Jan 17 20\:15\:31 BRST 2015
 environment=regtest
-execStatus=Error. Error invoking compiler
+execStatus=Failed. Execution failed\: `main' threw exception\: java.lang.NullPointerException
 harnessLoaderMode=Classpath Loader
 harnessVariety=Full Bundle
 hostname=Otmar-PC
@@ -23,10 +23,10 @@ javatestOS=Windows 8.1 6.3 (amd64)
 javatestVersion=4.6
 jtregVersion=jtreg 4.0 dev b00
 script=com.sun.javatest.regtest.RegressionScript
-sections=script_messages build compile
-start=Sat Jan 17 14\:52\:10 BRST 2015
+sections=script_messages build compile main
+start=Sat Jan 17 20\:15\:15 BRST 2015
 test=java/net/DatagramSocket/B6411513.java
-totalTime=3783
+totalTime=16275
 user.name=Otmar
 work=E\:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\java\\net\\DatagramSocket
 
@@ -35,18 +35,18 @@ work=E\:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\java\\net\\DatagramSoc
 JDK under test: C:\\Program Files\\Java\\jdk1.8.0_25
 
 #section:build
-----------messages:(3/96)----------
+----------messages:(3/97)----------
 command: build B6411513
 reason: Named class compiled on demand
-elapsed time (seconds): 2.704
-result: Error. Error invoking compiler
+elapsed time (seconds): 15.025
+result: Passed. Build successful
 
 #section:compile
-----------messages:(3/218)*----------
+----------messages:(3/219)*----------
 command: compile -XDignore.symbol.file=true E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\DatagramSocket\\B6411513.java
 reason: .class file out of date or does not exist
-elapsed time (seconds): 2.688
-----------rerun:(30/4565)*----------
+elapsed time (seconds): 15.009
+----------rerun:(30/4585)*----------
 CPAPPEND='C:\\aspectj1.8\\lib\\aspectjrt.jar;c:\\windows\\temp\\mute2.jar' \\
 PATH='C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Mercurial\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\WinMerge;E:\\cygwin64\\bin;C:\\Program Files (x86)\\Graphviz2.38\\bin;C:\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.8.0_25\\bin;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Executables;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Domains\\Parlanse\\Tools\\RunTimeSystem;C:\\Program Files\\doxygen\\bin;c:\\aspectj1.8\\bin;C:\\Ruby21-x64\\bin' \\
 SystemDrive=C: \\
@@ -54,9 +54,9 @@ SystemRoot='C:\\WINDOWS' \\
 TEMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
 TMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
 windir='C:\\WINDOWS' \\
-    'c:\\aspectj1.8\\bin\\ajc.bat' \\
+    'C:\\Program Files\\Java\\jdk1.8.0_25\\bin\\javac' \\
         -J-Xdebug \\
-        -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:51497 \\
+        -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:54845 \\
         -J-Djava.util.logging.config.file=log.properties \\
         -J-Dtraced.class=B6411513 \\
         -J-Dtrace.output.dir=C:/windows/temp/mute_log \\
@@ -69,38 +69,64 @@ windir='C:\\WINDOWS' \\
         -J-Dtest.src.path='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\DatagramSocket' \\
         -J-Dtest.classes='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\DatagramSocket' \\
         -J-Dtest.class.path='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\DatagramSocket' \\
-        -J-Dtest.vm.opts='-Xdebug -Xrunjdwp:transport=dt_socket,address=127.0.0.1:51497 -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -Xmx64M -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
-        -J-Dtest.tool.vm.opts='-J-Xdebug -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:51497 -J-Djava.util.logging.config.file=log.properties -J-Dtraced.class=B6411513 -J-Dtrace.output.dir=C:/windows/temp/mute_log -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -J-Dwrapper.packages=com.sun.javatest -J-Xmx64M -J-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.vm.opts='-Xdebug -Xrunjdwp:transport=dt_socket,address=127.0.0.1:54845 -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -Xmx64M -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.tool.vm.opts='-J-Xdebug -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:54845 -J-Djava.util.logging.config.file=log.properties -J-Dtraced.class=B6411513 -J-Dtrace.output.dir=C:/windows/temp/mute_log -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -J-Dwrapper.packages=com.sun.javatest -J-Xmx64M -J-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
         -J-Dtest.compiler.opts= \\
         -J-Dtest.java.opts= \\
         -J-Dtest.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
         -J-Dcompile.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
         -J-Dtest.timeout.factor=1.0 \\
         -d 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\DatagramSocket' -classpath 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\DatagramSocket;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\DatagramSocket;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;C:\\aspectj1.8\\lib\\aspectjrt.jar;c:\\windows\\temp\\mute2.jar' -sourcepath 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\DatagramSocket' -XDignore.symbol.file=true 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\DatagramSocket\\B6411513.java'
-----------direct.log:(19/1378)----------
-java.lang.IllegalArgumentException: argument type mismatch
+----------System.out:(1/26)----------
+Compiling test clas.....
+----------System.err:(0/0)----------
+result: Passed. Compilation successful
+
+#section:main
+----------messages:(3/118)----------
+command: main B6411513
+reason: Assumed action based on file name: run main B6411513 
+elapsed time (seconds): 0.125
+----------rerun:(22/3793)*----------
+CPAPPEND='C:\\aspectj1.8\\lib\\aspectjrt.jar;c:\\windows\\temp\\mute2.jar' \\
+PATH='C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Mercurial\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\WinMerge;E:\\cygwin64\\bin;C:\\Program Files (x86)\\Graphviz2.38\\bin;C:\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.8.0_25\\bin;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Executables;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Domains\\Parlanse\\Tools\\RunTimeSystem;C:\\Program Files\\doxygen\\bin;c:\\aspectj1.8\\bin;C:\\Ruby21-x64\\bin' \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'C:\\Program Files\\Java\\jdk1.8.0_25\\bin\\java' \\
+        -Dtest.class.path.prefix='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\DatagramSocket;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\DatagramSocket' \\
+        -Dtest.src='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\DatagramSocket' \\
+        -Dtest.src.path='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\DatagramSocket' \\
+        -Dtest.classes='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\DatagramSocket' \\
+        -Dtest.class.path='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\DatagramSocket' \\
+        -Dtest.vm.opts='-Xdebug -Xrunjdwp:transport=dt_socket,address=127.0.0.1:54845 -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -Xmx64M -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -Dtest.tool.vm.opts='-J-Xdebug -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:54845 -J-Djava.util.logging.config.file=log.properties -J-Dtraced.class=B6411513 -J-Dtrace.output.dir=C:/windows/temp/mute_log -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -J-Dwrapper.packages=com.sun.javatest -J-Xmx64M -J-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -Dtest.compiler.opts= \\
+        -Dtest.java.opts= \\
+        -Dtest.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -Dcompile.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -Dtest.timeout.factor=1.0 \\
+        -classpath 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\dist\\jtreg\\lib\\javatest.jar;E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\dist\\jtreg\\lib\\jtreg.jar;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\DatagramSocket;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\DatagramSocket;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;C:\\aspectj1.8\\lib\\aspectjrt.jar;c:\\windows\\temp\\mute2.jar' \\
+        B6411513
+----------System.out:(0/0)----------
+----------System.err:(14/811)----------
+java.lang.NullPointerException
+	at br.pucminas.icei.MUTETracer.ajc$afterReturning$br_pucminas_icei_MUTETracer$5$af6a9b8a(MUTETracer.aj:190)
+	at br.pucminas.icei.FullTracer.ajc$before$br_pucminas_icei_FullTracer$1$a829f799(FullTracer.aj:34)
+	at B6411513.main(B6411513.java:36)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:483)
-	at com.sun.javatest.regtest.RegressionCompileCommand.run(RegressionCompileCommand.java:257)
-	at com.sun.javatest.regtest.CompileAction.runCompile(CompileAction.java:604)
-	at com.sun.javatest.regtest.CompileAction.runSameJVM(CompileAction.java:435)
-	at com.sun.javatest.regtest.CompileAction.run(CompileAction.java:258)
-	at com.sun.javatest.regtest.CompileAction.compile(CompileAction.java:87)
-	at com.sun.javatest.regtest.BuildAction.run(BuildAction.java:211)
-	at com.sun.javatest.regtest.BuildAction.build(BuildAction.java:81)
-	at com.sun.javatest.regtest.MainAction.build(MainAction.java:299)
-	at com.sun.javatest.regtest.MainAction.run(MainAction.java:254)
-	at com.sun.javatest.regtest.RegressionScript.run(RegressionScript.java:154)
-	at com.sun.javatest.Script.run(Script.java:241)
-	at com.sun.javatest.DefaultTestRunner.runTest(DefaultTestRunner.java:174)
-	at com.sun.javatest.DefaultTestRunner.access$100(DefaultTestRunner.java:43)
-	at com.sun.javatest.DefaultTestRunner$1.run(DefaultTestRunner.java:66)
-----------System.out:(1/26)----------
-Compiling test clas.....
-----------System.err:(0/0)----------
-result: Error. Error invoking compiler
+	at com.sun.javatest.regtest.MainAction$SameVMRunnable.run(MainAction.java:787)
+	at java.lang.Thread.run(Thread.java:745)
+
+JavaTest Message: Test threw exception: java.lang.NullPointerException
+JavaTest Message: shutting down test
+
+result: Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
 
 
-test result: Error. Error invoking compiler
+test result: Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
