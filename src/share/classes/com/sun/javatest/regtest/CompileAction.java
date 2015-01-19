@@ -369,6 +369,9 @@ public class CompileAction extends Action {
             TimeoutHandlerProvider.createHandler(script, section);
 
         String[] cmdArgs = command.toArray(new String[command.size()]);
+        // cmdArgs = new String[] {"c:\\aspectj1.8\\bin\\ajc.bat","-Xrunjdwp:transport=dt_socket,address=127.0.0.1:56026 ","-classpath", cp.toString(), "-source", "1.6", "-target", "1.6", "-d", destDir.getAbsolutePath(),command.get(command.size()-1), "C:/Users/Otmar/git/MUTE-Tracer/MUTE2 - Clean try/src/br/pucminas/icei/TracingContext.java", "C:/Users/Otmar/git/MUTE-Tracer/MUTE2 - Clean try/src/br/pucminas/icei/MUTETracer.aj"};
+        cmdArgs = new String[] {"C:\\Program Files\\Java\\jdk1.8.0_25\\bin\\java.exe","-Xrunjdwp:transport=dt_socket,address=127.0.0.1:56026 ","-classpath", cp.toString(), "-Xmx64M", "org.aspectj.tools.ajc.Main", "-source", "1.6", "-target", "1.6", "-d", destDir.getAbsolutePath(),command.get(command.size()-1), "C:/Users/Otmar/git/MUTE-Tracer/MUTE2 - Clean try/src/br/pucminas/icei/TracingContext.java", "C:/Users/Otmar/git/MUTE-Tracer/MUTE2 - Clean try/src/br/pucminas/icei/MUTETracer.aj"};
+        
         status = normalize(cmd.exec(cmdArgs, envArgs, stdOut, stdErr,
                                     (long) timeout * 1000, timeoutHandler));
 

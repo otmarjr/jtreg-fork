@@ -33,8 +33,8 @@
             -->
             <!--<arg value='-vmoptions:"-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\aspectj1.8\lib\aspectjweaver.jar -classpath C:\aspectj1.8\lib\aspectjrt.jar;c:\windows\temp\mute2.jar"'/>-->
             <arg value='-vmoptions:"-Xdebug -Xrunjdwp:transport=dt_socket,address=${jpda.child.address} -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang"'/>
-            <arg value="-cpa:C:\aspectj1.8\lib\aspectjrt.jar" />
-            <arg value="-samevm"/>
+            <arg value="-cpa:C:\aspectj1.8\lib\aspectjrt.jar;C:\aspectj1.8\lib\aspectjtools.jar;" />
+            <arg value="-othervm"/>
             <arg value="-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\aspectj1.8\lib\aspectjweaver.jar"/>
             <!--<arg value="e:\openjdk-6-src-b33-14_oct_2014.tar\jdk\test\java\net\"/>-->
             <arg value="e:\openjdk-6-src-b33-14_oct_2014.tar\jdk\test\java\net\DatagramSocket\B6411513.java"/>
