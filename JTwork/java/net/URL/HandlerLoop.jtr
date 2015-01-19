@@ -1,0 +1,137 @@
+#Test Results (version 2)
+#Sun Jan 18 21:46:24 BRST 2015
+#-----testdescription-----
+$file=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URL\\HandlerLoop.java
+$root=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test
+keywords=bug4135031
+run=ASSUMED_ACTION main HandlerLoop\r\n
+source=HandlerLoop.java
+title=Test boostrap problem when a URLStreamHandlerFactory is loaded by the application class loader.
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/E\:/openjdk-6-src-b33-14_oct_2014.tar/jdk/test/java/net/URL/HandlerLoop.java
+elapsed=1203 0\:00\:01.203
+end=Sun Jan 18 21\:46\:24 BRST 2015
+environment=regtest
+execStatus=Failed. Execution failed\: `main' threw exception\: java.net.MalformedURLException
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=Otmar-PC
+javatestOS=Windows 8.1 6.3 (amd64)
+javatestVersion=4.6
+jtregVersion=jtreg 4.0 dev b00
+script=com.sun.javatest.regtest.RegressionScript
+sections=script_messages build compile main
+start=Sun Jan 18 21\:46\:23 BRST 2015
+test=java/net/URL/HandlerLoop.java
+totalTime=1203
+user.name=Otmar
+work=E\:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\java\\net\\URL
+
+#section:script_messages
+----------messages:(1/54)*----------
+JDK under test: C:\\Program Files\\Java\\jdk1.8.0_25
+
+#section:build
+----------messages:(3/99)----------
+command: build HandlerLoop
+reason: Named class compiled on demand
+elapsed time (seconds): 1.188
+result: Passed. Build successful
+
+#section:compile
+----------messages:(3/210)*----------
+command: compile -XDignore.symbol.file=true E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URL\\HandlerLoop.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.188
+----------rerun:(28/4245)*----------
+CPAPPEND='C:\\aspectj1.8\\lib\\aspectjrt.jar' \\
+PATH='C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Mercurial\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\WinMerge;E:\\cygwin64\\bin;C:\\Program Files (x86)\\Graphviz2.38\\bin;C:\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.8.0_25\\bin;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Executables;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Domains\\Parlanse\\Tools\\RunTimeSystem;C:\\Program Files\\doxygen\\bin;c:\\aspectj1.8\\bin;C:\\Ruby21-x64\\bin' \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'C:\\Program Files\\Java\\jdk1.8.0_25\\bin\\javac' \\
+        -J-Xdebug \\
+        -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 \\
+        -J-Djava.util.logging.config.file=log.properties \\
+        -J-Dtraced.class=B6411513 \\
+        -J-Dtrace.output.dir=C:/windows/temp/mute_log \\
+        -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang \\
+        -J'-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.class.path.prefix='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URL;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URL' \\
+        -J-Dtest.src='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URL' \\
+        -J-Dtest.src.path='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URL' \\
+        -J-Dtest.classes='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URL' \\
+        -J-Dtest.class.path='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URL' \\
+        -J-Dtest.vm.opts='-Xdebug -Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.tool.vm.opts='-J-Xdebug -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -J-Djava.util.logging.config.file=log.properties -J-Dtraced.class=B6411513 -J-Dtrace.output.dir=C:/windows/temp/mute_log -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -J-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.compiler.opts= \\
+        -J-Dtest.java.opts= \\
+        -J-Dtest.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -J-Dcompile.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -J-Dtest.timeout.factor=1.0 \\
+        -d 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URL' -classpath 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URL;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URL;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;C:\\aspectj1.8\\lib\\aspectjrt.jar' -sourcepath 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URL' -XDignore.symbol.file=true 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URL\\HandlerLoop.java'
+----------System.out:(1/26)----------
+Compiling test clas.....
+----------System.err:(0/0)----------
+result: Passed. Compilation successful
+
+#section:main
+----------messages:(3/124)----------
+command: main HandlerLoop
+reason: Assumed action based on file name: run main HandlerLoop 
+elapsed time (seconds): 0.015
+----------rerun:(22/3558)*----------
+CPAPPEND='C:\\aspectj1.8\\lib\\aspectjrt.jar' \\
+PATH='C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Mercurial\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\WinMerge;E:\\cygwin64\\bin;C:\\Program Files (x86)\\Graphviz2.38\\bin;C:\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.8.0_25\\bin;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Executables;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Domains\\Parlanse\\Tools\\RunTimeSystem;C:\\Program Files\\doxygen\\bin;c:\\aspectj1.8\\bin;C:\\Ruby21-x64\\bin' \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'C:\\Program Files\\Java\\jdk1.8.0_25\\bin\\java' \\
+        -Dtest.class.path.prefix='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URL;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URL' \\
+        -Dtest.src='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URL' \\
+        -Dtest.src.path='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URL' \\
+        -Dtest.classes='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URL' \\
+        -Dtest.class.path='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URL' \\
+        -Dtest.vm.opts='-Xdebug -Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -Dtest.tool.vm.opts='-J-Xdebug -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -J-Djava.util.logging.config.file=log.properties -J-Dtraced.class=B6411513 -J-Dtrace.output.dir=C:/windows/temp/mute_log -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -J-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -Dtest.compiler.opts= \\
+        -Dtest.java.opts= \\
+        -Dtest.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -Dcompile.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -Dtest.timeout.factor=1.0 \\
+        -classpath 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\dist\\jtreg\\lib\\javatest.jar;E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\dist\\jtreg\\lib\\jtreg.jar;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URL;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URL;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;C:\\aspectj1.8\\lib\\aspectjrt.jar' \\
+        HandlerLoop
+----------System.out:(0/0)----------
+----------System.err:(21/1049)----------
+java.net.MalformedURLException
+	at java.net.URL.<init>(URL.java:620)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at HandlerLoop.main(HandlerLoop.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.sun.javatest.regtest.MainAction$SameVMRunnable.run(MainAction.java:772)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at br.pucminas.icei.MUTETracer.ajc$before$br_pucminas_icei_MUTETracer$3$8c648db0(MUTETracer.aj:105)
+	at HandlerLoop$HandlerFactory.createURLStreamHandler(HandlerLoop.java:52)
+	at java.net.URL.getURLStreamHandler(URL.java:1135)
+	at java.net.URL.<init>(URL.java:592)
+	... 9 more
+
+JavaTest Message: Test threw exception: java.net.MalformedURLException
+JavaTest Message: shutting down test
+
+result: Failed. Execution failed: `main' threw exception: java.net.MalformedURLException
+
+
+test result: Failed. Execution failed: `main' threw exception: java.net.MalformedURLException

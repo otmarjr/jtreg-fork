@@ -1,0 +1,146 @@
+#Test Results (version 2)
+#Sun Jan 18 21:44:54 BRST 2015
+#-----testdescription-----
+$file=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java
+$root=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test
+keywords=bug4868820
+run=ASSUMED_ACTION main UdpTest\r\n
+source=UdpTest.java
+title=IPv6 support for Windows XP and 2003 server
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/E\:/openjdk-6-src-b33-14_oct_2014.tar/jdk/test/java/net/ipv6tests/UdpTest.java
+elapsed=954 0\:00\:00.954
+end=Sun Jan 18 21\:44\:54 BRST 2015
+environment=regtest
+execStatus=Error. unexpected exit code from javac\: 20
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=Otmar-PC
+javatestOS=Windows 8.1 6.3 (amd64)
+javatestVersion=4.6
+jtregVersion=jtreg 4.0 dev b00
+script=com.sun.javatest.regtest.RegressionScript
+sections=script_messages build compile
+start=Sun Jan 18 21\:44\:53 BRST 2015
+test=java/net/ipv6tests/UdpTest.java
+totalTime=954
+user.name=Otmar
+work=E\:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\java\\net\\ipv6tests
+
+#section:script_messages
+----------messages:(1/54)*----------
+JDK under test: C:\\Program Files\\Java\\jdk1.8.0_25
+
+#section:build
+----------messages:(3/95)----------
+command: build UdpTest
+reason: Named class compiled on demand
+elapsed time (seconds): 0.954
+result: Error. unexpected exit code from javac: 20
+
+#section:compile
+----------messages:(3/212)*----------
+command: compile -XDignore.symbol.file=true E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.954
+----------rerun:(28/4307)*----------
+CPAPPEND='C:\\aspectj1.8\\lib\\aspectjrt.jar' \\
+PATH='C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Mercurial\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\WinMerge;E:\\cygwin64\\bin;C:\\Program Files (x86)\\Graphviz2.38\\bin;C:\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.8.0_25\\bin;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Executables;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Domains\\Parlanse\\Tools\\RunTimeSystem;C:\\Program Files\\doxygen\\bin;c:\\aspectj1.8\\bin;C:\\Ruby21-x64\\bin' \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'C:\\Program Files\\Java\\jdk1.8.0_25\\bin\\javac' \\
+        -J-Xdebug \\
+        -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 \\
+        -J-Djava.util.logging.config.file=log.properties \\
+        -J-Dtraced.class=B6411513 \\
+        -J-Dtrace.output.dir=C:/windows/temp/mute_log \\
+        -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang \\
+        -J'-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.class.path.prefix='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\ipv6tests;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests' \\
+        -J-Dtest.src='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests' \\
+        -J-Dtest.src.path='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests' \\
+        -J-Dtest.classes='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\ipv6tests' \\
+        -J-Dtest.class.path='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\ipv6tests' \\
+        -J-Dtest.vm.opts='-Xdebug -Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.tool.vm.opts='-J-Xdebug -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -J-Djava.util.logging.config.file=log.properties -J-Dtraced.class=B6411513 -J-Dtrace.output.dir=C:/windows/temp/mute_log -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -J-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.compiler.opts= \\
+        -J-Dtest.java.opts= \\
+        -J-Dtest.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -J-Dcompile.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -J-Dtest.timeout.factor=1.0 \\
+        -d 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\ipv6tests' -classpath 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\ipv6tests;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;C:\\aspectj1.8\\lib\\aspectjrt.jar' -sourcepath 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests' -XDignore.symbol.file=true 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java'
+----------System.out:(1/26)----------
+Compiling test clas.....
+----------System.err:(62/4608)*----------
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:33 [error] Tests cannot be resolved to a type
+public class UdpTest extends Tests {
+                             ^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:58 [error] The method getFirstLocalIPv6Address() is undefined for the type UdpTest
+ia6addr = getFirstLocalIPv6Address ();
+          ^^^^^^^^^^^^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:59 [error] The method getFirstLocalIPv4Address() is undefined for the type UdpTest
+ia4addr = getFirstLocalIPv4Address ();
+          ^^^^^^^^^^^^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:63 [error] The method checkDebug(String[]) is undefined for the type UdpTest
+checkDebug(args);
+^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:68 [error] The method dprintln(String) is undefined for the type UdpTest
+dprintln ("Local Addresses");
+
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:69 [error] The method dprintln(String) is undefined for the type UdpTest
+dprintln (ia4addr.toString());
+
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:70 [error] The method dprintln(String) is undefined for the type UdpTest
+dprintln (ia6addr.toString());
+
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:73 [error] The method isLinux() is undefined for the type UdpTest
+if (!isLinux()) {
+     
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:84 [error] The method simpleDataExchange(DatagramSocket, Inet4Address, DatagramSocket, Inet4Address) is undefined for the type UdpTest
+simpleDataExchange (s1, ia4addr, s2, ia4addr);
+^^^^^^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:90 [error] The method simpleDataExchange(DatagramSocket, Inet6Address, DatagramSocket, Inet6Address) is undefined for the type UdpTest
+simpleDataExchange (s1, ia6addr, s2, ia6addr);
+^^^^^^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:96 [error] The method simpleDataExchange(DatagramSocket, Inet6Address, DatagramSocket, Inet6Address) is undefined for the type UdpTest
+simpleDataExchange (s1, ia6addr, s2, ia6addr);
+^^^^^^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:102 [error] The method simpleDataExchange(DatagramSocket, Inet6Address, DatagramSocket, Inet4Address) is undefined for the type UdpTest
+simpleDataExchange (s1, ia6addr, s2, ia4addr);
+^^^^^^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:110 [error] The method datagramEcho(DatagramSocket, DatagramSocket, Inet6Address) is undefined for the type UdpTest
+datagramEcho (s2, s1, ia6addr);
+^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:111 [error] The method datagramEcho(DatagramSocket, DatagramSocket, Inet4Address) is undefined for the type UdpTest
+datagramEcho (s3, s1, ia4addr);
+^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:129 [error] The method checkTime(long, int) is undefined for the type UdpTest
+checkTime (System.currentTimeMillis() - t1, 4000);
+
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:133 [error] The method simpleDataExchange(DatagramSocket, Inet6Address, DatagramSocket, Inet4Address) is undefined for the type UdpTest
+simpleDataExchange (s1, ia6addr, s2, ia4addr);
+^^^^^^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:142 [error] The method checkTime(long, int) is undefined for the type UdpTest
+checkTime (System.currentTimeMillis() - t1, 4000);
+
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:150 [error] The method runAfter(int, new Runnable(){}) is undefined for the type UdpTest
+runAfter (2000, new Runnable () {
+
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:160 [error] The method checkTime(long, int) is undefined for the type UdpTest
+checkTime (System.currentTimeMillis() - t1, 2000);
+
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\UdpTest.java:172 [error] The method datagramEcho(DatagramSocket, DatagramSocket, null) is undefined for the type UdpTest
+datagramEcho (s1, s2, null);
+^^^
+
+20 errors
+result: Error. unexpected exit code from javac: 20
+
+
+test result: Error. unexpected exit code from javac: 20

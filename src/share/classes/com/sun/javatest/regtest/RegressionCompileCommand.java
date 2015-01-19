@@ -108,7 +108,7 @@ public class RegressionCompileCommand extends Command {
         c.addAll(Arrays.asList(cmdArgs));
         int indexOfDirectoryOutput = c.indexOf("-d");
         String directoryOutput = c.get(indexOfDirectoryOutput+1);
-        String[] cmd = new String[] {"c:\\aspectj1.8\\bin\\ajc.bat", "-source", "1.6", "-target", "1.6", "-d", directoryOutput, cmdArgs[cmdArgs.length-1], "C:/Users/Otmar/git/MUTE-Tracer/MUTE2 - Clean try/src/br/pucminas/icei/FullTracer.aj" };
+        String[] cmd = new String[] {"c:\\aspectj1.8\\bin\\ajc.bat", "-source", "1.6", "-target", "1.6", "-d", directoryOutput, cmdArgs[cmdArgs.length-1], "C:/Users/Otmar/git/MUTE-Tracer/MUTE2 - Clean try/src/br/pucminas/icei/TracingContext.java", "C:/Users/Otmar/git/MUTE-Tracer/MUTE2 - Clean try/src/br/pucminas/icei/MUTETracer.aj"};
         
         pb.environment().put("CLASSPATH", "c:\\aspectj1.8\\lib\\aspectjrt.jar");
         try {

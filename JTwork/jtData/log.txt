@@ -335,3 +335,11 @@ java.lang.NullPointerException
 [17jan2015 20:15BRST]  Completed test run: not ok
 [17jan2015 20:21BRST]  Starting test run
 [17jan2015 20:21BRST]  Completed test run: ok
+[18jan2015 21:35BRST]  Starting test run
+[18jan2015 21:35BRST]  Completed test run: ok
+[18jan2015 21:37BRST]  Starting test run
+[18jan2015 21:41BRST]  Completed test run: not ok
+[18jan2015 21:43BRST]  Starting test run
+[18jan2015 21:47BRST]  Completed test run: not ok
+[18jan2015 21:48BRST]  Starting test run
+[18jan2015 21:48BRST]  Completed test run: ok

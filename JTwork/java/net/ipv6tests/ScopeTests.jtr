@@ -1,0 +1,98 @@
+#Test Results (version 2)
+#Sun Jan 18 21:44:52 BRST 2015
+#-----testdescription-----
+$file=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\ScopeTests.java
+$root=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test
+keywords=bug4868820
+run=ASSUMED_ACTION main ScopeTests\r\n
+source=ScopeTests.java
+title=IPv6 support for Windows XP and 2003 server
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/E\:/openjdk-6-src-b33-14_oct_2014.tar/jdk/test/java/net/ipv6tests/ScopeTests.java
+elapsed=984 0\:00\:00.984
+end=Sun Jan 18 21\:44\:52 BRST 2015
+environment=regtest
+execStatus=Error. compiler crashed (exit code 4)
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=Otmar-PC
+javatestOS=Windows 8.1 6.3 (amd64)
+javatestVersion=4.6
+jtregVersion=jtreg 4.0 dev b00
+script=com.sun.javatest.regtest.RegressionScript
+sections=script_messages build compile
+start=Sun Jan 18 21\:44\:51 BRST 2015
+test=java/net/ipv6tests/ScopeTests.java
+totalTime=984
+user.name=Otmar
+work=E\:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\java\\net\\ipv6tests
+
+#section:script_messages
+----------messages:(1/54)*----------
+JDK under test: C:\\Program Files\\Java\\jdk1.8.0_25
+
+#section:build
+----------messages:(3/98)----------
+command: build ScopeTests
+reason: Named class compiled on demand
+elapsed time (seconds): 0.984
+result: Error. compiler crashed (exit code 4)
+
+#section:compile
+----------messages:(3/215)*----------
+command: compile -XDignore.symbol.file=true E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\ScopeTests.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.984
+----------rerun:(28/4310)*----------
+CPAPPEND='C:\\aspectj1.8\\lib\\aspectjrt.jar' \\
+PATH='C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Mercurial\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\WinMerge;E:\\cygwin64\\bin;C:\\Program Files (x86)\\Graphviz2.38\\bin;C:\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.8.0_25\\bin;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Executables;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Domains\\Parlanse\\Tools\\RunTimeSystem;C:\\Program Files\\doxygen\\bin;c:\\aspectj1.8\\bin;C:\\Ruby21-x64\\bin' \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'C:\\Program Files\\Java\\jdk1.8.0_25\\bin\\javac' \\
+        -J-Xdebug \\
+        -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 \\
+        -J-Djava.util.logging.config.file=log.properties \\
+        -J-Dtraced.class=B6411513 \\
+        -J-Dtrace.output.dir=C:/windows/temp/mute_log \\
+        -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang \\
+        -J'-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.class.path.prefix='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\ipv6tests;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests' \\
+        -J-Dtest.src='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests' \\
+        -J-Dtest.src.path='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests' \\
+        -J-Dtest.classes='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\ipv6tests' \\
+        -J-Dtest.class.path='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\ipv6tests' \\
+        -J-Dtest.vm.opts='-Xdebug -Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.tool.vm.opts='-J-Xdebug -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -J-Djava.util.logging.config.file=log.properties -J-Dtraced.class=B6411513 -J-Dtrace.output.dir=C:/windows/temp/mute_log -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -J-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.compiler.opts= \\
+        -J-Dtest.java.opts= \\
+        -J-Dtest.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -J-Dcompile.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -J-Dtest.timeout.factor=1.0 \\
+        -d 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\ipv6tests' -classpath 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\ipv6tests;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;C:\\aspectj1.8\\lib\\aspectjrt.jar' -sourcepath 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests' -XDignore.symbol.file=true 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\ScopeTests.java'
+----------System.out:(1/26)----------
+Compiling test clas.....
+----------System.err:(14/815)*----------
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\ScopeTests.java:33 [error] Tests cannot be resolved to a type
+public class ScopeTests extends Tests {
+                                ^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\ScopeTests.java:36 [error] The method checkDebug(String[]) is undefined for the type ScopeTests
+checkDebug (args);
+^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\ScopeTests.java:81 [error] The method dprintln(String) is undefined for the type ScopeTests
+dprintln ("ComplexTests");
+
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\ipv6tests\\ScopeTests.java:89 [error] The method dprintln(String) is undefined for the type ScopeTests
+dprintln ("ComplexTests: "+addr);
+
+
+4 errors
+result: Error. compiler crashed (exit code 4)
+
+
+test result: Error. compiler crashed (exit code 4)

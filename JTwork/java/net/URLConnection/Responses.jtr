@@ -1,0 +1,135 @@
+#Test Results (version 2)
+#Sun Jan 18 21:47:10 BRST 2015
+#-----testdescription-----
+$file=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URLConnection\\Responses.java
+$root=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test
+keywords=bug4635698
+run=ASSUMED_ACTION main Responses\r\n
+source=Responses.java
+title=Check that HttpURLConnection.getResponseCode returns -1 for malformed status-lines in the http response.
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/E\:/openjdk-6-src-b33-14_oct_2014.tar/jdk/test/java/net/URLConnection/Responses.java
+elapsed=1187 0\:00\:01.187
+end=Sun Jan 18 21\:47\:10 BRST 2015
+environment=regtest
+execStatus=Error. Can't load test\: java.lang.ClassNotFoundException\: Responses
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=Otmar-PC
+javatestOS=Windows 8.1 6.3 (amd64)
+javatestVersion=4.6
+jtregVersion=jtreg 4.0 dev b00
+script=com.sun.javatest.regtest.RegressionScript
+sections=script_messages build compile main
+start=Sun Jan 18 21\:47\:09 BRST 2015
+test=java/net/URLConnection/Responses.java
+totalTime=1187
+user.name=Otmar
+work=E\:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\java\\net\\URLConnection
+
+#section:script_messages
+----------messages:(1/54)*----------
+JDK under test: C:\\Program Files\\Java\\jdk1.8.0_25
+
+#section:build
+----------messages:(3/97)----------
+command: build Responses
+reason: Named class compiled on demand
+elapsed time (seconds): 1.187
+result: Passed. Build successful
+
+#section:compile
+----------messages:(3/218)*----------
+command: compile -XDignore.symbol.file=true E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URLConnection\\Responses.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.187
+----------rerun:(28/4353)*----------
+CPAPPEND='C:\\aspectj1.8\\lib\\aspectjrt.jar' \\
+PATH='C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Mercurial\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\WinMerge;E:\\cygwin64\\bin;C:\\Program Files (x86)\\Graphviz2.38\\bin;C:\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.8.0_25\\bin;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Executables;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Domains\\Parlanse\\Tools\\RunTimeSystem;C:\\Program Files\\doxygen\\bin;c:\\aspectj1.8\\bin;C:\\Ruby21-x64\\bin' \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'C:\\Program Files\\Java\\jdk1.8.0_25\\bin\\javac' \\
+        -J-Xdebug \\
+        -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 \\
+        -J-Djava.util.logging.config.file=log.properties \\
+        -J-Dtraced.class=B6411513 \\
+        -J-Dtrace.output.dir=C:/windows/temp/mute_log \\
+        -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang \\
+        -J'-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.class.path.prefix='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URLConnection;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URLConnection' \\
+        -J-Dtest.src='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URLConnection' \\
+        -J-Dtest.src.path='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URLConnection' \\
+        -J-Dtest.classes='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URLConnection' \\
+        -J-Dtest.class.path='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URLConnection' \\
+        -J-Dtest.vm.opts='-Xdebug -Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.tool.vm.opts='-J-Xdebug -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -J-Djava.util.logging.config.file=log.properties -J-Dtraced.class=B6411513 -J-Dtrace.output.dir=C:/windows/temp/mute_log -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -J-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.compiler.opts= \\
+        -J-Dtest.java.opts= \\
+        -J-Dtest.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -J-Dcompile.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -J-Dtest.timeout.factor=1.0 \\
+        -d 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URLConnection' -classpath 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URLConnection;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URLConnection;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;C:\\aspectj1.8\\lib\\aspectjrt.jar' -sourcepath 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URLConnection' -XDignore.symbol.file=true 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URLConnection\\Responses.java'
+----------System.out:(1/26)----------
+Compiling test clas.....
+----------System.err:(0/0)----------
+result: Passed. Compilation successful
+
+#section:main
+----------messages:(3/118)----------
+command: main Responses
+reason: Assumed action based on file name: run main Responses 
+elapsed time (seconds): 0.0
+----------rerun:(22/3636)*----------
+CPAPPEND='C:\\aspectj1.8\\lib\\aspectjrt.jar' \\
+PATH='C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Mercurial\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\WinMerge;E:\\cygwin64\\bin;C:\\Program Files (x86)\\Graphviz2.38\\bin;C:\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.8.0_25\\bin;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Executables;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Domains\\Parlanse\\Tools\\RunTimeSystem;C:\\Program Files\\doxygen\\bin;c:\\aspectj1.8\\bin;C:\\Ruby21-x64\\bin' \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'C:\\Program Files\\Java\\jdk1.8.0_25\\bin\\java' \\
+        -Dtest.class.path.prefix='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URLConnection;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URLConnection' \\
+        -Dtest.src='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URLConnection' \\
+        -Dtest.src.path='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URLConnection' \\
+        -Dtest.classes='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URLConnection' \\
+        -Dtest.class.path='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URLConnection' \\
+        -Dtest.vm.opts='-Xdebug -Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -Dtest.tool.vm.opts='-J-Xdebug -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -J-Djava.util.logging.config.file=log.properties -J-Dtraced.class=B6411513 -J-Dtrace.output.dir=C:/windows/temp/mute_log -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -J-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -Dtest.compiler.opts= \\
+        -Dtest.java.opts= \\
+        -Dtest.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -Dcompile.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -Dtest.timeout.factor=1.0 \\
+        -classpath 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\dist\\jtreg\\lib\\javatest.jar;E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\dist\\jtreg\\lib\\jtreg.jar;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\URLConnection;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\URLConnection;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;C:\\aspectj1.8\\lib\\aspectjrt.jar' \\
+        Responses
+----------System.out:(0/0)----------
+----------System.err:(19/1097)----------
+java.lang.ClassNotFoundException: Responses
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at com.sun.javatest.regtest.MainAction.runClass(MainAction.java:618)
+	at com.sun.javatest.regtest.MainAction.runSameJVM(MainAction.java:489)
+	at com.sun.javatest.regtest.MainAction.run(MainAction.java:276)
+	at com.sun.javatest.regtest.RegressionScript.run(RegressionScript.java:154)
+	at com.sun.javatest.Script.run(Script.java:241)
+	at com.sun.javatest.DefaultTestRunner.runTest(DefaultTestRunner.java:174)
+	at com.sun.javatest.DefaultTestRunner.access$100(DefaultTestRunner.java:43)
+	at com.sun.javatest.DefaultTestRunner$1.run(DefaultTestRunner.java:66)
+
+JavaTest Message: main() method must be in a public class named
+JavaTest Message: Responses in file Responses.java
+
+result: Error. Can't load test: java.lang.ClassNotFoundException: Responses
+
+
+test result: Error. Can't load test: java.lang.ClassNotFoundException: Responses

@@ -1,0 +1,96 @@
+#Test Results (version 2)
+#Sun Jan 18 21:43:35 BRST 2015
+#-----testdescription-----
+$file=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\Authenticator\\B4769350.java
+$root=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test
+keywords=bug4769350
+library=../../../sun/net/www/httptest/
+run=USER_SPECIFIED build HttpCallback HttpServer ClosedChannelList HttpTransaction AbstractCallback\r\nUSER_SPECIFIED main B4769350 server\r\nUSER_SPECIFIED main B4769350 proxy\r\n
+source=B4769350.java
+title=proxy authentication username and password caching only works in serial case
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/E\:/openjdk-6-src-b33-14_oct_2014.tar/jdk/test/java/net/Authenticator/B4769350.java
+elapsed=954 0\:00\:00.954
+end=Sun Jan 18 21\:43\:35 BRST 2015
+environment=regtest
+execStatus=Error. system error (exit code 3)
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=Otmar-PC
+javatestOS=Windows 8.1 6.3 (amd64)
+javatestVersion=4.6
+jtregVersion=jtreg 4.0 dev b00
+script=com.sun.javatest.regtest.RegressionScript
+sections=script_messages build compile
+start=Sun Jan 18 21\:43\:34 BRST 2015
+test=java/net/Authenticator/B4769350.java
+totalTime=954
+user.name=Otmar
+work=E\:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\java\\net\\Authenticator
+
+#section:script_messages
+----------messages:(1/54)*----------
+JDK under test: C:\\Program Files\\Java\\jdk1.8.0_25
+
+#section:build
+----------messages:(3/240)----------
+command: build HttpCallback HttpServer ClosedChannelList HttpTransaction AbstractCallback
+reason: User specified action: run build HttpCallback HttpServer ClosedChannelList HttpTransaction AbstractCallback 
+elapsed time (seconds): 0.954
+result: Error. system error (exit code 3)
+
+#section:compile
+----------messages:(3/602)*----------
+command: compile -XDignore.symbol.file=true E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpCallback.java E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpServer.java E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\ClosedChannelList.java E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpTransaction.java E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\AbstractCallback.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.954
+----------rerun:(28/5147)*----------
+CPAPPEND='C:\\aspectj1.8\\lib\\aspectjrt.jar' \\
+PATH='C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Mercurial\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\WinMerge;E:\\cygwin64\\bin;C:\\Program Files (x86)\\Graphviz2.38\\bin;C:\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.8.0_25\\bin;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Executables;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Domains\\Parlanse\\Tools\\RunTimeSystem;C:\\Program Files\\doxygen\\bin;c:\\aspectj1.8\\bin;C:\\Ruby21-x64\\bin' \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'C:\\Program Files\\Java\\jdk1.8.0_25\\bin\\javac' \\
+        -J-Xdebug \\
+        -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 \\
+        -J-Djava.util.logging.config.file=log.properties \\
+        -J-Dtraced.class=B6411513 \\
+        -J-Dtrace.output.dir=C:/windows/temp/mute_log \\
+        -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang \\
+        -J'-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.class.path.prefix='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\Authenticator;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\Authenticator;E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\sun\\net\\www\\httptest' \\
+        -J-Dtest.src='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\Authenticator' \\
+        -J-Dtest.src.path='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\Authenticator;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest' \\
+        -J-Dtest.classes='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\Authenticator' \\
+        -J-Dtest.class.path='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\Authenticator;E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\sun\\net\\www\\httptest' \\
+        -J-Dtest.vm.opts='-Xdebug -Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.tool.vm.opts='-J-Xdebug -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -J-Djava.util.logging.config.file=log.properties -J-Dtraced.class=B6411513 -J-Dtrace.output.dir=C:/windows/temp/mute_log -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -J-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.compiler.opts= \\
+        -J-Dtest.java.opts= \\
+        -J-Dtest.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -J-Dcompile.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -J-Dtest.timeout.factor=1.0 \\
+        -d 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\sun\\net\\www\\httptest' -classpath 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\Authenticator;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\Authenticator;E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\sun\\net\\www\\httptest;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;C:\\aspectj1.8\\lib\\aspectjrt.jar' -sourcepath 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\Authenticator;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest' -XDignore.symbol.file=true 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpCallback.java' 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpServer.java' 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\ClosedChannelList.java' 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpTransaction.java' 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\AbstractCallback.java'
+----------System.out:(1/26)----------
+Compiling test clas.....
+----------System.err:(11/780)*----------
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\AbstractCallback.java:37 [error] HttpCallback cannot be resolved to a type
+public abstract class AbstractCallback implements HttpCallback {
+                                                  ^^^^^^^^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\AbstractCallback.java:60 [error] HttpTransaction cannot be resolved to a type
+public void request (HttpTransaction msg) {
+                     ^^^^^^^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\AbstractCallback.java:81 [error] HttpTransaction cannot be resolved to a type
+abstract public void request (HttpTransaction msg, int n);
+                              ^^^^^^^^^^
+
+3 errors
+result: Error. system error (exit code 3)
+
+
+test result: Error. system error (exit code 3)

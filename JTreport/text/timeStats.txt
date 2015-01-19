@@ -1,6 +1,6 @@
  time,count
-   21,    1
+    8,    1
 
-Mean                21,00s
+Mean                 8,00s
 Standard deviation   0,00s
-Total elapsed time 0m 21s
+Total elapsed time 0m 8s

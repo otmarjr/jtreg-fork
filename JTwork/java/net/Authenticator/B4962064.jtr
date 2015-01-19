@@ -1,0 +1,108 @@
+#Test Results (version 2)
+#Sun Jan 18 21:43:38 BRST 2015
+#-----testdescription-----
+$file=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\Authenticator\\B4962064.java
+$root=E\:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test
+keywords=bug4962064 othervm
+library=../../../sun/net/www/httptest/
+run=USER_SPECIFIED build HttpCallback HttpServer ClosedChannelList HttpTransaction\r\nUSER_SPECIFIED main/othervm B4962064\r\n
+source=B4962064.java
+title=Extend Authenticator to provide access to request URI and server/proxy
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/E\:/openjdk-6-src-b33-14_oct_2014.tar/jdk/test/java/net/Authenticator/B4962064.java
+elapsed=1138 0\:00\:01.138
+end=Sun Jan 18 21\:43\:38 BRST 2015
+environment=regtest
+execStatus=Error. unexpected exit code from javac\: 7
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=Otmar-PC
+javatestOS=Windows 8.1 6.3 (amd64)
+javatestVersion=4.6
+jtregVersion=jtreg 4.0 dev b00
+script=com.sun.javatest.regtest.RegressionScript
+sections=script_messages build compile
+start=Sun Jan 18 21\:43\:36 BRST 2015
+test=java/net/Authenticator/B4962064.java
+totalTime=1138
+user.name=Otmar
+work=E\:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\java\\net\\Authenticator
+
+#section:script_messages
+----------messages:(1/54)*----------
+JDK under test: C:\\Program Files\\Java\\jdk1.8.0_25
+
+#section:build
+----------messages:(3/206)----------
+command: build HttpCallback HttpServer ClosedChannelList HttpTransaction
+reason: User specified action: run build HttpCallback HttpServer ClosedChannelList HttpTransaction 
+elapsed time (seconds): 1.138
+result: Error. unexpected exit code from javac: 7
+
+#section:compile
+----------messages:(3/505)*----------
+command: compile -XDignore.symbol.file=true E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpCallback.java E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpServer.java E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\ClosedChannelList.java E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpTransaction.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.138
+----------rerun:(28/5048)*----------
+CPAPPEND='C:\\aspectj1.8\\lib\\aspectjrt.jar' \\
+PATH='C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Mercurial\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\WinMerge;E:\\cygwin64\\bin;C:\\Program Files (x86)\\Graphviz2.38\\bin;C:\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.8.0_25\\bin;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Executables;C:\\Program Files (x86)\\SemanticDesigns\\DMS\\Domains\\Parlanse\\Tools\\RunTimeSystem;C:\\Program Files\\doxygen\\bin;c:\\aspectj1.8\\bin;C:\\Ruby21-x64\\bin' \\
+SystemDrive=C: \\
+SystemRoot='C:\\WINDOWS' \\
+TEMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+TMP='C:\\Users\\Otmar\\AppData\\Local\\Temp' \\
+windir='C:\\WINDOWS' \\
+    'C:\\Program Files\\Java\\jdk1.8.0_25\\bin\\javac' \\
+        -J-Xdebug \\
+        -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 \\
+        -J-Djava.util.logging.config.file=log.properties \\
+        -J-Dtraced.class=B6411513 \\
+        -J-Dtrace.output.dir=C:/windows/temp/mute_log \\
+        -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang \\
+        -J'-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.class.path.prefix='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\Authenticator;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\Authenticator;E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\sun\\net\\www\\httptest' \\
+        -J-Dtest.src='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\Authenticator' \\
+        -J-Dtest.src.path='E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\Authenticator;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest' \\
+        -J-Dtest.classes='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\Authenticator' \\
+        -J-Dtest.class.path='E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\Authenticator;E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\sun\\net\\www\\httptest' \\
+        -J-Dtest.vm.opts='-Xdebug -Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.tool.vm.opts='-J-Xdebug -J-Xrunjdwp:transport=dt_socket,address=127.0.0.1:63505 -J-Djava.util.logging.config.file=log.properties -J-Dtraced.class=B6411513 -J-Dtrace.output.dir=C:/windows/temp/mute_log -J-Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -J-Djava.util.logging.config.file=log.properties -Dtraced.class=B6411513 -Dtrace.output.dir=C:/windows/temp/mute_log -Dignored.names=java.util.Enumeration,java.io.PrintStream,java.lang -Dwrapper.packages=com.sun.javatest -javaagent:C:\\aspectj1.8\\lib\\aspectjweaver.jar' \\
+        -J-Dtest.compiler.opts= \\
+        -J-Dtest.java.opts= \\
+        -J-Dtest.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -J-Dcompile.jdk='C:\\Program Files\\Java\\jdk1.8.0_25' \\
+        -J-Dtest.timeout.factor=1.0 \\
+        -d 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\sun\\net\\www\\httptest' -classpath 'E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\java\\net\\Authenticator;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\Authenticator;E:\\jtreg-d37ce1ca5ded\\jtreg-d37ce1ca5ded\\JTwork\\classes\\sun\\net\\www\\httptest;C:\\Program Files\\Java\\jdk1.8.0_25\\lib\\tools.jar;C:\\aspectj1.8\\lib\\aspectjrt.jar' -sourcepath 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\java\\net\\Authenticator;E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest' -XDignore.symbol.file=true 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpCallback.java' 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpServer.java' 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\ClosedChannelList.java' 'E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpTransaction.java'
+----------System.out:(1/26)----------
+Compiling test clas.....
+----------System.err:(23/1424)*----------
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpTransaction.java:40 [error] HttpServer cannot be resolved to a type
+HttpServer.Server server;
+^^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpTransaction.java:49 [error] HttpServer cannot be resolved to a type
+HttpTransaction (HttpServer.Server server, String command,
+                 ^^^^^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpTransaction.java:58 [error] server cannot be resolved or is not a field
+this.server = server;
+     
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpTransaction.java:177 [error] server cannot be resolved
+server.orderlyCloseChannel (key);
+
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpTransaction.java:189 [error] server cannot be resolved
+server.abortiveCloseChannel(key);
+
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpTransaction.java:292 [error] HttpServer cannot be resolved to a type
+OutputStream os = new HttpServer.NioOutputStream(channel());
+                      ^
+E:\\openjdk-6-src-b33-14_oct_2014.tar\\jdk\\test\\sun\\net\\www\\httptest\\HttpTransaction.java:316 [error] HttpServer cannot be resolved to a type
+OutputStream os = new HttpServer.NioOutputStream(channel());
+                      ^
+
+7 errors
+result: Error. unexpected exit code from javac: 7
+
+
+test result: Error. unexpected exit code from javac: 7

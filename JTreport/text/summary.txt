@@ -1373,206 +1373,206 @@ java/math/BigInteger/ProbablePrime.java                                         
 java/math/BigInteger/StringConstructor.java                                                                        Not run.
 java/math/BigInteger/UnicodeConstructor.java                                                                       Not run.
 java/math/RoundingMode/RoundingModeTests.java                                                                      Not run.
-java/net/Authenticator/AuthNPETest.java                                                                            Not run.
-java/net/Authenticator/B4678055.java                                                                               Not run.
-java/net/Authenticator/B4722333.java                                                                               Not run.
-java/net/Authenticator/B4759514.java                                                                               Not run.
-java/net/Authenticator/B4769350.java                                                                               Not run.
-java/net/Authenticator/B4921848.java                                                                               Not run.
-java/net/Authenticator/B4933582.sh                                                                                 Not run.
-java/net/Authenticator/B4962064.java                                                                               Not run.
-java/net/Authenticator/BasicTest.java                                                                              Not run.
-java/net/Authenticator/BasicTest3.java                                                                             Not run.
-java/net/Authenticator/BasicTest4.java                                                                             Not run.
-java/net/BindException/Test.java                                                                                   Not run.
-java/net/CookieHandler/B6277794.java                                                                               Not run.
-java/net/CookieHandler/CookieHandlerTest.java                                                                      Not run.
-java/net/CookieHandler/CookieManagerTest.java                                                                      Not run.
-java/net/CookieHandler/TestHttpCookie.java                                                                         Not run.
-java/net/DatagramPacket/CheckBoundaries.java                                                                       Not run.
-java/net/DatagramPacket/Constructor.java                                                                           Not run.
-java/net/DatagramPacket/Offset.java                                                                                Not run.
-java/net/DatagramPacket/ReuseBuf.java                                                                              Not run.
-java/net/DatagramPacket/Unresolved.java                                                                            Not run.
-java/net/DatagramSocketImpl/CheckDiscard.java                                                                      Not run.
+java/net/Authenticator/AuthNPETest.java                                                                            Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Authenticator/B4678055.java                                                                               Error. unexpected exit code from javac: 7
+java/net/Authenticator/B4722333.java                                                                               Error. unexpected exit code from javac: 7
+java/net/Authenticator/B4759514.java                                                                               Error. unexpected exit code from javac: 7
+java/net/Authenticator/B4769350.java                                                                               Error. system error (exit code 3)
+java/net/Authenticator/B4921848.java                                                                               Error. unexpected exit code from javac: 7
+java/net/Authenticator/B4933582.sh                                                                                 Failed. Execution failed: exit code 1
+java/net/Authenticator/B4962064.java                                                                               Error. unexpected exit code from javac: 7
+java/net/Authenticator/BasicTest.java                                                                              Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Authenticator/BasicTest3.java                                                                             Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Authenticator/BasicTest4.java                                                                             Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/BindException/Test.java                                                                                   Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/CookieHandler/B6277794.java                                                                               Failed. Unexpected exit from test [exit code: 1]
+java/net/CookieHandler/CookieHandlerTest.java                                                                      Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/CookieHandler/CookieManagerTest.java                                                                      Error. unexpected exit code from javac: 7
+java/net/CookieHandler/TestHttpCookie.java                                                                         Failed. Execution failed: `main' threw exception: java.lang.ExceptionInInitializerError
+java/net/DatagramPacket/CheckBoundaries.java                                                                       Passed. Execution successful
+java/net/DatagramPacket/Constructor.java                                                                           Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramPacket/Offset.java                                                                                Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramPacket/ReuseBuf.java                                                                              Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramPacket/Unresolved.java                                                                            Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramSocketImpl/CheckDiscard.java                                                                      Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
 java/net/DatagramSocket/B6411513.java                                                                              Passed. Execution successful
-java/net/DatagramSocket/BindFailTest.java                                                                          Not run.
-java/net/DatagramSocket/DatagramTimeout.java                                                                       Not run.
-java/net/DatagramSocket/ImplicitBind.java                                                                          Not run.
-java/net/DatagramSocket/InheritHandle.java                                                                         Not run.
-java/net/DatagramSocket/PortUnreachable.java                                                                       Not run.
-java/net/DatagramSocket/ReportSocketClosed.java                                                                    Not run.
-java/net/DatagramSocket/Send12k.java                                                                               Not run.
-java/net/DatagramSocket/SendDatagramToBadAddress.java                                                              Not run.
-java/net/DatagramSocket/SendSize.java                                                                              Not run.
-java/net/DatagramSocket/SetDatagramSocketImplFactory/ADatagramSocket.java                                          Not run.
-java/net/DatagramSocket/SetReceiveBufferSize.java                                                                  Not run.
-java/net/HttpURLConnection/HttpResponseCode.java                                                                   Not run.
-java/net/HttpURLConnection/getResponseCode.java                                                                    Not run.
-java/net/Inet4Address/isSiteLocalAddress.java                                                                      Not run.
-java/net/Inet4Address/textToNumericFormat.java                                                                     Not run.
-java/net/Inet6Address/B4923906.java                                                                                Not run.
-java/net/Inet6Address/B6206527.java                                                                                Not run.
-java/net/Inet6Address/B6214234.java                                                                                Not run.
-java/net/Inet6Address/IPv6AddressTypes.java                                                                        Not run.
-java/net/Inet6Address/IPv6Numeric.java                                                                             Not run.
-java/net/Inet6Address/serialize/Serialize.java                                                                     Not run.
-java/net/InetAddress/B4762344.java                                                                                 Not run.
-java/net/InetAddress/B5087907.java                                                                                 Not run.
-java/net/InetAddress/B6246242.java                                                                                 Not run.
-java/net/InetAddress/B6296240.java                                                                                 Not run.
-java/net/InetAddress/BadDottedIPAddress.java                                                                       Not run.
-java/net/InetAddress/CachedUnknownHostName.java                                                                    Not run.
-java/net/InetAddress/CheckJNI.java                                                                                 Not run.
-java/net/InetAddress/GetLocalHostWithSM.java                                                                       Not run.
-java/net/InetAddress/HashSpread.java                                                                               Not run.
-java/net/InetAddress/IPv4Formats.java                                                                              Not run.
-java/net/InetAddress/IsHostReachableBug.java                                                                       Not run.
-java/net/InetAddress/IsReachable.java                                                                              Not run.
-java/net/InetAddress/WhiteSpaceHostTest.java                                                                       Not run.
-java/net/InetAddress/ptr/lookup.sh                                                                                 Not run.
-java/net/InetSocketAddress/CreateUnresolved.java                                                                   Not run.
-java/net/InetSocketAddress/ToString.java                                                                           Not run.
-java/net/MulticastSocket/B6425815.java                                                                             Not run.
-java/net/MulticastSocket/B6427403.java                                                                             Not run.
-java/net/MulticastSocket/JoinGroup.java                                                                            Not run.
-java/net/MulticastSocket/Leave.java                                                                                Not run.
-java/net/MulticastSocket/MulticastTTL.java                                                                         Not run.
-java/net/MulticastSocket/NoLoopbackPackets.java                                                                    Not run.
-java/net/MulticastSocket/SetLoopbackMode.java                                                                      Not run.
-java/net/MulticastSocket/SetOutgoingIf.java                                                                        Not run.
-java/net/MulticastSocket/SetTTLAndGetTTL.java                                                                      Not run.
-java/net/MulticastSocket/SetTTLTo0.java                                                                            Not run.
-java/net/MulticastSocket/Test.java                                                                                 Not run.
-java/net/MulticastSocket/TestDefaults.java                                                                         Not run.
-java/net/MulticastSocket/TestInterfaces.java                                                                       Not run.
-java/net/MulticastSocket/TimeToLive.java                                                                           Not run.
-java/net/NetworkInterface/NetParamsTest.java                                                                       Not run.
-java/net/NetworkInterface/Test.java                                                                                Not run.
-java/net/PlainSocketImpl/BigBacklog.java                                                                           Not run.
-java/net/PlainSocketImpl/SetBufferSize.java                                                                        Not run.
-java/net/PlainSocketImpl/SetOption.java                                                                            Not run.
-java/net/PortUnreachableException/Concurrent.java                                                                  Not run.
-java/net/PortUnreachableException/OneExceptionOnly.java                                                            Not run.
-java/net/PortUnreachableException/Test.java                                                                        Not run.
-java/net/ProxySelector/B6563259.java                                                                               Not run.
-java/net/ProxySelector/LoopbackAddresses.java                                                                      Not run.
-java/net/ProxySelector/NullArguments.java                                                                          Not run.
-java/net/ProxySelector/NullSelector.java                                                                           Not run.
-java/net/ProxySelector/ProxyTest.java                                                                              Not run.
-java/net/ResponseCache/B6181108.java                                                                               Not run.
-java/net/ResponseCache/ResponseCacheTest.java                                                                      Not run.
-java/net/ResponseCache/getResponseCode.java                                                                        Not run.
-java/net/ServerSocket/AcceptCauseFileDescriptorLeak.java                                                           Not run.
-java/net/ServerSocket/ThreadStop.java                                                                              Not run.
-java/net/SocketInputStream/SocketClosedException.java                                                              Not run.
-java/net/SocketInputStream/SocketTimeout.java                                                                      Not run.
-java/net/SocketPermission/ActionSpace.java                                                                         Not run.
-java/net/SocketPermission/B4414825.java                                                                            Not run.
-java/net/SocketPermission/Ctor.java                                                                                Not run.
-java/net/SocketPermission/Equals.java                                                                              Not run.
-java/net/SocketPermission/NoAction.java                                                                            Not run.
-java/net/Socket/AccurateTimeout.java                                                                               Not run.
-java/net/Socket/AddressTest.java                                                                                   Not run.
-java/net/Socket/CloseAvailable.java                                                                                Not run.
-java/net/Socket/DeadlockTest.java                                                                                  Not run.
-java/net/Socket/FDClose.java                                                                                       Not run.
-java/net/Socket/GetLocalAddress.java                                                                               Not run.
-java/net/Socket/IDNTest.java                                                                                       Not run.
-java/net/Socket/InheritTimeout.java                                                                                Not run.
-java/net/Socket/LingerTest.java                                                                                    Not run.
-java/net/Socket/LinkLocal.java                                                                                     Not run.
-java/net/Socket/NullHost.java                                                                                      Not run.
-java/net/Socket/OldImpl.java                                                                                       Not run.
-java/net/Socket/OldSocketImpl.sh                                                                                   Not run.
-java/net/Socket/ProxyCons.java                                                                                     Not run.
-java/net/Socket/ReadTimeout.java                                                                                   Not run.
-java/net/Socket/SetReceiveBufferSize.java                                                                          Not run.
-java/net/Socket/SetSoLinger.java                                                                                   Not run.
-java/net/Socket/ShutdownBoth.java                                                                                  Not run.
-java/net/Socket/SoTimeout.java                                                                                     Not run.
-java/net/Socket/TestClose.java                                                                                     Not run.
-java/net/Socket/TestTcpNoDelay.java                                                                                Not run.
-java/net/Socket/Timeout.java                                                                                       Not run.
-java/net/Socket/TrafficClass.java                                                                                  Not run.
-java/net/Socket/UrgentDataTest.java                                                                                Not run.
-java/net/Socket/asyncClose/AsyncClose.java                                                                         Not run.
-java/net/Socket/asyncClose/BrokenPipe.java                                                                         Not run.
-java/net/Socket/setReuseAddress/Basic.java                                                                         Not run.
-java/net/Socket/setReuseAddress/Restart.java                                                                       Not run.
-java/net/Socks/SocksV4Test.java                                                                                    Not run.
-java/net/URI/RelativeEncoding.java                                                                                 Not run.
-java/net/URI/Test.java                                                                                             Not run.
-java/net/URI/URItoURLTest.java                                                                                     Not run.
-java/net/URLClassLoader/B5077773.sh                                                                                Not run.
-java/net/URLClassLoader/ClassLoad.java                                                                             Not run.
-java/net/URLClassLoader/ClassPathTest.java                                                                         Not run.
-java/net/URLClassLoader/HttpTest.java                                                                              Not run.
-java/net/URLClassLoader/URLParsing.java                                                                            Not run.
-java/net/URLClassLoader/getresourceasstream/test.sh                                                                Not run.
-java/net/URLClassLoader/sealing/CheckSealed.java                                                                   Not run.
-java/net/URLConnection/6212146/test.sh                                                                             Not run.
-java/net/URLConnection/Connect.java                                                                                Not run.
-java/net/URLConnection/DisconnectAfterEOF.java                                                                     Not run.
-java/net/URLConnection/ExifContentGuesser.java                                                                     Not run.
-java/net/URLConnection/GetContentType.java                                                                         Not run.
-java/net/URLConnection/GetFileNameMap.java                                                                         Not run.
-java/net/URLConnection/GetLastModified.java                                                                        Not run.
-java/net/URLConnection/GetXmlContentType.java                                                                      Not run.
-java/net/URLConnection/HandleContentTypeWithAttrs.java                                                             Not run.
-java/net/URLConnection/HttpContinueStackOverflow.java                                                              Not run.
-java/net/URLConnection/Redirect307Test.java                                                                        Not run.
-java/net/URLConnection/RedirectLimit.java                                                                          Not run.
-java/net/URLConnection/RequestProperties.java                                                                      Not run.
-java/net/URLConnection/RequestPropertyValues.java                                                                  Not run.
-java/net/URLConnection/ResendPostBody.java                                                                         Not run.
-java/net/URLConnection/Responses.java                                                                              Not run.
-java/net/URLConnection/SetIfModifiedSince.java                                                                     Not run.
-java/net/URLConnection/TimeoutTest.java                                                                            Not run.
-java/net/URLConnection/UNCTest.sh                                                                                  Not run.
-java/net/URLConnection/URLConnectionHeaders.java                                                                   Not run.
-java/net/URLConnection/UnknownContentType.java                                                                     Not run.
-java/net/URLConnection/ZeroContentLength.java                                                                      Not run.
-java/net/URLConnection/contentHandler/UserContentHandler.java                                                      Not run.
-java/net/URLDecoder/B6463990.java                                                                                  Not run.
-java/net/URLDecoder/EncodeDecode.java                                                                              Not run.
-java/net/URLDecoder/URLDecoderArgs.java                                                                            Not run.
-java/net/URLEncoder/DecodeNonEncoded.java                                                                          Not run.
-java/net/URLEncoder/Decoder.java                                                                                   Not run.
-java/net/URLEncoder/SurrogatePairs.java                                                                            Not run.
-java/net/URLEncoder/URLEncodeDecode.java                                                                           Not run.
-java/net/URLEncoder/URLEncoderEncodeArgs.java                                                                      Not run.
-java/net/URL/B4148751.java                                                                                         Not run.
-java/net/URL/B5086147.java                                                                                         Not run.
-java/net/URL/B6529759.java                                                                                         Not run.
-java/net/URL/Equals.java                                                                                           Not run.
-java/net/URL/GetContent.java                                                                                       Not run.
-java/net/URL/GetDefaultPort.java                                                                                   Not run.
-java/net/URL/HandlerLoop.java                                                                                      Not run.
-java/net/URL/HashCode.java                                                                                         Not run.
-java/net/URL/OpenConnection.java                                                                                   Not run.
-java/net/URL/OpenStream.java                                                                                       Not run.
-java/net/URL/ParseAuthority.java                                                                                   Not run.
-java/net/URL/ParseURL.java                                                                                         Not run.
-java/net/URL/PerConnectionProxy.java                                                                               Not run.
-java/net/URL/Protocol.java                                                                                         Not run.
-java/net/URL/RelativePath.java                                                                                     Not run.
-java/net/URL/RelativeURL.java                                                                                      Not run.
-java/net/URL/RelativeURLTest.java                                                                                  Not run.
-java/net/URL/RestoreURL.java                                                                                       Not run.
-java/net/URL/SpecifyHandler.java                                                                                   Not run.
-java/net/URL/Test.java                                                                                             Not run.
-java/net/URL/TestIPv6Addresses.java                                                                                Not run.
-java/net/URL/TestPort.java                                                                                         Not run.
-java/net/URL/TestRFC2732.java                                                                                      Not run.
-java/net/URL/URIToURLTest.java                                                                                     Not run.
-java/net/URL/UppercaseScheme.java                                                                                  Not run.
-java/net/URL/runconstructor.sh                                                                                     Not run.
-java/net/ipv6tests/B6521014.java                                                                                   Not run.
-java/net/ipv6tests/BadIPv6Addresses.java                                                                           Not run.
-java/net/ipv6tests/ScopeTests.java                                                                                 Not run.
-java/net/ipv6tests/TcpTest.java                                                                                    Not run.
-java/net/ipv6tests/UdpTest.java                                                                                    Not run.
+java/net/DatagramSocket/BindFailTest.java                                                                          Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramSocket/DatagramTimeout.java                                                                       Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramSocket/ImplicitBind.java                                                                          Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramSocket/InheritHandle.java                                                                         Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramSocket/PortUnreachable.java                                                                       Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramSocket/ReportSocketClosed.java                                                                    Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramSocket/Send12k.java                                                                               Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramSocket/SendDatagramToBadAddress.java                                                              Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramSocket/SendSize.java                                                                              Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/DatagramSocket/SetDatagramSocketImplFactory/ADatagramSocket.java                                          Failed. Compilation failed: Compilation failed
+java/net/DatagramSocket/SetReceiveBufferSize.java                                                                  Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/HttpURLConnection/HttpResponseCode.java                                                                   Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/HttpURLConnection/getResponseCode.java                                                                    Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Inet4Address/isSiteLocalAddress.java                                                                      Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Inet4Address/textToNumericFormat.java                                                                     Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Inet6Address/B4923906.java                                                                                Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Inet6Address/B6206527.java                                                                                Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Inet6Address/B6214234.java                                                                                Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Inet6Address/IPv6AddressTypes.java                                                                        Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Inet6Address/IPv6Numeric.java                                                                             Passed. Execution successful
+java/net/Inet6Address/serialize/Serialize.java                                                                     Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/InetAddress/B4762344.java                                                                                 Error. command line error (exit code 2)
+java/net/InetAddress/B5087907.java                                                                                 Failed. Unexpected exit from test [exit code: 1]
+java/net/InetAddress/B6246242.java                                                                                 Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/InetAddress/B6296240.java                                                                                 Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/InetAddress/BadDottedIPAddress.java                                                                       Passed. Execution successful
+java/net/InetAddress/CachedUnknownHostName.java                                                                    Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/InetAddress/CheckJNI.java                                                                                 Failed. Unexpected exit from test [exit code: 1]
+java/net/InetAddress/GetLocalHostWithSM.java                                                                       Error. command line error (exit code 2)
+java/net/InetAddress/HashSpread.java                                                                               Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/InetAddress/IPv4Formats.java                                                                              Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/InetAddress/IsHostReachableBug.java                                                                       Failed. Unexpected exit from test [exit code: 1]
+java/net/InetAddress/IsReachable.java                                                                              Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/InetAddress/WhiteSpaceHostTest.java                                                                       Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/InetAddress/ptr/lookup.sh                                                                                 Passed. Execution successful
+java/net/InetSocketAddress/CreateUnresolved.java                                                                   Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/InetSocketAddress/ToString.java                                                                           Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/B6425815.java                                                                             Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/B6427403.java                                                                             Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/JoinGroup.java                                                                            Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/Leave.java                                                                                Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/MulticastTTL.java                                                                         Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/NoLoopbackPackets.java                                                                    Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/SetLoopbackMode.java                                                                      Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/SetOutgoingIf.java                                                                        Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/SetTTLAndGetTTL.java                                                                      Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/SetTTLTo0.java                                                                            Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/Test.java                                                                                 Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/TestDefaults.java                                                                         Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/TestInterfaces.java                                                                       Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/MulticastSocket/TimeToLive.java                                                                           Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/NetworkInterface/NetParamsTest.java                                                                       Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/NetworkInterface/Test.java                                                                                Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/PlainSocketImpl/BigBacklog.java                                                                           Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/PlainSocketImpl/SetBufferSize.java                                                                        Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/PlainSocketImpl/SetOption.java                                                                            Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/PortUnreachableException/Concurrent.java                                                                  Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/PortUnreachableException/OneExceptionOnly.java                                                            Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/PortUnreachableException/Test.java                                                                        Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/ProxySelector/B6563259.java                                                                               Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/ProxySelector/LoopbackAddresses.java                                                                      Failed. Compilation failed: Compilation failed
+java/net/ProxySelector/NullArguments.java                                                                          Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/ProxySelector/NullSelector.java                                                                           Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/ProxySelector/ProxyTest.java                                                                              Failed. Compilation failed: Compilation failed
+java/net/ResponseCache/B6181108.java                                                                               Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/ResponseCache/ResponseCacheTest.java                                                                      Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/ResponseCache/getResponseCode.java                                                                        Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/ServerSocket/AcceptCauseFileDescriptorLeak.java                                                           Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/ServerSocket/ThreadStop.java                                                                              Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/SocketInputStream/SocketClosedException.java                                                              Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/SocketInputStream/SocketTimeout.java                                                                      Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/SocketPermission/ActionSpace.java                                                                         Passed. Execution successful
+java/net/SocketPermission/B4414825.java                                                                            Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/SocketPermission/Ctor.java                                                                                Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/SocketPermission/Equals.java                                                                              Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/SocketPermission/NoAction.java                                                                            Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/AccurateTimeout.java                                                                               Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/AddressTest.java                                                                                   Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Socket.bind should throw IllegalArgumentException!
+java/net/Socket/CloseAvailable.java                                                                                Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/DeadlockTest.java                                                                                  Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/FDClose.java                                                                                       Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/GetLocalAddress.java                                                                               Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/IDNTest.java                                                                                       Passed. Execution successful
+java/net/Socket/InheritTimeout.java                                                                                Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/LingerTest.java                                                                                    Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/LinkLocal.java                                                                                     Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/NullHost.java                                                                                      Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/OldImpl.java                                                                                       Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/OldSocketImpl.sh                                                                                   Failed. Execution failed: exit code 1
+java/net/Socket/ProxyCons.java                                                                                     Failed. Unexpected exit from test [exit code: 1]
+java/net/Socket/ReadTimeout.java                                                                                   Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/SetReceiveBufferSize.java                                                                          Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/SetSoLinger.java                                                                                   Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/ShutdownBoth.java                                                                                  Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/SoTimeout.java                                                                                     Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/TestClose.java                                                                                     Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/TestTcpNoDelay.java                                                                                Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/Timeout.java                                                                                       Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/TrafficClass.java                                                                                  Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/UrgentDataTest.java                                                                                Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/asyncClose/AsyncClose.java                                                                         Error. unexpected exit code from javac: 9
+java/net/Socket/asyncClose/BrokenPipe.java                                                                         Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/setReuseAddress/Basic.java                                                                         Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socket/setReuseAddress/Restart.java                                                                       Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/Socks/SocksV4Test.java                                                                                    Error. No action after @build
+java/net/URI/RelativeEncoding.java                                                                                 Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/URI/Test.java                                                                                             Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/URI/URItoURLTest.java                                                                                     Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/URLClassLoader/B5077773.sh                                                                                Failed. Execution failed: exit code 1
+java/net/URLClassLoader/ClassLoad.java                                                                             Error. Can't load test: java.lang.ClassNotFoundException: ClassLoad
+java/net/URLClassLoader/ClassPathTest.java                                                                         Error. Can't load test: java.lang.ClassNotFoundException: ClassPathTest
+java/net/URLClassLoader/HttpTest.java                                                                              Error. Can't load test: java.lang.ClassNotFoundException: HttpTest
+java/net/URLClassLoader/URLParsing.java                                                                            Error. Can't load test: java.lang.ClassNotFoundException: URLParsing
+java/net/URLClassLoader/getresourceasstream/test.sh                                                                Failed. Execution failed: exit code 1
+java/net/URLClassLoader/sealing/CheckSealed.java                                                                   Failed. Execution failed: exit code 1
+java/net/URLConnection/6212146/test.sh                                                                             Failed. Execution failed: exit code 1
+java/net/URLConnection/Connect.java                                                                                Error. Can't load test: java.lang.ClassNotFoundException: Connect
+java/net/URLConnection/DisconnectAfterEOF.java                                                                     Error. Can't load test: java.lang.ClassNotFoundException: DisconnectAfterEOF
+java/net/URLConnection/ExifContentGuesser.java                                                                     Error. Can't load test: java.lang.ClassNotFoundException: ExifContentGuesser
+java/net/URLConnection/GetContentType.java                                                                         Error. Can't load test: java.lang.ClassNotFoundException: GetContentType
+java/net/URLConnection/GetFileNameMap.java                                                                         Error. Can't load test: java.lang.ClassNotFoundException: GetFileNameMap
+java/net/URLConnection/GetLastModified.java                                                                        Error. Can't load test: java.lang.ClassNotFoundException: GetLastModified
+java/net/URLConnection/GetXmlContentType.java                                                                      Error. Can't load test: java.lang.ClassNotFoundException: GetXmlContentType
+java/net/URLConnection/HandleContentTypeWithAttrs.java                                                             Error. Can't load test: java.lang.ClassNotFoundException: HandleContentTypeWithAttrs
+java/net/URLConnection/HttpContinueStackOverflow.java                                                              Error. Can't load test: java.lang.ClassNotFoundException: HttpContinueStackOverflow
+java/net/URLConnection/Redirect307Test.java                                                                        Error. Can't load test: java.lang.ClassNotFoundException: Redirect307Test
+java/net/URLConnection/RedirectLimit.java                                                                          Error. Can't load test: java.lang.ClassNotFoundException: RedirectLimit
+java/net/URLConnection/RequestProperties.java                                                                      Error. Can't load test: java.lang.ClassNotFoundException: RequestProperties
+java/net/URLConnection/RequestPropertyValues.java                                                                  Error. Can't load test: java.lang.ClassNotFoundException: RequestPropertyValues
+java/net/URLConnection/ResendPostBody.java                                                                         Error. Can't load test: java.lang.ClassNotFoundException: ResendPostBody
+java/net/URLConnection/Responses.java                                                                              Error. Can't load test: java.lang.ClassNotFoundException: Responses
+java/net/URLConnection/SetIfModifiedSince.java                                                                     Error. Can't load test: java.lang.ClassNotFoundException: SetIfModifiedSince
+java/net/URLConnection/TimeoutTest.java                                                                            Failed. Unexpected exit from test [exit code: 1]
+java/net/URLConnection/UNCTest.sh                                                                                  Passed. Execution successful
+java/net/URLConnection/URLConnectionHeaders.java                                                                   Error. Can't load test: java.lang.ClassNotFoundException: URLConnectionHeaders
+java/net/URLConnection/UnknownContentType.java                                                                     Error. Can't load test: java.lang.ClassNotFoundException: UnknownContentType
+java/net/URLConnection/ZeroContentLength.java                                                                      Error. Can't load test: java.lang.ClassNotFoundException: ZeroContentLength
+java/net/URLConnection/contentHandler/UserContentHandler.java                                                      Failed. Compilation failed: Compilation failed
+java/net/URLDecoder/B6463990.java                                                                                  Error. Can't load test: java.lang.ClassNotFoundException: B6463990
+java/net/URLDecoder/EncodeDecode.java                                                                              Error. Can't load test: java.lang.ClassNotFoundException: EncodeDecode
+java/net/URLDecoder/URLDecoderArgs.java                                                                            Error. Can't load test: java.lang.ClassNotFoundException: URLDecoderArgs
+java/net/URLEncoder/DecodeNonEncoded.java                                                                          Error. Can't load test: java.lang.ClassNotFoundException: DecodeNonEncoded
+java/net/URLEncoder/Decoder.java                                                                                   Error. Can't load test: java.lang.ClassNotFoundException: Decoder
+java/net/URLEncoder/SurrogatePairs.java                                                                            Error. Can't load test: java.lang.ClassNotFoundException: SurrogatePairs
+java/net/URLEncoder/URLEncodeDecode.java                                                                           Error. Can't load test: java.lang.ClassNotFoundException: URLEncodeDecode
+java/net/URLEncoder/URLEncoderEncodeArgs.java                                                                      Error. Can't load test: java.lang.ClassNotFoundException: URLEncoderEncodeArgs
+java/net/URL/B4148751.java                                                                                         Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/URL/B5086147.java                                                                                         Failed. Execution failed: exit code 1
+java/net/URL/B6529759.java                                                                                         Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/URL/Equals.java                                                                                           Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/URL/GetContent.java                                                                                       Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/URL/GetDefaultPort.java                                                                                   Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/URL/HandlerLoop.java                                                                                      Failed. Execution failed: `main' threw exception: java.net.MalformedURLException
+java/net/URL/HashCode.java                                                                                         Error. Can't load test: java.lang.ClassNotFoundException: HashCode
+java/net/URL/OpenConnection.java                                                                                   Failed. Unexpected exit from test [exit code: 1]
+java/net/URL/OpenStream.java                                                                                       Error. Can't load test: java.lang.ClassNotFoundException: OpenStream
+java/net/URL/ParseAuthority.java                                                                                   Error. Can't load test: java.lang.ClassNotFoundException: ParseAuthority
+java/net/URL/ParseURL.java                                                                                         Error. Can't load test: java.lang.ClassNotFoundException: ParseURL
+java/net/URL/PerConnectionProxy.java                                                                               Failed. Compilation failed: Compilation failed
+java/net/URL/Protocol.java                                                                                         Error. Can't load test: java.lang.ClassNotFoundException: Protocol
+java/net/URL/RelativePath.java                                                                                     Error. Can't load test: java.lang.ClassNotFoundException: RelativePath
+java/net/URL/RelativeURL.java                                                                                      Error. Can't load test: java.lang.ClassNotFoundException: RelativeURL
+java/net/URL/RelativeURLTest.java                                                                                  Error. Can't load test: java.lang.ClassNotFoundException: RelativeURLTest
+java/net/URL/RestoreURL.java                                                                                       Error. Can't load test: java.lang.ClassNotFoundException: RestoreURL
+java/net/URL/SpecifyHandler.java                                                                                   Error. Can't load test: java.lang.ClassNotFoundException: SpecifyHandler
+java/net/URL/Test.java                                                                                             Error. Can't load test: java.lang.ClassNotFoundException: Test
+java/net/URL/TestIPv6Addresses.java                                                                                Error. Can't load test: java.lang.ClassNotFoundException: TestIPv6Addresses
+java/net/URL/TestPort.java                                                                                         Error. Can't load test: java.lang.ClassNotFoundException: TestPort
+java/net/URL/TestRFC2732.java                                                                                      Error. Can't load test: java.lang.ClassNotFoundException: TestRFC2732
+java/net/URL/URIToURLTest.java                                                                                     Error. Can't load test: java.lang.ClassNotFoundException: URIToURLTest
+java/net/URL/UppercaseScheme.java                                                                                  Error. Can't load test: java.lang.ClassNotFoundException: UppercaseScheme
+java/net/URL/runconstructor.sh                                                                                     Failed. Execution failed: exit code 1
+java/net/ipv6tests/B6521014.java                                                                                   Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/ipv6tests/BadIPv6Addresses.java                                                                           Failed. Execution failed: `main' threw exception: java.lang.NullPointerException
+java/net/ipv6tests/ScopeTests.java                                                                                 Error. compiler crashed (exit code 4)
+java/net/ipv6tests/TcpTest.java                                                                                    Error. unexpected exit code from javac: 26
+java/net/ipv6tests/UdpTest.java                                                                                    Error. unexpected exit code from javac: 20
 java/nio/Buffer/AllocateDirectInit.java                                                                            Not run.
 java/nio/Buffer/Basic.java                                                                                         Not run.
 java/nio/Buffer/CharAt.java                                                                                        Not run.
