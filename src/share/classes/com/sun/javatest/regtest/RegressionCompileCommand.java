@@ -36,8 +36,13 @@ import com.sun.javatest.util.PathClassLoader;
 import com.sun.javatest.util.WriterStream;
 
 import static com.sun.javatest.regtest.RStatus.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -102,15 +107,40 @@ public class RegressionCompileCommand extends Command {
         ProcessBuilder pb = new ProcessBuilder();
         //pb.environment().clear();
         int rc = -1;
-        
+
         List<String> c = new ArrayList<String>();
-        String[] cmdArgs = (String[])args[0];
+        String[] cmdArgs = (String[]) args[0];
         c.addAll(Arrays.asList(cmdArgs));
         int indexOfDirectoryOutput = c.indexOf("-d");
-        String directoryOutput = c.get(indexOfDirectoryOutput+1);
-        String[] cmd = new String[] {"c:\\aspectj1.8\\bin\\ajc.bat", "-source", "1.6", "-target", "1.6", "-d", directoryOutput, cmdArgs[cmdArgs.length-1], "C:/Users/Otmar/git/MUTE-Tracer/MUTE2 - Clean try/src/br/pucminas/icei/TracingContext.java", "C:/Users/Otmar/git/MUTE-Tracer/MUTE2 - Clean try/src/br/pucminas/icei/MUTETracer.aj"};
-        
+        String directoryOutput = c.get(indexOfDirectoryOutput + 1);
+        File compiledTestFile = new File(cmdArgs[cmdArgs.length - 1]);
+
+        String[] cmd = new String[]{"c:\\aspectj1.8\\bin\\ajc.bat", "-source", "1.6", "-target", "1.6", "-d", directoryOutput, cmdArgs[cmdArgs.length - 1], "C:/Users/Otmar/git/MUTE-Tracer/MUTE2 - Clean try/src/br/pucminas/icei/TracingContext.java", "C:/Users/Otmar/git/MUTE-Tracer/MUTE2 - Clean try/src/br/pucminas/icei/MUTETracer.aj"};
+        System.out.println("TMP VARIABLE: " + System.getenv("TMP"));
+        File propsFile = new File(System.getenv("TMP"), "mute_weaving.properties");
+        try {
+            String content = "original.source.code.location=" + compiledTestFile.getPath();
+
+            // if file doesnt exists, then create it
+            if (!propsFile.exists()) {
+                propsFile.createNewFile();
+                System.out.println("Creating file!");
+            }
+
+            FileWriter fw = new FileWriter(propsFile.getAbsoluteFile());
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(content);
+            bw.newLine();
+            bw.flush();
+            bw.close();
+            System.out.println("File written to " + propsFile.getAbsolutePath());
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(RegressionCompileCommand.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(RegressionCompileCommand.class.getName()).log(Level.SEVERE, null, ex);
+        }
         pb.environment().put("CLASSPATH", "c:\\aspectj1.8\\lib\\aspectjrt.jar");
+
         try {
             p = pb.command(cmd).start();
 
@@ -134,6 +164,9 @@ public class RegressionCompileCommand extends Command {
 
             // wait for the process to complete;
             rc = p.waitFor();
+            if (null != propsFile) {
+                //propsFile.delete();
+            }
         } catch (IOException ex) {
             Logger.getLogger(RegressionCompileCommand.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InterruptedException ex) {

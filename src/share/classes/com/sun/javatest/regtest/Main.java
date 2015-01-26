@@ -1660,8 +1660,8 @@ public class Main {
                 SearchPath cp = new SearchPath().append(javatest_jar, jtreg_jar, testJDK.getToolsJar());
 
                 if (debugChild){
-                    System.out.println("Search path: " + cp.split().stream().map(f -> f.getAbsolutePath()).collect(Collectors.joining(";")));
-                    System.out.println("Env vars: " + getEnvVars().keySet().stream().map(k -> "$" + k+"=" + getEnvVars().get(k)).collect(Collectors.joining(";")));
+                    System.out.println("Search path: " + cp.toString());
+                    System.out.println("Env vars: " + getEnvVars().toString());
                     System.out.println("CLASSPATH=" + cp.toString());
                     System.out.println("Exec dir=" + execDir);
                     System.out.println(Arrays.asList(cmd).stream().collect(Collectors.joining(" ")));

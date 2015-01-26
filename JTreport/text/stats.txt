@@ -1,1 +1,1 @@
-Test results: failed: 1
+Test results: error: 1

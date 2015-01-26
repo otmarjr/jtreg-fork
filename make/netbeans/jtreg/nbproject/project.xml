@@ -70,7 +70,7 @@
             <ide-actions>
                 <action name="build">
                     <script>${ant.script}</script>
-                    <target>dist-jtreg-debug</target>
+                    <target>dist-jtreg</target>
                 </action>
                 <action name="clean">
                     <script>${ant.script}</script>
@@ -83,7 +83,7 @@
                 <action name="rebuild">
                     <script>${ant.script}</script>
                     <target>clean</target>
-                    <target>dist-jtreg-debug</target>
+                    <target>dist-jtreg</target>
                 </action>
                 <action name="run">
                     <script>${ant.script}</script>

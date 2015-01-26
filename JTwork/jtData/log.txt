@@ -362,3 +362,6 @@ java.lang.NullPointerException
 [19jan2015 16:24BRST]  Starting test run
 [19jan2015 16:26BRST]  Completed test run: not ok
 [19jan2015 16:26BRST]  Starting test run
+[20jan2015 13:57BRST]  Starting test run
+[20jan2015 13:57BRST]  Unexpected error caught from test java/net/DatagramSocket/B6411513.java: java.lang.NoClassDefFoundError: org/aspectj/lang/Signature
+[20jan2015 13:57BRST]  Completed test run: not ok

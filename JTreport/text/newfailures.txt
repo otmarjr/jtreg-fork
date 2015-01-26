@@ -12,7 +12,6 @@ java/net/DatagramPacket/Constructor.java
 java/net/DatagramPacket/Offset.java 
 java/net/DatagramPacket/ReuseBuf.java 
 java/net/DatagramPacket/Unresolved.java 
-java/net/DatagramSocket/B6411513.java 
 java/net/DatagramSocket/BindFailTest.java 
 java/net/DatagramSocket/DatagramTimeout.java 
 java/net/DatagramSocket/ImplicitBind.java 

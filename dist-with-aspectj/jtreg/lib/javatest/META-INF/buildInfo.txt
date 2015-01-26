@@ -1,0 +1,9 @@
+# Build info
+            date=January 20, 2015
+            version=4.6
+            milestone=dev
+            build=b00
+            java=Java(TM) 2 SDK, Version 1.8.0_25
+            bundle-type=Classpath Loader
+            harness-variety=Full Bundle
+        

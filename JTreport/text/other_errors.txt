@@ -6,6 +6,7 @@ java/net/Authenticator/B4769350.java
 java/net/Authenticator/B4921848.java 
 java/net/Authenticator/B4962064.java 
 java/net/CookieHandler/CookieManagerTest.java 
+java/net/DatagramSocket/B6411513.java 
 java/net/InetAddress/B4762344.java 
 java/net/InetAddress/GetLocalHostWithSM.java 
 java/net/Socket/asyncClose/AsyncClose.java 

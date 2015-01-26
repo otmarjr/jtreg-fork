@@ -1,4 +1,4 @@
-# Trace file started at Mon Jan 19 16:26:09 BRST 2015
+# Trace file started at Tue Jan 20 13:57:35 BRST 2015
 # JT Harness version 4.6
 # class directory: E:\jtreg-d37ce1ca5ded\jtreg-d37ce1ca5ded\dist\jtreg\lib\javatest.jar
 # using java: C:\Program Files\Java\jdk1.8.0_25\jre
@@ -7,3 +7,7 @@ Test suite class: com.sun.javatest.regtest.RegressionTestSuite
 Test finder class: com.sun.javatest.regtest.RegressionTestFinder
 
 Test starting: java/net/DatagramSocket/B6411513.java
+
+Test finished: java/net/DatagramSocket/B6411513.java: Error. Unexpected error caught from test java/net/DatagramSocket/B6411513.java: java.lang.NoClassDefFoundError: org/aspectj/lang/Signature
+Doing post-run cleanup
+Completed: Some tests did not pass
